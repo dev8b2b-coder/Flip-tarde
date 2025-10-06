@@ -5,7 +5,7 @@ import Title from "../Uiux/Title";
 import Discription from "../Uiux/Discription";
 import Button from "../Uiux/Button";
 import fireicon from "../../../../public/icons/firebtnicon.svg";
-const Pipvalue = () => {
+const Pipvalue = ({onScrollClick}) => {
   return (
     <div className="bg-white">
       <div className="inn_container py-12 md:py-18 lg:py-24">
@@ -31,7 +31,7 @@ const Pipvalue = () => {
                   color="text-ternary"
                 />
               </div>
-              <div className="pt-8">
+              <div className="pt-8" onClick={onScrollClick}>
                 <Button
                   btn_name="Start Calculating Now"
                   icon={fireicon}

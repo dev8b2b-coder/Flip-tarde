@@ -50,7 +50,7 @@ function page() {
       <Mt5card />
       <Mt5download />
       <div className=" bg-white ">
-        <div className="inn_container pb-12">
+        <div className="inn_container py-12">
           <div className="text-center">
             <Title
               title={"Frequently Asked <br /> Questions"}

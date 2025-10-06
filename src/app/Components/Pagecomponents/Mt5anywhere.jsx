@@ -11,7 +11,7 @@ const Mt5anywhere = () => {
         style={{ backgroundImage: `url(${boxbg.src})` }}
       >
         <div className="inn_container py-12 lg:py-18">
-          <div className="text-center pb-8">
+          <div className="text-center pb-4 md:pb-8">
             <Title title={"Trade Anywhere"} color={"text-secondary"} />
           </div>
           <div className="relative">
@@ -22,13 +22,13 @@ const Mt5anywhere = () => {
               height={500}
               className="max-w-[990px] w-full m-auto"
             />
-            <div className=" md:absolute mt-3 bottom-[15%] left-[10%] list_text font-light font_ternary leading-6 xl:leading-[28px] bg-subprimary md:w-max py-2.5 lg:py-5 px-8 lg:px-8 rounded-[60px] text-white">
+            <div className=" md:absolute mt-3 bottom-[15%] left-[10%] list_text font-light font_ternary leading-6 xl:leading-[28px] bg-subprimary md:w-max py-2.5 lg:py-5 px-8 lg:px-8 rounded-3xl md:rounded-[60px] text-white">
               <span className="font-semibold">Web </span>   – Trade from any browser.
             </div>
-             <div className=" md:absolute mt-3 right-[10%]  list_text font-light font_ternary leading-6 xl:leading-[28px] bg-subprimary md:w-max py-2.5 lg:py-5 px-8 lg:px-8 rounded-[60px] text-white">
+             <div className=" md:absolute mt-3 right-[10%]  list_text font-light font_ternary leading-6 xl:leading-[28px] bg-subprimary md:w-max py-2.5 lg:py-5 px-8 lg:px-8 rounded-3xl md:rounded-[60px] text-white">
               <span className="font-semibold">Mobile  </span>   – iOS & Android apps for trading on-the-go.
             </div>
-           <div className=" md:absolute mt-3 top-[15%] right-[5%] list_text font-light font_ternary leading-6 xl:leading-[28px] bg-subprimary md:w-max py-2.5 lg:py-5 px-8 lg:px-8 rounded-[60px] text-white">
+           <div className=" md:absolute mt-3 top-[15%] right-[5%] list_text font-light font_ternary leading-6 xl:leading-[28px] bg-subprimary md:w-max py-2.5 lg:py-5 px-8 lg:px-8 rounded-3xl md:rounded-[60px] text-white">
               <span className="font-semibold">Desktop </span>  – Windows & macOS.
             </div> 
           </div>
