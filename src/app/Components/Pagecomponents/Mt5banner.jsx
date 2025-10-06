@@ -6,6 +6,7 @@ import Discription from "../Uiux/Discription";
 import Button from "../Uiux/Button";
 import firebtn from "../../../../public/icons/firebtnicon.svg";
 import Image from "next/image";
+import Link from "next/link";
 function Mt5banner() {
   return (
     <div className="bg-cover" style={{ backgroundImage: `url(${banner.src})` }}>
@@ -16,6 +17,7 @@ function Mt5banner() {
               <Title
                 title={`MetaTrader 5 – Trade Smarter, Faster`}
                 color="gradient_text"
+                ish1={true}
               />
               <div className="flex w-full pt-4">
                 <Discription
@@ -25,6 +27,10 @@ function Mt5banner() {
               </div>
 
               <div className="pt-12 pb-5">
+                <Link
+                 href='https://play.google.com/store/apps/details?id=net.metaquotes.metatrader5&hl=en_IN'
+                 target="_blank"
+                 >
                 <Button
                   btn_name="Download MT5"
                   border_color="border-primary"
@@ -33,6 +39,7 @@ function Mt5banner() {
                   text_color={"text-white"}
                   icon={firebtn}
                 />
+                </Link>
               </div>
             </div>
           </div>
