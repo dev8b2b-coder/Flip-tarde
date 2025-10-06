@@ -40,7 +40,7 @@ const Mt5card = () => {
         <div className="text-center lg:text-start">
           <Title title={"Why FlipTrade + MT5"} color={"text-secondary"} />
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 xl:gap-0 xl:grid-cols-4 pt-18">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 xl:gap-0 xl:grid-cols-4 pt-8 md:pt-18">
           {features.map((data, index) =>
             <div
               key={index}
