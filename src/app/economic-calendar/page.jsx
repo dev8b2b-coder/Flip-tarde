@@ -1,10 +1,9 @@
 import React from 'react'
-import Pipcalculatormain from './Pipcalculator'
 
 function page() {
   return (
     <div>
-      <Pipcalculatormain />
+      
     </div>
   )
 }

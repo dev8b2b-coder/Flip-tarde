@@ -33,7 +33,7 @@ const footerdata = {
     },
     {
       title: "Platform",
-      pagelinks: [{ pagelink: "/", pagename: "Metatrader 5" }]
+      pagelinks: [{ pagelink: "/platform", pagename: "Metatrader 5" }]
     }
   ],
   carddata: [
@@ -106,7 +106,7 @@ const Fotter = () => {
                     />
                   </Link>
                 </div>
-                {footerdata.linkingdata.slice(0, 2).map((data, index) =>
+                {footerdata.linkingdata.map((data, index) =>
                   <div
                     className={`${index === 2
                       ? null
@@ -120,7 +120,7 @@ const Fotter = () => {
 
               <div className="flex md:hidden flex-col-reverse">
                 <div className="grid grid-cols-2 lg:grid-cols-1 py-6">
-                  {footerdata.linkingdata.slice(0, 2).map((data, index) =>
+                  {footerdata.linkingdata.slice(0,1).map((data, index) =>
                     <div
                       className={`${index === 2
                         ? null
@@ -134,7 +134,7 @@ const Fotter = () => {
                       />
                     </div>
                   )}
-                  {/* <div className="flex items-start flex-col gap-4">
+                  <div className="flex items-start flex-col gap-4">
                     {footerdata.linkingdata.slice(1, 3).map((data, index) =>
                       <div
                         className={`${index === 2
@@ -148,7 +148,7 @@ const Fotter = () => {
                         />
                       </div>
                     )}
-                  </div> */}
+                  </div>
                 </div>
                 <div className="flex justify-center items-center py-6">
                   <Link href="/">
