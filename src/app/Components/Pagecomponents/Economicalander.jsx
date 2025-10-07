@@ -22,7 +22,8 @@ function Economicalander() {
           </div>
         </div>
         <div>
-          <Graphhome pagepath='/economic-calendar' />
+          <Graphhome pagepath='/economic-calendar' /> 
+          
         </div>
       </div>
     </div>
