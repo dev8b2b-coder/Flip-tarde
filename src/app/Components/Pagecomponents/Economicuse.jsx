@@ -39,7 +39,7 @@ function Economicuse() {
     <div className="bg-white">
       <div className="md:py-12">
         <div
-          className="bg-cover py-12 md:py-18"
+          className="bg-contain md:bg-cover py-12 md:py-18"
           style={{ backgroundImage: `url(${boxbg.src})` }}
         >
           <div className="inn_container">

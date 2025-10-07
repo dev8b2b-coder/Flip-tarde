@@ -8,7 +8,7 @@ import fireicon from "../../../../public/icons/firebtnicon.svg";
 const Economicgetstart = () => {
   return (
     <div className="bg-white">
-      <div className="inn_container py-12 md:py-18 lg:py-24">
+      <div className="inn_container pt-12 md:pt-18 lg:pt-24">
         <div className="grid grid-cols-1 lg:grid-cols-[2fr_4fr]">
           <div>
             <Image

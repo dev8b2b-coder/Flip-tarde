@@ -10,7 +10,7 @@ import firebtnicon from "../../../../public/icons/firebtnicon.svg";
 import menuicon from "../../../../public/icons/menuicon.svg";
 import menucross from "../../../../public/icons/menucross.svg";
 import downarrow from "../../../../public/icons/downarrow.svg";
-
+import usericon from "../../../../public/icons/user.svg"
 const navlistdata = [
   { id: 1, nav_name: "Home", nav_link: "/" },
   {
@@ -144,23 +144,27 @@ export default function Header() {
         </div>
 
         {/* ---------- Desktop Buttons ---------- */}
-        <div className="hidden xl:flex items-center gap-6">
+        <div className="flex gap-8">
+             <div className="hidden lg:flex items-center gap-6">
           <Link href={"https://client.fliptradegroup.com/trader"}>
-            <button className="text-white list_text font-medium px-8 cursor-pointer hover:underline duration-500 transition-all">
+            <button className="text-white hover:text-[var(--subprimary)] list_text font-medium px-8 cursor-pointer hover:underline hover:scale-[1.1] duration-300 transition-all">
               Login
             </button>
           </Link>
-          <div className="sign_up_btn rounded-[50px]">
+          <div className=" rounded-[50px]">
             <Link href={"https://client.fliptradegroup.com/trader/registration"}>
-              <button className="border-primary cursor-pointer gap-2 border-[3px] border-solid py-[8px] px-[36px] 2xl:py-[13px] 2xl:px-[50px] bg-[#00000057] text-white tracking-[0.4px] text-xl 2xl:text-[23px] font-normal rounded-[50px] font_secondary">
-                Sign Up
-              </button>
+               <Button
+                    icon={usericon.src}
+                    btn_name="Sign Up"
+                    btn_bg="bg-primary"
+                    text_color="text-white"
+                    border_color="border-primary"
+                    shadow={true}
+                  />
             </Link>
           </div>
-        </div>
-
-        {/* ---------- Mobile Menu Icon ---------- */}
-        <div className="flex xl:hidden gap-6">
+             </div>
+            <div className="flex xl:hidden gap-6">
           <div
             className={`relative z-[999] duration-700 transition-all ${isMenu ? "rotate-0" : "rotate-[225deg]"}`}
             onClick={() => setIsMenu(!isMenu)}
@@ -173,12 +177,17 @@ export default function Header() {
               className="max-w-10 cursor-pointer"
             />
           </div>
+            </div>
         </div>
+        
+
+        {/* ---------- Mobile Menu Icon ---------- */}
+        
       </div>
 
       {/* ---------- Mobile Dropdown Menu ---------- */}
       <div
-        className={`fixed bg-white h-[120vh] w-[100vw] duration-700 transition-all ${
+        className={`fixed bg-white h-[120vh] w-[100vw] z-[5] duration-700 transition-all ${
           !isMenu ? "right-[-300%] scale-0 top-[-300%]" : "right-0 top-0 scale-[1]"
         }`}
       >
@@ -272,15 +281,16 @@ export default function Header() {
         <div className="lg:hidden flex items-center w-[80%] pt-5 m-auto gap-8">
           <Link href={"https://client.fliptradegroup.com/trader/registration"}>
             <Button
+            icon={usericon}
               btn_name={`Sign Up`}
-              btn_bg={`gradient_bg`}
-              text_color="text-secondary"
+              btn_bg={`bg-primary`}
+              text_color="text-white"
               border_color="border-primary"
               shadow={true}
             />
           </Link>
           <Link href={"https://client.fliptradegroup.com/trader"}>
-            <button className="text-primary text-base font-medium px-8 cursor-pointer hover:underline duration-500 transition-all">
+            <button className="text-secondary hover:text-[var(--subprimary)] list_text font-medium px-8 cursor-pointer hover:underline hover:scale-[1.1] duration-300 transition-all">
               Login
             </button>
           </Link>

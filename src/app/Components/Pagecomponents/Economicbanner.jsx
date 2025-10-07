@@ -15,7 +15,7 @@ function Economicbanner({onScrollClick}) {
       <div className="inn_container  pt-48 2xl:pt-68">
          <div className="grid xl:grid-cols-[4fr_3fr]">
           <div className="text-center xl:text-start">
-            <div>
+            <div >
               <Title
                 title={`Economic Calendar`}
                 color="gradient_text"

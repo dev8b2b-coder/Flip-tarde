@@ -54,7 +54,7 @@ function Calendarwarp() {
        </div>
       <Economicuse />
       <Economicgetstart />
-      <div className="bg-white pb-12 md:pb-18 lg:py-24">
+      <div className="bg-white py-12 md:py-18 lg:py-24">
         <div className="inn_container">
           <div className="text-center">
             <Title

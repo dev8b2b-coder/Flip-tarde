@@ -132,7 +132,7 @@ body {
 }
 
 .sign_up_btn button:hover {
-  box-shadow: inset -1px 0px 20px 5px #3b2480;
+  box-shadow: inset -1px 0px 20px 20px #3b2480;
 }
 
 .ui_btn_shadow {
