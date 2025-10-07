@@ -6,7 +6,7 @@ import Title from "../Uiux/Title";
 import Link from "next/link";
 const Mt5anywhere = () => {
     const getMobileLink = () => {
-    if (typeof navigator === "undefined") return "#"; // fallback for SSR
+    if (typeof navigator === "undefined") return "#";
     const userAgent = navigator.userAgent || navigator.vendor || window.opera;
 
     if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
@@ -14,7 +14,7 @@ const Mt5anywhere = () => {
     } else if (/android/i.test(userAgent)) {
       return "https://download.mql5.com/cdn/mobile/mt5/android?server=FlipTradeGroup-Server";
     } else {
-      return "https://download.mql5.com/cdn/web/flip.trade.group/mt5/fliptradegroup5setup.exe";
+      return null ;
     }
   };
   return (
