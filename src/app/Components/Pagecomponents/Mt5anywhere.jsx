@@ -5,18 +5,18 @@ import Image from "next/image";
 import Title from "../Uiux/Title";
 import Link from "next/link";
 const Mt5anywhere = () => {
-    const getMobileLink = () => {
-    if (typeof navigator === "undefined") return "#";
-    const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+  //   const getMobileLink = () => {
+  //   if (typeof navigator === "undefined") return "#";
+  //   const userAgent = navigator.userAgent || navigator.vendor || window.opera;
 
-    if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-      return "https://download.mql5.com/cdn/mobile/mt5/ios?server=FlipTradeGroup-Server";
-    } else if (/android/i.test(userAgent)) {
-      return "https://download.mql5.com/cdn/mobile/mt5/android?server=FlipTradeGroup-Server";
-    } else {
-      return "/" ;
-    }
-  };
+  //   if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+  //     return "https://download.mql5.com/cdn/mobile/mt5/ios?server=FlipTradeGroup-Server";
+  //   } else if (/android/i.test(userAgent)) {
+  //     return "https://download.mql5.com/cdn/mobile/mt5/android?server=FlipTradeGroup-Server";
+  //   } else {
+  //     return "/" ;
+  //   }
+  // };
   return (
     <div className="bg-white">
       <div
@@ -37,19 +37,19 @@ const Mt5anywhere = () => {
             />
             <Link
               href={
-                "https://download.mql5.com/cdn/web/flip.trade.group/mt5/fliptradegroup5setup.exe"
+                "https://download.mql5.com/cdn/mobile/mt5/android?server=FlipTradeGroup-Server"
               }
               target="_blank"
             >
               <div className=" md:absolute mt-3 bottom-[15%] left-[10%] list_text font-light font_ternary leading-6 xl:leading-[28px] bg-subprimary md:w-max py-2.5 lg:py-5 px-8 lg:px-8 rounded-3xl md:rounded-[60px] text-white">
-                <span className="font-semibold">Web </span> – Trade from any
-                browser.
+                <span className="font-semibold">Android </span> android 
+                apps for trading on-the-go.
               </div>
             </Link>
             {/* mobile ios & android  */}
-            <Link href={getMobileLink()} target="_blank">
+            <Link href={'https://download.mql5.com/cdn/mobile/mt5/ios?server=FlipTradeGroup-Server'} target="_blank">
               <div className=" md:absolute mt-3 right-[10%] list_text font-light font_ternary leading-6 xl:leading-[28px] bg-subprimary md:w-max py-2.5 lg:py-5 px-8 lg:px-8 rounded-3xl md:rounded-[60px] text-white">
-                <span className="font-semibold">Mobile </span> – iOS & Android
+                <span className="font-semibold"> iOS </span> – iOS 
                 apps for trading on-the-go.
               </div>
             </Link>
