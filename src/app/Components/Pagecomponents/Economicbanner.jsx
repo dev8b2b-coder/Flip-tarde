@@ -6,7 +6,7 @@ import Discription from '../Uiux/Discription';
 import Button from '../Uiux/Button';
 import sidebanner from "../../../../public/images/ecosidebanner.webp";
 import Image from 'next/image';
-function Economicbanner() {
+function Economicbanner({onScrollClick}) {
   return (
     <div 
      className='bg-cover'
@@ -15,7 +15,7 @@ function Economicbanner() {
       <div className="inn_container  pt-48 2xl:pt-68">
          <div className="grid xl:grid-cols-[4fr_3fr]">
           <div className="text-center xl:text-start">
-            <div>
+            <div >
               <Title
                 title={`Economic Calendar`}
                 color="gradient_text"
@@ -28,7 +28,7 @@ function Economicbanner() {
                 />
               </div>
 
-              <div className="pt-12 pb-5">
+              <div className="pt-12 pb-5" onClick={onScrollClick}>
                 <Button
                   btn_name="View Economic Calendar"
                   border_color="border-primary"

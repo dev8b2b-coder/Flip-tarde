@@ -50,34 +50,34 @@ export async function POST(req) {
     });
 
     // 2) Send Thank You email to User
-    // await transporter.sendMail({
-    //   from: process.env.EMAIL_USER,
-    //   to: email,
-    //   subject: "We’ve Received Your Request ",
-    //   text: `Hi ${name},`,
-    //   html: `
-    //   <div>
-    //    <h3>
-    //       Hi <strong> ${name} </strong> Thank you for reaching out to <strong> Flip Trade Group </strong>
-    //     </h3>
-    //     <h3>
-    //       Your request has been received, and one of our experts will connect with you shortly to guide you through the next steps.
-    //     </h3>
-    //     <h3>
-    //     At FlipTrade, we value transparency, security, and support — so you can feel confident that you’re in safe hands.
-    //     </h3?
+    await transporter.sendMail({
+      from: process.env.EMAIL_USER,
+      to: email,
+      subject: "We’ve Received Your Request ",
+      text: `Hi ${name},`,
+      html: `
+      <div>
+       <h3>
+          Hi <strong> ${name} </strong> Thank you for reaching out to <strong> Flip Trade Group </strong>
+        </h3>
+        <h3>
+          Your request has been received, and one of our experts will connect with you shortly to guide you through the next steps.
+        </h3>
+        <h3>
+        At FlipTrade, we value transparency, security, and support — so you can feel confident that you’re in safe hands.
+        </h3?
 
-    //       <div>
-    //          <h3>
-    //            Best regards,
-    //          </h3>
-    //          <h3>
-    //            Team FlipTrade
-    //          </h3>
-    //       </div>
-    //     </div>
-    //   `,
-    // });
+          <div>
+             <h3>
+               Best regards,
+             </h3>
+             <h3>
+               Team FlipTrade
+             </h3>
+          </div>
+        </div>
+      `,
+    });
 
     return NextResponse.json({ ok: true });
   } catch (error) {
