@@ -26,7 +26,7 @@ function Mt5banner() {
                 />
               </div>
 
-              <div className="pt-12 pb-5">
+              {/* <div className="pt-12 pb-5">
                 <Link
                  href='https://play.google.com/store/apps/details?id=net.metaquotes.metatrader5&hl=en_IN'
                  target="_blank"
@@ -40,7 +40,7 @@ function Mt5banner() {
                   icon={firebtn}
                 />
                 </Link>
-              </div>
+              </div> */}
             </div>
           </div>
           <div className="pt-8 xl:pt-0">
