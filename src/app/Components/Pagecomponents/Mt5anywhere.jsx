@@ -14,7 +14,7 @@ const Mt5anywhere = () => {
     } else if (/android/i.test(userAgent)) {
       return "https://download.mql5.com/cdn/mobile/mt5/android?server=FlipTradeGroup-Server";
     } else {
-      return null ;
+      return "/" ;
     }
   };
   return (
