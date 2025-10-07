@@ -1,5 +1,6 @@
 import React from "react";
 
+
 const Title = ({ title, color,ish1}) => {
   return (
     <>
@@ -20,3 +21,4 @@ const Title = ({ title, color,ish1}) => {
 };
 
 export default Title;
+

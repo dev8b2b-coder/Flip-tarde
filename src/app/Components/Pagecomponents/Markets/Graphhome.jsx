@@ -8,36 +8,45 @@ import Commoditiesgraph from "./Commoditiesgraph";
 import Cryptocurrencygraph from "./Cryptocurrencygraph";
 import Metalgraph from "./Metalgraph";
 import Stocksgraph from "./Stocksgraph";
+import Economicgraph from "../Economicgraph";
 
 const Graphhome = ({ title, discription, pagepath }) => {
   const [darkMode, setDarkMode] = useState("light");
 
   const toggleDarkMode = () => {
-    setDarkMode((prev) => (prev === "light" ? "dark" : "light"));
+    setDarkMode(prev => (prev === "light" ? "dark" : "light"));
   };
 
   return (
     <div className={`py-12 md:py-18 lg:py-24 xl:py-32 bg-white`}>
       <div className="inn_container">
-        <div className="grid  text-center xl:text-start xl:grid-cols-2 max-w-[700px] md:max-w-[unset]">
-          <div className="flex justify-center xl:justify-start">
-            <Title title={title} color={"text-secondary"} />
-          </div>
-          <div className="flex justify-center xl:justify-start">
-            <Discription dispription={discription} color={"text-ternary"} />
-          </div>
-        </div>
+        {pagepath === "/economic-calendar"
+          ? null
+          : <div className="grid  text-center xl:text-start xl:grid-cols-2 max-w-[700px] md:max-w-[unset]">
+              <div className="flex justify-center xl:justify-start">
+                <Title title={title} color={"text-secondary"} />
+              </div>
+              <div className="flex justify-center xl:justify-start">
+                <Discription dispription={discription} color={"text-ternary"} />
+              </div>
+            </div>}
 
         <div className="pt-12 2xl:max-w-[1380px] m-auto relative">
-          {
-            pagepath === "/forex" ? <Forexgraph darkMode={darkMode} />
-            : pagepath === "/indices" ? <Indicesgraph darkMode={darkMode} /> 
-            : pagepath === "/commodities" ? <Commoditiesgraph darkMode={darkMode} /> 
-            : pagepath === "/cryptocurrency" ? <Cryptocurrencygraph darkMode={darkMode} /> 
-            : pagepath === "/metals" ? <Metalgraph darkMode={darkMode} /> 
-            : pagepath === "/stocks" ? <Stocksgraph darkMode={darkMode} />
-            : null 
-          } 
+          {pagepath === "/forex"
+            ? <Forexgraph darkMode={darkMode} />
+            : pagepath === "/indices"
+              ? <Indicesgraph darkMode={darkMode} />
+              : pagepath === "/commodities"
+                ? <Commoditiesgraph darkMode={darkMode} />
+                : pagepath === "/cryptocurrency"
+                  ? <Cryptocurrencygraph darkMode={darkMode} />
+                  : pagepath === "/metals"
+                    ? <Metalgraph darkMode={darkMode} />
+                    : pagepath === "/stocks"
+                      ? <Stocksgraph darkMode={darkMode} />
+                      : pagepath === "/economic-calendar"
+                        ? <Economicgraph darkMode={darkMode} />
+                        : null}
 
           <div className="absolute top-[10px] right-3">
             <button

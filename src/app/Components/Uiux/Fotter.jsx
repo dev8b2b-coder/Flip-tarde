@@ -27,7 +27,7 @@ const footerdata = {
     {
       title: "Tools",
       pagelinks: [
-        // { pagelink: "/", pagename: "Economic Calendar" },
+        { pagelink: "/economic-calendar", pagename: "Economic Calendar" },
         { pagelink: "/pip-calculator", pagename: "PIP Calculator" }
       ]
     },
