@@ -29,9 +29,7 @@ export const metadata = {
   title: "Best Forex & Multi-Asset Trading Platform | FlipTrade Group",
   description:
     "Trade forex, stocks, cryptos, commodities & metals with FlipTrade — low spreads, fast execution, secure platform. Start your trading journey today.",
-  icons: {
-    icon: "/favicon.ico",
-  },
+
   verification: {
     google: "KgCqFoO6NlFNiJg06rxf_0u6vjoiAAGn4sVMH_X-1aQ"
   }
