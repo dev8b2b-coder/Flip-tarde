@@ -1,8 +1,7 @@
 "use client";
 import Script from "next/script";
-import React from "react";
 
-const Metalinks = () => {
+export default function Metalinks() {
   return (
     <>
       <Script id="meta-pixel" strategy="afterInteractive">
@@ -33,4 +32,3 @@ const Metalinks = () => {
   );
 };
 
-export default Metalinks;
