@@ -1,10 +1,10 @@
 "use client";
 import Script from "next/script";
 
-export default function Metalinks() {
+export default function Metalinksseo() {
   return (
     <>
-      <Script id="meta-pixel" strategy="afterInteractive">
+      <script id="meta-pixel" strategy="afterInteractive">
         {`
           !function(f,b,e,v,n,t,s)
           {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -17,7 +17,7 @@ export default function Metalinks() {
           fbq('init', '1802853220355740');
           fbq('track', 'PageView');
         `}
-      </Script>
+      </script>
 
       
 

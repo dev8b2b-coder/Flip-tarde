@@ -7,8 +7,8 @@ import giftbtnicon from "../../../../public/icons/giftbtnicon.svg";
 import Homesidebanner from "../../../../public/banners/Homesidebanner.webp";
 import Image from "next/image";
 import Link from "next/link";
-import { Player } from "@lottiefiles/react-lottie-player";
-import json from "../../../../public/json/Growth.json"
+// import { Player } from "@lottiefiles/react-lottie-player";
+// import json from "../../../../public/json/Growth.json"
 export default function Banner() {
   return (
     <div className={`bg-no-repeat main_banner`}>
