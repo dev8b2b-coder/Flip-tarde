@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import Discription from "../Uiux/Discription";
 import Button from "../Uiux/Button";
@@ -6,6 +7,8 @@ import giftbtnicon from "../../../../public/icons/giftbtnicon.svg";
 import Homesidebanner from "../../../../public/banners/Homesidebanner.webp";
 import Image from "next/image";
 import Link from "next/link";
+import { Player } from "@lottiefiles/react-lottie-player";
+import json from "../../../../public/json/Growth.json"
 export default function Banner() {
   return (
     <div className={`bg-no-repeat main_banner`}>
@@ -64,6 +67,12 @@ export default function Banner() {
               height={500}
               className="relative right-[-2%] w-[90%] md:w-[60%] lg:w-full m-auto"
             />
+            {/* <Player
+              src={json}
+              loop
+              autoplay
+               className="relative right-[-2%] w-[90%] md:w-[60%] lg:w-full m-auto"
+            /> */}
           </div>
         </div>
       </div>

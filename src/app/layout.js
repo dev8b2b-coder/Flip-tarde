@@ -4,6 +4,7 @@ import Header from "./Components/Uiux/Header";
 import Fotter from "./Components/Uiux/Fotter";
 import Canonical from "./Canonical";
 import GoogleAnalytics from "./GoogleAnalytics";
+import Metalinks from "./Metalinks";
 const monaSans = localFont({
   src: [{ path: "../../public/fonts/Mona-Sans-MediumWide.ttf" }],
 
@@ -28,6 +29,9 @@ export const metadata = {
   title: "Best Forex & Multi-Asset Trading Platform | FlipTrade Group",
   description:
     "Trade forex, stocks, cryptos, commodities & metals with FlipTrade — low spreads, fast execution, secure platform. Start your trading journey today.",
+  icons: {
+    icon: "/favicon.ico",
+  },
   verification: {
     google: "KgCqFoO6NlFNiJg06rxf_0u6vjoiAAGn4sVMH_X-1aQ"
   }
@@ -37,6 +41,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         <Canonical />
+        <Metalinks />
       </head>
       <body
         className={`${monaSans.variable} ${monaSansnormal.variable} ${monaSansnormallight.variable} ${monaSanswidenormal.variable} antialiased`}
