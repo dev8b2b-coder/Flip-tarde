@@ -7,6 +7,7 @@ import Button from "../../Uiux/Button";
 import firebtnicon from "../../../../../public/icons/firebtnicon.svg";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
+import Link from "next/link";
 const Discovertrading = ({
   discription,
   discoverleftimage,
@@ -42,14 +43,19 @@ const Discovertrading = ({
               <Discription dispription={discription} color={"text-ternary"} />
             </div>
             <div>
-              <Button
-                btn_name={`Start Trading ${pathname}`}
-                border_color={"border-primary"}
-                btn_bg={"bg-primary"}
-                shadow={true}
-                icon={firebtnicon}
-                text_color={"text-white"}
-              />
+              <Link
+                href={"https://client.fliptradegroup.com/trader/registration"}
+                target="_blank"
+              >
+                <Button
+                  btn_name={`Start Trading ${pathname}`}
+                  border_color={"border-primary"}
+                  btn_bg={"bg-primary"}
+                  shadow={true}
+                  icon={firebtnicon}
+                  text_color={"text-white"}
+                />
+              </Link>
             </div>
           </div>
           <div className="flex items-center">
@@ -62,7 +68,7 @@ const Discovertrading = ({
             />
           </div>
         </div>
-         <div className="grid lg:hidden grid-cols-1 relative">
+        <div className="grid lg:hidden grid-cols-1 relative">
           <div className="flex absolute items-center z-[1] left-0 top-[30%]">
             <Image
               src={discoverleftimage}
@@ -74,24 +80,23 @@ const Discovertrading = ({
           </div>
           <div className="py-24 lg:py-36 px-8 max-w-[700px] m-auto">
             <div className="text-center relative z-[2]">
-
-            <Title
-              title={`Discover <br/> ${pathname} Trading`}
-              color="text-primary"
-            />
-            <div className="flex justify-center py-10">
-              <Discription dispription={discription} color={"text-ternary"} />
-            </div>
-            <div>
-              <Button
-                btn_name={`Start Trading ${pathname}`}
-                border_color={"border-primary"}
-                btn_bg={"bg-primary"}
-                shadow={true}
-                icon={firebtnicon}
-                text_color={"text-white"}
+              <Title
+                title={`Discover <br/> ${pathname} Trading`}
+                color="text-primary"
               />
-            </div>
+              <div className="flex justify-center py-10">
+                <Discription dispription={discription} color={"text-ternary"} />
+              </div>
+              <div>
+                <Button
+                  btn_name={`Start Trading ${pathname}`}
+                  border_color={"border-primary"}
+                  btn_bg={"bg-primary"}
+                  shadow={true}
+                  icon={firebtnicon}
+                  text_color={"text-white"}
+                />
+              </div>
             </div>
           </div>
           <div className="flex absolute items-center z-[1] right-0 top-[30%]">
