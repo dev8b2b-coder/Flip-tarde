@@ -39,13 +39,14 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         <Canonical />
-        <Metalinks />
+
       </head>
       <body
         className={`${monaSans.variable} ${monaSansnormal.variable} ${monaSansnormallight.variable} ${monaSanswidenormal.variable} antialiased`}
         cz-shortcut-listen="true"
       >
         <GoogleAnalytics />
+        <Metalinks />
         <div className="main_outer_container">
           <div className="absolute w-full max-w-[1960px] z-[999] bg-[linear-gradient(1deg,rgba(255,255,255,0)_15%,rgb(0_0_0_/_76%)_99%)]">
             <Header />
