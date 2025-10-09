@@ -1,12 +1,14 @@
-import localFont from "next/font/local";
+// app/layout.js
 import "./globals.css";
+import localFont from "next/font/local";
 import Header from "./Components/Uiux/Header";
 import Fotter from "./Components/Uiux/Fotter";
 import Canonical from "./Canonical";
 import GoogleAnalytics from "./GoogleAnalytics";
-import Metalinks from "./Metalinks";
-import Script from "next/script"; // ✅ add this
+import Metalinks from "./Metalinks"; // Meta Pixel
+import Script from "next/script";     // For Orufy & other scripts
 
+// Fonts
 const monaSans = localFont({
   src: [{ path: "../../public/fonts/Mona-Sans-MediumWide.ttf" }],
   variable: "--font-mona-sans"
@@ -24,6 +26,7 @@ const monaSanswidenormal = localFont({
   variable: "--font-mona-sans-monaSanswidenormal"
 });
 
+// Metadata for SEO
 export const metadata = {
   title: "Best Forex & Multi-Asset Trading Platform | FlipTrade Group",
   description:
@@ -37,22 +40,17 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <Canonical />
+        <Canonical /> 
       </head>
+
       <body
         className={`${monaSans.variable} ${monaSansnormal.variable} ${monaSansnormallight.variable} ${monaSanswidenormal.variable} antialiased`}
       >
+        {/* Analytics & Tracking */}
         <GoogleAnalytics />
-        <Metalinks />
-        <div className="main_outer_container">
-          <div className="absolute w-full max-w-[1960px] z-[999] bg-[linear-gradient(1deg,rgba(255,255,255,0)_15%,rgb(0_0_0_/_76%)_99%)]">
-            <Header />
-          </div>
-          {children}
-          <Fotter />
-        </div>
-
-        {/* ✅ Safe Orufy widget */}
+        <Metalinks /> {/* Meta Pixel */}
+        
+        {/* Orufy Widget */}
         <Script id="orufy-connect" strategy="afterInteractive">
           {`
             (function(_, m) {
@@ -68,6 +66,15 @@ export default function RootLayout({ children }) {
             })(document, window.orufy_connect || {});
           `}
         </Script>
+
+        {/* Page Structure */}
+        <div className="main_outer_container">
+          <div className="absolute w-full max-w-[1960px] z-[999] bg-[linear-gradient(1deg,rgba(255,255,255,0)_15%,rgb(0_0_0_/_76%)_99%)]">
+            <Header />
+          </div>
+          {children}
+          <Fotter />
+        </div>
       </body>
     </html>
   );
