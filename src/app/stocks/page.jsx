@@ -67,14 +67,13 @@ const pointdata = [
   }
 ];
 
-const Pagemeta  = {
+export const metadata = {
   title : 'Stock Trading CFDs Online | Trade Global Equities FlipTrade',
   description :'Trade stock CFDs on US, European, and Asian companies with FlipTrade. Access global equities with competitive spreads, fractional trading, and fast execution.'
 }
 export default function page() {
   return (
     <div>
-      <PageHead PageMeta={Pagemeta}/>
       <Marketbanner
         banner_title="Stock Trading | Global <br /> Equities"
         banner_discription="Trade global company shares with low costs, real-time <br/> data, and easy portfolio diversification."

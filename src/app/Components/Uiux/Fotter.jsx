@@ -16,6 +16,7 @@ const footerdata = {
       pagelinks: [
         // { pagelink: "/", pagename: "About us" },
         { pagelink: "/contact-us", pagename: "Contact Us" },
+        { pagelink: "/web-trading", pagename: "Start Trading" },
         { pagelink: "/forex", pagename: "Forex" },
         { pagelink: "/indices", pagename: "Indices" },
         { pagelink: "/commodities", pagename: "Commodities" },

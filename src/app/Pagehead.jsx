@@ -1,20 +1,29 @@
 "use client";
-import { useEffect } from "react";
+import { useEffect, useLayoutEffect } from "react";
 
 export default function PageHead({ PageMeta }) {
-  useEffect(() => {
-    if (PageMeta?.title) {
-      document.title = PageMeta.title;
+  // useLayoutEffect runs *before paint* — faster update than useEffect
+  useLayoutEffect(() => {
+    if (!PageMeta) return;
+
+    // ✅ Update <title>
+    if (PageMeta.title) {
+      let titleTag = document.querySelector("title");
+      if (!titleTag) {
+        titleTag = document.createElement("title");
+        document.head.appendChild(titleTag);
+      }
+      titleTag.textContent = PageMeta.title;
     }
-    const metaDescription = document.querySelector("meta[name='description']");
-    if (metaDescription) {
-      metaDescription.setAttribute("content", PageMeta.description || "");
-    } else {
-      const newMeta = document.createElement("meta");
-      newMeta.name = "description";
-      newMeta.content = PageMeta.description || "";
-      document.head.appendChild(newMeta);
+
+    // ✅ Update <meta name="description">
+    let metaDesc = document.querySelector("meta[name='description']");
+    if (!metaDesc) {
+      metaDesc = document.createElement("meta");
+      metaDesc.name = "description";
+      document.head.appendChild(metaDesc);
     }
+    metaDesc.content = PageMeta.description || "";
   }, [PageMeta]);
 
   return null;

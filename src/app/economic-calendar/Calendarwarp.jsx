@@ -6,7 +6,6 @@ import Economicgetstart from "../Components/Pagecomponents/Economicgetstart";
 import Title from "../Components/Uiux/Title";
 import Faq from "../Components/Pagecomponents/Faq";
 import Economicalander from "../Components/Pagecomponents/Economicalander";
-import PageHead from "../Pagehead";
 const faqData = [
   {
     question: "What is the purpose of an economic calendar?",
@@ -34,11 +33,7 @@ const faqData = [
       "You can use the calendar to anticipate potential market volatility, align your trades with upcoming events, and manage risk more effectively."
   }
 ];
-const Pagemeta = {
-  title: "Economic Calendar | Real-Time Economic Events | FlipTrade Group",
-  description:
-    "FlipTrade’s Economic Calendar delivers real-time global events and data releases. Stay updated, analyze trends, and make informed trading decisions every day."
-};
+
 function Calendarwarp() {
       const calculatorRef = useRef(null);
     
@@ -47,7 +42,6 @@ function Calendarwarp() {
       };
   return (
     <div>
-      <PageHead PageMeta={Pagemeta} />
       <Economicbanner onScrollClick={scrollToCalculator} />
        <div ref={calculatorRef}>
          <Economicalander />

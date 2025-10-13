@@ -11,7 +11,6 @@ import Support from "/public/icons/Support.svg";
 import indicescoverleft from "/public/images/indicescoverleft.webp";
 import indicescoverright from "/public/images/indicescoverright.webp";
 import Graphhome from "../Components/Pagecomponents/Markets/Graphhome";
-import PageHead from "../Pagehead";
 const faqData = [
   {
     question: "Which indices can I trade?",
@@ -66,14 +65,13 @@ const pointdata = [
     icon: Support
   }
 ];
-const pagemeta = {
+export const metadata = {
   title : 'Global Indices Trading Platform | Trade Index CFDs FlipTrade' ,
   description : 'FlipTrade lets you trade leading global indices like S&P 500, Nasdaq, FTSE, and DAX. Access CFDs with leverage, tight spreads, and transparent trading conditions.'
 }
 export default function page() {
   return (
     <div> 
-      <PageHead PageMeta={pagemeta} />
       <Marketbanner
         banner_title="For Difference (CFD) <br /> Trading  on Indices"
         banner_discription="FlipTrade offers global cash and futures index <br/> trading with low costs."

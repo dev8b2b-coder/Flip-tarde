@@ -11,7 +11,6 @@ import realtime from "/public/icons/realtime.svg";
 import Secure from "/public/icons/forexpoint2.svg";
 import Support from "/public/icons/Support.svg";
 import Graphhome from "../Components/Pagecomponents/Markets/Graphhome";
-import PageHead from "../Pagehead";
 const faqData = [
   {
     question: "Which cryptocurrencies are supported?",
@@ -66,14 +65,13 @@ const pointdata = [
     icon: Support
   }
 ];
-const PageMeta  = {
+export const metadata  = {
   title : 'Cryptocurrency Trading Platform | Trade Bitcoin & Altcoins',
   description : 'Trade Bitcoin, Ethereum, and altcoins 24/7 with FlipTrade. Enjoy secure accounts, low spreads, fast execution, and leverage options for crypto CFD trading.'
 }
 export default function page() {
   return (
     <div>
-      <PageHead PageMeta={PageMeta} />
       <Marketbanner
         banner_title="Cryptocurrency Trading | <br/>  Buy & Sell Digital Assets"
         banner_discription="Trade top cryptos like Bitcoin and Ethereum with <br /> low spreads and high security."

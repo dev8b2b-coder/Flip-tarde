@@ -67,14 +67,13 @@ const pointdata = [
     icon: Support
   }
 ];
-const  PageMeta ={
+export const metadata={
   title : 'Commodity Trading Platform | Oil, Gas & Agriculture CFDs',
   description :'FlipTrade offers commodity CFD trading in oil, natural gas, coffee, sugar, and agricultural products. Access global commodity markets with leverage and transparent pricing.'
 }
 export default function page() {
   return (
     <div>
-      <PageHead PageMeta={PageMeta} />
       <Marketbanner
         banner_title="Commodities <br /> CFDs"
         banner_discription="Trade spot and futures commodities across metals, <br /> energy, and agriculture markets."

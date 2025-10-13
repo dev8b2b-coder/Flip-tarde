@@ -5,9 +5,8 @@ import Mt5anywhere from "../Components/Pagecomponents/Mt5anywhere";
 import Mt5card from "../Components/Pagecomponents/Mt5card";
 import Mt5download from "../Components/Pagecomponents/Mt5download";
 import Title from "../Components/Uiux/Title";
-import PageHead from "../Pagehead";
 import Faq from "../Components/Pagecomponents/Faq";
-const pagemeta = {
+export const metadata = {
   title: "FlipTrade Platform | Trade with MetaTrader 5 & Multi-Asset Access",
   description:
     "Explore FlipTrade’s trading platform powered by MetaTrader 5 access forex, stocks, commodities, indices & crypto. Trade seamlessly with charts, alerts & advanced tools"
@@ -43,7 +42,6 @@ const faqData = [
 function page() {
   return (
     <div>
-      <PageHead PageMeta={pagemeta} />
       <Mt5banner />
       <Mt5keyfeature />
       <Mt5anywhere />

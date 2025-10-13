@@ -1,7 +1,6 @@
 import React from "react";
 import Accounttypebanner from "../Components/Pagecomponents/Accounttypebanner";
 import Tradingaccounts from "../Components/Pagecomponents/Tradingaccounts";
-import PageHead from "../Pagehead";
 import Title from "../Components/Uiux/Title";
 import Faq from "../Components/Pagecomponents/Faq";
 import Accountstep from "../Components/Pagecomponents/Accountstep";
@@ -33,7 +32,7 @@ const faqData = [
       "VIP accounts provide premium spreads, lower fees, and priority support."
   }
 ];
-const Pagemeta = {
+export const metadata = {
   title: "Trading Account Types | Standard, ECN & VIP FlipTrade",
   description:
     "Choose FlipTrade account types — Standard, ECN, or VIP. Compare minimum deposits, spreads, leverage, and benefits to find the best fit for your trading style."
@@ -41,7 +40,6 @@ const Pagemeta = {
 export default function page() {
   return (
     <div>
-      <PageHead PageMeta={Pagemeta} />
       <Accounttypebanner />
       <Tradingaccounts />
       <Accountstep />
