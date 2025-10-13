@@ -11,7 +11,6 @@ import Advanced from "/public/icons/Advanced.svg";
 import Secure from "/public/icons/forexpoint2.svg";
 import Support from "/public/icons/Support.svg";
 import Graphhome from "../Components/Pagecomponents/Markets/Graphhome";
-import PageHead from "../Pagehead";
 const faqData = [
   {
     question: "Which metals are available?",
@@ -66,14 +65,13 @@ const pointdata = [
     icon: Support
   }
 ];
-const Pagemeta  = {
+export const metadata = {
   title : 'Precious Metals Trading Platform | Gold, Silver, Platinum',
   description :'Trade gold, silver, and platinum CFDs with FlipTrade. Benefit from secure trading accounts, tight spreads, leverage, and near 24-hour market access on metals.'
 }
 export default function page() {
   return (
     <div>
-      <PageHead PageMeta={Pagemeta} />
       <Marketbanner
         banner_title="Precious Metals Trading <br/> Gold & Silver"
         banner_discription="Trade Gold, Silver, and Platinum with tight <br/> spreads and high liquidity."

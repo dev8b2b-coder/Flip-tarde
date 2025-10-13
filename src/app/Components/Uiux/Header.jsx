@@ -28,6 +28,7 @@ const navlistdata = [
   },
   { id: 3, nav_name: "Account Type", nav_link: "/accounts-types" },
   { id: 4, nav_name: "Platform", nav_link: "/platform" },
+  { id: 7, nav_name: "Start Trading", nav_link: "/web-trading" },
   {
     id: 5,
     nav_name: "Tools",
@@ -96,10 +97,10 @@ export default function Header() {
         </div>
 
         {/* ---------- Desktop Navbar ---------- */}
-        <div className="hidden w-[52%] 2xl:w-[55%] max-w-[900px] xl:flex justify-center bg-[linear-gradient(90deg,rgba(43,38,55,1)_0%,rgba(72,56,123,1)_100%)] border-[3px] border-[#D9D9D926] border-solid rounded-[40px]">
+        <div className="hidden w-[52%] 2xl:w-[55%] max-w-[1280px] 2xl:flex justify-center bg-[linear-gradient(90deg,rgba(43,38,55,1)_0%,rgba(72,56,123,1)_100%)] border-[3px] border-[#D9D9D926] border-solid rounded-[40px]">
           <div
             ref={containerRef}
-            className="relative flex w-[90%] 2xl:w-[90%] justify-around items-center py-1 font_secondary"
+            className="relative flex w-[90%] 2xl:w-[95%] justify-around items-center py-1 font_secondary"
           >
             <div
               className="absolute top-[18%] 2xl:top-[16%] h-[65%] rounded-full bg-primary transition-all duration-500 ui_btn_shadow"
@@ -144,7 +145,7 @@ export default function Header() {
         </div>
 
         {/* ---------- Desktop Buttons ---------- */}
-        <div className="flex gap-8">
+        <div className="flex gap-8 items-center">
              <div className="hidden lg:flex items-center gap-6">
           <Link href={"https://client.fliptradegroup.com/trader"}>
             <button className="text-white hover:text-[var(--subprimary)] list_text font-medium px-8 cursor-pointer hover:underline hover:scale-[1.1] duration-300 transition-all">
@@ -164,7 +165,7 @@ export default function Header() {
             </Link>
           </div>
              </div>
-            <div className="flex xl:hidden gap-6">
+            <div className="flex 2xl:hidden gap-6">
           <div
             className={`relative z-[999] duration-700 transition-all ${isMenu ? "rotate-0" : "rotate-[225deg]"}`}
             onClick={() => setIsMenu(!isMenu)}

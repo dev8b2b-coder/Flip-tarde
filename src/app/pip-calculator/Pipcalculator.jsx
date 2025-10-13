@@ -6,7 +6,6 @@ import Pipuse from "../Components/Pagecomponents/Pipuse";
 import Pipvalue from "../Components/Pagecomponents/Pipvalue";
 import Pipcalculator from "../Components/Pagecomponents/Pipcalculator";
 import Title from "../Components/Uiux/Title";
-import PageHead from "../Pagehead";
 import Faq from "../Components/Pagecomponents/Faq";
 
 
@@ -37,11 +36,7 @@ const faqData = [
       "Yes, the calculator works for standard, mini, and micro accounts, making it useful for all traders."
   }
 ];
-const Pagemeta = {
-  title: "Pip Calculator - Forex Pip Value Calculator | FlipTrade Group",
-  description:
-    "Use Flip Trade Group’s Pip Calculator to quickly calculate pip values for any forex pair. Manage risk, set position sizes, and trade smarter with ease."
-};
+
 function Pipcalculatormain() {
   const calculatorRef = useRef(null);
 
@@ -50,7 +45,6 @@ function Pipcalculatormain() {
   };
   return (
     <div>
-      <PageHead PageMeta={Pagemeta} />
       <Pipbanner onScrollClick={scrollToCalculator}/>
       <Pipworkstep />
       <div ref={calculatorRef}>

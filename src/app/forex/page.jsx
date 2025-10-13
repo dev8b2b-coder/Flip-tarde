@@ -62,7 +62,7 @@ const pointdata = [
     icon: setp4
   }
 ];
-const pagehead = {
+export const metadata = {
   title: "Forex Trading Online Platform | Trade Currency Pairs FlipTrade",
   description:
     "Trade major, minor, and exotic forex pairs on FlipTrade. Enjoy tight spreads, fast execution, and flexible leverage to enhance your online forex trading experience securely."
@@ -70,7 +70,6 @@ const pagehead = {
 export default function page() {
   return (
     <div>
-      <PageHead PageMeta={pagehead} />
       <Marketbanner
         banner_title="Forex Trading | Online <br/> FX Trading"
         banner_discription="The FX market moves over $5 trillion daily, making it the <br/> world’s largest and most liquid."
