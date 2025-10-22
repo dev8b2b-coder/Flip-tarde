@@ -2,7 +2,7 @@
 import { useState } from "react";
 import plus from "../../../../public/icons/plus.svg";
 import Image from "next/image";
-const Faq = ({ faqData }) => {
+const Faq = ({ faqData, pt }) => {
   const [activeIndex, setActiveIndex] = useState(null);
 
   const toggleAnswer = index => {
@@ -10,7 +10,11 @@ const Faq = ({ faqData }) => {
   };
 
   return (
-    <div className="max-w-[900px] 2xl:max-w-7xl m-auto pt-6 md:pt-12 xl:pt-16">
+    <div
+      className={`max-w-[900px] 2xl:max-w-7xl m-auto ${pt === false
+        ? "pt-8"
+        : "pt-6 md:pt-12 xl:pt-16"} `}
+    >
       <div className="flex flex-col gap-4 md:gap-5 font_secondary">
         {faqData.map((faq, index) =>
           <div
@@ -45,9 +49,10 @@ const Faq = ({ faqData }) => {
                 maxHeight: activeIndex === index ? "200px" : "0px"
               }}
             >
-              <div className=" text-secondary text-base 2xl:text-xl font-light py-2 ps-[2%] text-start">
-                {faq.answer}
-              </div>
+              <div
+                className=" text-secondary text-base 2xl:text-xl font-light py-2 ps-[2%] text-start custome_faq"
+                dangerouslySetInnerHTML={{ __html: faq.answer }}
+              />
             </div>
           </div>
         )}
