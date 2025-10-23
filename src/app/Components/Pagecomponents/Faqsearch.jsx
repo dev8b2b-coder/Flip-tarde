@@ -215,21 +215,32 @@ const faqsmaindata = [
     },
     {
         id: 4,
-        faqtitle: "Funding & Withdrawals",
+        faqtitle: "Safety and Security of Funds",
         faqicon: wallet,
         faqiconwhite: walletwhite,
-        faqlist: [
-            {
-                question: "Is FlipTrade regulated?",
-                answer:
-                    "Yes, FlipTrade complies with international regulatory standards to ensure transparency and security."
-            },
-            {
-                question: "Where is FlipTrade based?",
-                answer:
-                    "FlipTrade operates globally with offices in multiple financial hubs."
-            }
-        ]
+       faqlist: [
+  {
+    question: "Where are my deposits held and is my money safe?",
+    answer:
+      "At FlipTrade Group, client funds are held in segregated accounts with 'AA-' rated banks, separate from the company’s funds, ensuring your money is secure and fully protected."
+  },
+  {
+    question: "Are my funds held in segregated bank accounts?",
+    answer:
+      "Yes, at FlipTrade Group, all client funds are securely held in segregated bank accounts, keeping them separate from the company’s funds for maximum safety."
+  },
+  {
+    question: "How is my personal information stored?",
+    answer:
+      "For full details on how your personal information is stored and protected, please refer to FlipTrade Group’s Privacy Policy here: https://www.fliptradegroup.com/privacy-policy/"
+  },
+  {
+    question: "Can you delete all my records from your system?",
+    answer:
+      "Due to regulations, FlipTrade Group retains transaction records securely but will remove you from all mailing lists."
+  }
+]
+
     },
     {
         id: 5,

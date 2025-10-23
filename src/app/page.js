@@ -7,7 +7,6 @@ import Exploremarket from "./Components/Pagecomponents/Exploremarket";
 import Workprocess from "./Components/Pagecomponents/Workprocess";
 import Tradingaccounts from "./Components/Pagecomponents/Tradingaccounts";
 import Tradeyourway from "./Components/Pagecomponents/Tradeyourway";
-import tradeyouwaygraf from "/public/images/tradeyouwaygraf.webp";
 
 function page() {
   return (

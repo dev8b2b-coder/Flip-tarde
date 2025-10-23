@@ -21,18 +21,18 @@ const Marketaccess = () => {
         </div>
 
         <div className="pt-12">
-          <div className="flex gap-2 justify-center">
+          <div className="flex flex-col lg:flex-row gap-2 justify-center">
             <div className="relative">
               <Image
                 src={cardarrowbgleft}
                 alt="bg"
                 width={1000}
                 height={500}
-                className="max-w-[625px]"
+                className="max-w-[625px] w-full m-auto"
               />
               <div className="absolute top-0 w-full h-[72%] flex justify-center items-center">
                 <div className="">
-                  <p className="text-2xl md:text-4xl lg:text-3xl 2xl:text-4xl null  font-medium text-white">
+                  <p className="text-xl md:text-2xl lg:text-4xl xl:text-3xl 2xl:text-4xl null  font-medium text-white text-center">
                     Multiple Instruments
                   </p>
                   <span className="list_text font-light text-center max-w-[350px] md:max-w-[unset] m-auto  pt-4 font_ternary leading-[28px] max-w[330px] min-h-[65px] h-full flex text-white justify-center">
@@ -47,11 +47,11 @@ const Marketaccess = () => {
                 alt="bg"
                 width={1000}
                 height={500}
-                className="max-w-[625px]"
+                className="max-w-[625px] w-full m-auto"
               />
               <div className="absolute top-0 w-full h-[72%] flex justify-center items-center">
                 <div className="">
-                  <p className="text-2xl md:text-4xl lg:text-3xl 2xl:text-4xl null  font-medium text-white">
+                  <p className="text-xl md:text-2xl lg:text-4xl xl:text-3xl 2xl:text-4xl null  font-medium text-white text-center">
                     Deep Liquidity
                   </p>
                   <span className="list_text font-light text-center max-w-[350px] md:max-w-[unset] m-auto  pt-4 font_ternary leading-[28px] max-w[330px] min-h-[65px] h-full flex text-white justify-center">
@@ -61,18 +61,18 @@ const Marketaccess = () => {
               </div>
             </div>
           </div>
-          <div className="flex gap-2 justify-center relative top-[-80px]">
+          <div className="flex flex-col lg:flex-row gap-2 justify-center relative lg:top-[-80px]">
             <div className="relative">
               <Image
                 src={cardarrowbgleft}
                 alt="bg"
                 width={1000}
                 height={500}
-                className="max-w-[625px]"
+                className="max-w-[625px] w-full m-auto"
               />
               <div className="absolute top-0 w-full h-[72%] flex justify-center items-center">
                 <div className="">
-                  <p className="text-2xl md:text-4xl lg:text-3xl 2xl:text-4xl null  font-medium text-white">
+                  <p className="text-xl md:text-2xl lg:text-4xl xl:text-3xl 2xl:text-4xl null  font-medium text-white text-center">
                     24/5 Access
                   </p>
                   <span className="list_text font-light text-center max-w-[350px] md:max-w-[unset] m-auto  pt-4 font_ternary leading-[28px] max-w[330px] min-h-[65px] h-full flex text-white justify-center">
@@ -87,11 +87,11 @@ const Marketaccess = () => {
                 alt="bg"
                 width={1000}
                 height={500}
-                className="max-w-[625px]"
+                className="max-w-[625px] w-full m-auto"
               />
               <div className="absolute top-0 w-full h-[72%] flex justify-center items-center">
                 <div className="">
-                  <p className="text-2xl md:text-4xl lg:text-3xl 2xl:text-4xl null  font-medium text-white">
+                  <p className="text-xl md:text-2xl lg:text-4xl xl:text-3xl 2xl:text-4xl null  font-medium text-white text-center">
                     One Account
                   </p>
                   <span className="list_text font-light text-center max-w-[350px] md:max-w-[unset] m-auto  pt-4 font_ternary leading-[28px] max-w[330px] min-h-[65px] h-full flex text-white justify-center">

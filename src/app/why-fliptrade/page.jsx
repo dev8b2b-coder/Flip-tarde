@@ -62,6 +62,11 @@ const faqData = [
       "VIP accounts provide premium spreads, lower fees, and priority support."
   }
 ];
+export const metadata = {
+  title: "Why Choose FlipTrade Group – Your Premier Forex & CFD Broker",
+  description:
+    "Trade with confidence at FlipTrade Group. Enjoy secure trading, transparent pricing, fast execution, and expert support. Experience why traders choose us."
+};
 function page() {
   return (
     <div>

@@ -1,28 +1,34 @@
 import React from "react";
-import faqbanner from "../../../../public/banners/defaultbgbanner.webp";
+import copytradingbanner from "../../../../public/banners/copytradingbanner.webp";
 import Title from "../Uiux/Title";
 import Discription from "../Uiux/Discription";
 import Button from "../Uiux/Button";
 import firebtn from "../../../../public/icons/firebtnicon.svg";
 import Image from "next/image";
-import faqsideimage from "../../../../public/images/faqsideimage.webp";
-const Faqbanner = () => {
+import SocialTradingright from "../../../../public/images/Social-Tradingright.webp";
+const Copytradingbanner = () => {
   return (
-    <div className="" style={{ backgroundImage: `url(${faqbanner.src})` }}>
-      <div className="inn_container pt-40 pb-20 ">
+    <div
+      className=""
+      style={{ backgroundImage: `url(${copytradingbanner.src})` }}
+    >
+      <div className="inn_container pt-40 pb-14 ">
         <div className="grid grid-cols-1 lg:grid-cols-2 ">
           <div className="flex flex-col justify-center text-center lg:text-start">
-            <Title title={"FlipTrade FAQ"} color={"gradient_text"} />
+            <Title
+              title={"Become a Fliptrade <br/> IB Partner"}
+              color={"gradient_text"}
+            />
             <div className="py-6">
               <Discription
                 dispription={
-                  "Find quick answers about account <br/> opening, trading, deposits, <br/> withdrawals, and more."
+                  "Earn commissions by referring traders to Fliptrade <br /> simple, transparent, and rewarding."
                 }
                 color={"text-[#D0D0D0]"}
               />
             </div>
             <Button
-              btn_name="View Pip Calculator"
+              btn_name="Join Now"
               border_color="border-primary"
               btn_bg={"bg-primary"}
               shadow={true}
@@ -30,13 +36,13 @@ const Faqbanner = () => {
               icon={firebtn}
             />
           </div>
-          <div>
+          <div className="pt-12 lg:pt-0">
             <Image
-              src={faqsideimage}
+              src={SocialTradingright}
               alt="side banner"
               width={1000}
               height={500}
-              className="max-w-[80%] m-auto"
+              className="max-w-[90%] m-auto"
             />
           </div>
         </div>
@@ -45,4 +51,4 @@ const Faqbanner = () => {
   );
 };
 
-export default Faqbanner;
+export default Copytradingbanner;
