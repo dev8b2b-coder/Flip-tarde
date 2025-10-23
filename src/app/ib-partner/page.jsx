@@ -10,31 +10,32 @@ import ibgrapsecondary from "../../../public/images/ibgrapsecondary.webp";
 import ibgrapsecondaryph from "../../../public/images/ibgrapsecondaryph.webp";
 const faqData = [
   {
-    question: "What account types are available?",
+    question: "What is an IB Partner?",
     answer:
-      "FlipTrade offers Standard, ECN, and VIP accounts with different features for traders of all levels."
+      "An IB Partner refers traders to Fliptrade and earns commissions from their trades."
   },
   {
-    question: "What is the minimum deposit?",
+    question: "How do I become an IB Partner?",
     answer:
-      "Minimum deposits vary by account type, making it easy for beginners and professionals to start trading."
+      "Sign up for the IB program on Fliptrade, complete the registration, and start referring traders."
   },
   {
-    question: "Do spreads differ by account type?",
+    question: "How much can I earn as an IB Partner?",
     answer:
-      "Yes, ECN and VIP accounts offer tighter spreads compared to Standard accounts."
+      "Earnings depend on the number of active referrals and their trading volume."
   },
   {
-    question: "Can I change my account type later?",
+    question: "How do I track my referrals and earnings?",
     answer:
-      "Yes, you can upgrade or switch accounts by contacting FlipTrade support."
+      "You can track all referrals, commissions, and performance through your IB dashboard."
   },
   {
-    question: "What benefits do VIP accounts offer?",
+    question: "Are there any limits on how many traders I can refer?",
     answer:
-      "VIP accounts provide premium spreads, lower fees, and priority support."
+      "No, there are no limits — you can refer as many traders as you like."
   }
 ];
+
 export const metadata = {
   title: "IB Partner Program – FlipTrade Group | Earn with Trade Referrals",
   description:

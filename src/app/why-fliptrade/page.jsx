@@ -37,31 +37,32 @@ const pointdata = [
 ];
 const faqData = [
   {
-    question: "What account types are available?",
+    question: "Are there any hidden fees on Fliptrade?",
     answer:
-      "FlipTrade offers Standard, ECN, and VIP accounts with different features for traders of all levels."
+      "No. Fliptrade offers full transparency — you only pay spreads and commissions as clearly stated."
   },
   {
-    question: "What is the minimum deposit?",
+    question: "What are Fliptrade’s spreads?",
     answer:
-      "Minimum deposits vary by account type, making it easy for beginners and professionals to start trading."
+      "Fliptrade provides competitive and variable spreads depending on market conditions, ensuring fair and transparent pricing for all trades."
   },
   {
-    question: "Do spreads differ by account type?",
+    question: "Does Fliptrade charge deposit or withdrawal fees?",
     answer:
-      "Yes, ECN and VIP accounts offer tighter spreads compared to Standard accounts."
+      "No, Fliptrade does not charge any deposit or withdrawal fees. However, your bank or payment provider may apply standard transfer charges."
   },
   {
-    question: "Can I change my account type later?",
+    question: "How can I check live pricing?",
     answer:
-      "Yes, you can upgrade or switch accounts by contacting FlipTrade support."
+      "You can view real-time prices directly on Fliptrade’s trading platform or app. Live updates ensure you always trade at accurate market rates."
   },
   {
-    question: "What benefits do VIP accounts offer?",
+    question: "Does Fliptrade offer different pricing for different accounts?",
     answer:
-      "VIP accounts provide premium spreads, lower fees, and priority support."
+      "Yes, Fliptrade may offer different spreads or commission structures based on your account type and trading volume. All details are clearly displayed in your account settings."
   }
 ];
+
 export const metadata = {
   title: "Why Choose FlipTrade Group – Your Premier Forex & CFD Broker",
   description:

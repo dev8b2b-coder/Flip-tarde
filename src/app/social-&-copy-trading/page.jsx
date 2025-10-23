@@ -10,31 +10,32 @@ import Title from "../Components/Uiux/Title";
 import Faq from "../Components/Pagecomponents/Faq";
 const faqData = [
   {
-    question: "What account types are available?",
+    question: "What is Copy Trading?",
     answer:
-      "FlipTrade offers Standard, ECN, and VIP accounts with different features for traders of all levels."
+      "Copy Trading lets you automatically mirror expert traders’ strategies and trade smarter instantly."
   },
   {
-    question: "What is the minimum deposit?",
+    question: "What is Social Trading?",
     answer:
-      "Minimum deposits vary by account type, making it easy for beginners and professionals to start trading."
+      "Social Trading allows traders to share, follow, and learn from each other’s strategies in real time."
   },
   {
-    question: "Do spreads differ by account type?",
+    question: "How do I start Copy Trading?",
     answer:
-      "Yes, ECN and VIP accounts offer tighter spreads compared to Standard accounts."
+      "Simply create an account, choose an expert trader to copy, and set your investment amount."
   },
   {
-    question: "Can I change my account type later?",
+    question: "Can I control my risk?",
     answer:
-      "Yes, you can upgrade or switch accounts by contacting FlipTrade support."
+      "Yes, you can manage your risk by setting limits, adjusting trade size, or stopping copying anytime."
   },
   {
-    question: "What benefits do VIP accounts offer?",
+    question: "Can I become a trader that others can copy?",
     answer:
-      "VIP accounts provide premium spreads, lower fees, and priority support."
+      "Yes, experienced traders can apply to become strategy providers and earn from their followers’ trades."
   }
 ];
+
 export const metadata = {
   title: "Social & Copy Trading – FlipTrade Group | Follow Top Traders",
   description:
