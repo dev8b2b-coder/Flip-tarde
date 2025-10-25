@@ -10,11 +10,11 @@ const Copytradingwork = () => {
         className="bg-no-repeat bg-cover"
         style={{ backgroundImage: `url(${boxbg.src})` }}
       >
-        <div className="inn_container grid grid-cols-2 py-12 md:py-18">
-          <div className="flex flex-col gap-18 relative left-[7%]">
-            <div className="w-max  bg-white ml-auto border-r-[3px] border-black">
+        <div className="inn_container grid grid-cols-1 lg:grid-cols-2 py-12 md:py-18">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-18 relative lg:left-[7%]">
+            <div className="lg:w-max  bg-white  lg:ml-auto border-b-[1px] lg:border-b-0 border-r-0 lg:border-r-[3px] border-black">
               <div className="p-4">
-                <h5 className="text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl lg:leading-[35px]  font-medium text-primary text-end">
+                <h5 className="text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl lg:leading-[35px]  font-medium text-primary text-center lg:text-end">
                   Monitor & Adjust
                 </h5>
                 <p className="list_text font-light font_ternary  max-w-[400px]  text-center md:text-end lg:max-w-[unset] md:text-[unset] leading-6 xl:leading-[28px]">
@@ -22,9 +22,9 @@ const Copytradingwork = () => {
                 </p>
               </div>
             </div>
-            <div className="w-max  bg-white mx-auto border-r-[3px] border-black">
+            <div className="lg:w-max  bg-white  lg:mx-auto border-b-[1px] lg:border-b-0 border-r-0 lg:border-r-[3px] border-black">
               <div className="p-4">
-                <h5 className="text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl lg:leading-[35px]  font-medium text-primary text-end">
+                <h5 className="text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl lg:leading-[35px]  font-medium text-primary text-center lg:text-end">
                   Set Your Limits
                 </h5>
                 <p className="list_text font-light font_ternary  max-w-[400px]  text-center md:text-end lg:max-w-[unset] md:text-[unset] leading-6 xl:leading-[28px]">
@@ -32,9 +32,9 @@ const Copytradingwork = () => {
                 </p>
               </div>
             </div>
-            <div className="w-max bg-white mx-auto border-r-[3px] border-black">
+            <div className="lg:w-max bg-white  lg:mx-auto border-b-[1px] lg:border-b-0 border-r-0 lg:border-r-[3px] border-black">
               <div className="p-4">
-                <h5 className="text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl lg:leading-[35px]  font-medium text-primary text-end">
+                <h5 className="text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl lg:leading-[35px]  font-medium text-primary text-center lg:text-end">
                   Follow or Copy
                 </h5>
                 <p className="list_text font-light font_ternary  max-w-[400px]  text-center md:text-end lg:max-w-[unset] md:text-[unset] leading-6 xl:leading-[28px]">
@@ -43,9 +43,9 @@ const Copytradingwork = () => {
                 </p>
               </div>
             </div>
-            <div className="w-max bg-white ml-auto border-r-[3px] border-black">
+            <div className="lg:w-max bg-white  lg:ml-auto border-b-[1px] lg:border-b-0 border-r-0 lg:border-r-[3px] border-black">
               <div className="p-4">
-                <h5 className="text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl lg:leading-[35px]  font-medium text-primary text-end">
+                <h5 className="text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl lg:leading-[35px]  font-medium text-primary text-center lg:text-end">
                   Discover Top Traders
                 </h5>
                 <p className="list_text font-light font_ternary  max-w-[400px]  text-center md:text-end lg:max-w-[unset] md:text-[unset] leading-6 xl:leading-[28px]">
@@ -56,14 +56,14 @@ const Copytradingwork = () => {
             </div>
           </div>
 
-          <div className="flex items-center">
-            <div className="relative w-max">
+          <div className="flex items-center pt-12 lg:pt-0">
+            <div className="relative w-[60%] lg:w-max m-auto ">
               <Image
                 src={copytradingwork}
                 alt="img"
                 width={1000}
                 height={500}
-                className="max-w-[540px]"
+                className="max-w-[100%] lg:max-w-[540px]"
               />
 
               <div className="absolute w-full h-full top-0 flex justify-center items-center">

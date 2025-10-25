@@ -13,7 +13,7 @@ const Whatcopytrading = () => {
         className=" bg-left bg-no-repeat bg-contain"
         style={{ backgroundImage: `url(${whatcopytradingbg.src})` }}
       >
-        <div className="inn_container grid grid-cols-2 gap-6">
+        <div className="inn_container grid lg:grid-cols-2 gap-6">
           <div>
             <Image
               src={whatcopytradingleft}
@@ -23,7 +23,7 @@ const Whatcopytrading = () => {
               className=""
             />
           </div>
-          <div>
+          <div className="text-center lg:text-start">
             <Title
               title={"What Is Social & <br/> Copy Trading?"}
               color={"text-secondary"}

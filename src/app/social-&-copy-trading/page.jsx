@@ -8,6 +8,7 @@ import ibgrapsecondaryph from "../../../public/images/ibgrapsecondaryph.webp";
 import Grapsecondary from "../Components/Pagecomponents/Grapsecondary";
 import Title from "../Components/Uiux/Title";
 import Faq from "../Components/Pagecomponents/Faq";
+import Tradefliptrade from "../Components/Pagecomponents/Tradefliptrade";
 const faqData = [
   {
     question: "What is Copy Trading?",
@@ -47,6 +48,7 @@ const page = () => {
       <Copytradingbanner />
       <Whatcopytrading />
       <Copytradingwork />
+      <Tradefliptrade />
       <Grapsecondary
         desktopbanner={copytradingdesktop}
         phonetabbanner={ibgrapsecondaryph}

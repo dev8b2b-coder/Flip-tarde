@@ -39,7 +39,7 @@ const footerdata = {
   ],
   carddata: [
     {
-      title: "Physical Address",
+      title: "Head Quarter",
       discription:
         "Giorgi Leonid Ze Street, Tbilisi 0105, <br/> Georgia Office 38.",
       link: false
