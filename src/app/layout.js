@@ -5,6 +5,7 @@ import Fotter from "./Components/Uiux/Fotter";
 import Canonical from "./Canonical";
 import GoogleAnalytics from "./GoogleAnalytics";
 import Metalinksseo from "./Metalinksseo";
+import Telegramlink from "./Telegramlink";
 const monaSans = localFont({
   src: [{ path: "../../public/fonts/Mona-Sans-MediumWide.ttf" }],
 
@@ -53,6 +54,9 @@ export default function RootLayout({ children }) {
           </div>
           {children}
           <Fotter />
+          <div className="fixed left-0 bottom-0">
+            <Telegramlink />
+          </div>
         </div>
         <Metalinksseo />
         <script>{` ;(function(_, m) { const orufyConnectSettings = { appId: 'wsxQa3dGW436zgdZgOzyNHB47qdKdl7S' }; const s = document.createElement("script"); s.type = "text/javascript"; s.async = true; s.src = 'https://widget.connect.orufy.com/widget.js'; const head = document.getElementsByTagName("head")[0]; head?.appendChild(s); window.orufy_connect = m; m._globals = orufyConnectSettings; })(document, window.orufy_connect || {}) `}</script>

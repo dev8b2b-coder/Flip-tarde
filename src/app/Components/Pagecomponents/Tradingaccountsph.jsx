@@ -132,18 +132,14 @@ const CardContent = ({ data, index }) =>
         </li>
       )}
       <li className="list-none text-center pt-3">
-        <p className="text-[13.7px] lg:text-lg 2xl:text-[22px]">
-          Commission
-        </p>
+        <p className="text-[13.7px] lg:text-lg 2xl:text-[22px]">Commission</p>
         <span className="text-[12.5px] lg:text-base 2xl:text-xl text-ternary ">
           {data.Commission ? "Yes" : "No"}
         </span>
       </li>
       <div className="relative top-8">
         {index % 2 === 0
-          ? <Link
-              href={"https://client.fliptradegroup.com/trader/registration"}
-            >
+          ? <Link href={data.pagelink}>
               <Button
                 btn_name={"Open Account"}
                 icon={firebtniconblue.src}
@@ -153,9 +149,7 @@ const CardContent = ({ data, index }) =>
                 shadow={true}
               />
             </Link>
-          : <Link
-              href={"https://client.fliptradegroup.com/trader/registration"}
-            >
+          : <Link href={data.pagelink}>
               <Button
                 btn_name={"Open Account"}
                 icon={firebtn.src}

@@ -13,82 +13,109 @@ import Bitcoin from "../../../../public/icons/Bitcoin.svg";
 import Tradingaccountsph from "./Tradingaccountsph";
 import Link from "next/link";
 const accountinfo = [
-    {
+  {
     acount_title: "Standard <br/>  Account",
     min_deposit: "$25",
-    Swap_Free: "No",
+    Swap_Free: "Yes",
     spreads: "1.2",
-    Commission: false
+    Commission: false,
+    pagelink: "/standard-account"
   },
   {
     acount_title: "Classic <br/> Account",
     min_deposit: "$100",
     Swap_Free: "Yes",
     spreads: "0.8",
-    Commission: false
+    Commission: false,
+    pagelink: "/classic-account"
   },
 
   {
     acount_title: "ECN  <br/>  Account",
     min_deposit: "$200",
-    Swap_Free: "NO",
+    Swap_Free: "Yes",
     spreads: "Raw Spread",
-    Commission: true
+    Commission: true,
+    pagelink: "/enc-account"
   },
   {
     acount_title: "Professional <br/>  Account",
     min_deposit: "$500",
     Swap_Free: "Yes",
     spreads: "Raw Spread",
-    Commission: true
+    Commission: true,
+    pagelink: "/professional-account"
   }
 ];
 const accountinfoph = [
+  ,
+  {
+    acount_title: "Standard <br/>  Account",
+    min_deposit: "$25",
+    Swap_Free: "Yes",
+    spreads: "1.2",
+    Commission: false,
+    pagelink: "/standard-account"
+  },
   {
     acount_title: "Classic <br/> Account",
     min_deposit: "$100",
     Swap_Free: "Yes",
     spreads: "0.8",
-    Commission: false
+    Commission: false,
+    pagelink: "/classic-account"
   },
 
   {
     acount_title: "ECN  <br/>  Account",
     min_deposit: "$200",
-    Swap_Free: "NO",
+    Swap_Free: "Yes",
     spreads: "Raw Spread",
-    Commission: true
+    Commission: true,
+    pagelink: "/enc-account"
   },
   {
     acount_title: "Professional <br/>  Account",
     min_deposit: "$500",
     Swap_Free: "Yes",
     spreads: "Raw Spread",
-    Commission: true
+    Commission: true,
+    pagelink: "/professional-account"
   },
 
-  // copy for slider loop
+  //copy for slider working properly
+  {
+    acount_title: "Standard <br/>  Account",
+    min_deposit: "$25",
+    Swap_Free: "Yes",
+    spreads: "1.2",
+    Commission: false,
+    pagelink: "/standard-account"
+  },
   {
     acount_title: "Classic <br/> Account",
     min_deposit: "$100",
     Swap_Free: "Yes",
     spreads: "0.8",
-    Commission: false
+    Commission: false,
+    pagelink: "/classic-account"
   },
 
   {
     acount_title: "ECN  <br/>  Account",
     min_deposit: "$200",
-    Swap_Free: "NO",
+    Swap_Free: "Yes",
     spreads: "Raw Spread",
-    Commission: true
+    Commission: true,
+    pagelink: "/enc-account"
   },
   {
     acount_title: "Professional <br/>  Account",
     min_deposit: "$500",
     Swap_Free: "Yes",
     spreads: "Raw Spread",
-    Commission: true
+    Commission: true,
+    pagelink: "/professional-account"
   }
 ];
 function Tradingaccounts() {
@@ -177,9 +204,7 @@ function Tradingaccounts() {
                           <div className="relative top-8">
                             {index % 2 === 0
                               ? <Link
-                                  href={
-                                    "https://client.fliptradegroup.com/trader/registration"
-                                  }
+                                  href={data.pagelink}
                                 >
                                   <Button
                                     btn_name={"Open Account"}
@@ -191,9 +216,7 @@ function Tradingaccounts() {
                                   />
                                 </Link>
                               : <Link
-                                  href={
-                                    "https://client.fliptradegroup.com/trader/registration"
-                                  }
+                                  href={data.pagelink}
                                 >
                                   <Button
                                     btn_name={"Open Account"}
@@ -241,7 +264,7 @@ function Tradingaccounts() {
             </div>
           </div>
           <div className="block xl:hidden">
-           <Tradingaccountsph accountinfo={accountinfoph} />
+            <Tradingaccountsph accountinfo={accountinfoph} />
           </div>
         </div>
       </div>

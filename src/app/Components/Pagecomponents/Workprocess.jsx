@@ -7,7 +7,7 @@ import Image from "next/image";
 export default function Workprocess() {
   return (
     <div className="bg-white">
-      <div className="pt-12 md:pt-22 lg:pt-36">
+      <div className="pt-10 md:pt-18 lg:pt-24">
         <div
           className="bg-cover"
           style={{ backgroundImage: `url(${workprocessbanner.src})` }}
@@ -89,6 +89,7 @@ export default function Workprocess() {
               </div>
             </div>
           </div>
+          
           <div className="">
             <div className="block md:hidden">
               <div

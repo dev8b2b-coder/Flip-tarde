@@ -53,16 +53,16 @@ const Buildtrader = () => {
           {buildtradetagcard.map((data, index) =>
             <div
               key={index}
-              className={`bg-[#F3EFFF] flex flex-col items-center gap-2 lg:gap-4 2xl:gap-5 py-[24px] md:py-[30px] lg:py-[46px] 
+              className={` flex flex-col items-center gap-2 lg:gap-4 2xl:gap-5 py-[24px] md:py-[30px] lg:py-[46px] rounded-2xl 
                 ${index % 2 === 0
-                  ? "[clip-path:polygon(0_0,80%_0,100%_25%,100%_100%,20%_100%,0_75%)]"
-                  : "[clip-path:polygon(20%_0,100%_0,100%_75%,80%_100%,0_100%,0_25%)]"} `}
+                  ? "[clip-path:polygon(0_0,80%_0,100%_25%,100%_100%,20%_100%,0_75%)] bg-[#6A40EB] shadow-[inset_1px_0px_20px_20px_#462A9C]"
+                  : "[clip-path:polygon(20%_0,100%_0,100%_75%,80%_100%,0_100%,0_25%)] bg-[#B46AFF] shadow-[inset_1px_0px_20px_20px_#7E4AB2]"} `}
             >
-              <p className="text-lg md:text-2xl xl:text-3xl 2xl:text-4xl font-semibold text-primary md:min-w-[200px] text-center pb-4 2xl:pb-5 border-b-[3px] !border-solid border-[#BCC1FF]">
+              <p className="text-lg md:text-2xl xl:text-3xl 2xl:text-4xl font-semibold text-white md:min-w-[200px] text-center pb-4 2xl:pb-5 border-b-[3px] !border-solid border-[#BCC1FF]">
                 {data.title}
               </p>
               <p
-                className="list_text font-light text-center font_ternary leading-6 xl:leading-[28px] px-3 md:px-0"
+                className="list_text font-light text-center font_ternary text-white leading-6 xl:leading-[28px] px-3 md:px-0"
                 dangerouslySetInnerHTML={{ __html: data.sub_title }}
               />
             </div>

@@ -8,6 +8,7 @@ import Discription from "../Uiux/Discription";
 import Button from "../Uiux/Button";
 import downloadicon from "../../../../public/icons/downloadicon.svg";
 import Faq from "./Faq";
+import Yourway from "./Yourway";
 const faqData = [
   {
     question: "What is FlipTrade?",
@@ -35,58 +36,10 @@ const faqData = [
 const Tradeyourway = () => {
   return (
     <div className="bg-white">
-      <div className="xl:py-32">
-        <div className="text-center">
-          <Title title={"Trade It Your Way"} color="text-secondary" />
-        </div>
+      <div className="">
+        <Yourway />
         <div>
-          <div className="relative">
-            <Image
-              src={tradeyouwaygraf}
-              alt="#"
-              width={2000}
-              height={1000}
-              className="w-full"
-            />
-            <div className="absolute top-0 w-full h-full">
-              <div className="inn_container relative w-full h-full flex items-center">
-                <div className="relative hidden md:flex w-full font_ternary font-normal justify-between px-[1.5%] top-[10%]">
-                  <div className="text-[16px] lg:text-2xl 2xl:text-[32px] font-normal flex items-center bg-white border-[3px] border-dashed border-[#979797] rounded-[60px]  2xl:py-4 py-1.5 lg:py-3 px-5 lg:px-10 2xl:px-12 gap-3">
-                    <span className="w-[11px] h-[11px] bg-primary flex rounded-[50%]" />{" "}
-                    Instant Deposit
-                  </div>
-                  <div className="text-[16px] lg:text-2xl 2xl:text-[32px] font-normal flex items-center bg-white border-[3px] border-dashed border-[#979797] rounded-[60px]  2xl:py-4 py-1.5 lg:py-3 px-5 lg:px-10 2xl:px-12 gap-3">
-                    <span className="w-[11px] h-[11px] bg-primary flex rounded-[50%]" />{" "}
-                    Fast Withdrawal
-                  </div>
-                  <div className="text-[16px] lg:text-2xl 2xl:text-[32px] font-normal flex items-center bg-white border-[3px] border-dashed border-[#979797] rounded-[60px]  2xl:py-4 py-1.5 lg:py-3 px-5 lg:px-10 2xl:px-12 gap-3">
-                    <span className="w-[11px] h-[11px] bg-primary flex rounded-[50%]" />{" "}
-                    0% Commission
-                  </div>
-                </div>
-
-                <div className="relative pt-24 gap-3 flex flex-col md:hidden w-full font_ternary font-normal items-center justify-between px-[1.5%] top-[10%]">
-                  <div className="flex gap-3 w-full justify-center">
-                    <div className="text-[13px] 2xl:text-[32px] font-normal flex items-center bg-white border-[3px] border-dashed border-[#979797] rounded-[60px]  2xl:py-4 py-2  px-4 2xl:px-12 gap-3">
-                      <span className="w-[11px] h-[11px] bg-primary flex rounded-[50%]" />{" "}
-                      Instant Deposit
-                    </div>
-                    <div className="text-[13px] 2xl:text-[32px] font-normal flex items-center bg-white border-[3px] border-dashed border-[#979797] rounded-[60px]  2xl:py-4 py-2  px-4 2xl:px-12 gap-3">
-                      <span className="w-[11px] h-[11px] bg-primary flex rounded-[50%]" />{" "}
-                      Fast Withdrawal
-                    </div>
-                  </div>
-                  <div>
-                    <div className="text-[13px] 2xl:text-[32px] w-max font-normal flex items-center bg-white border-[3px] border-dashed border-[#979797] rounded-[60px]  2xl:py-4 py-2  px-4 2xl:px-12 gap-3">
-                      <span className="w-[11px] h-[11px] bg-primary flex rounded-[50%]" />{" "}
-                      0% Commission
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="inn_container pt-20 md:pt-12 lg:pt-28 xl:pt-32">
+          <div className="inn_container pt-20 md:pt-12 lg:pt-18 xl:pt-24">
             <div className="text-center">
               <Title
                 title={`Frequently Asked <br/> Questions`}

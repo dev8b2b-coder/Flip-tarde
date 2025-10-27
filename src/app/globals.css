@@ -6,6 +6,12 @@
   --secondary: #212121;
   --ternary: #434343;
   --lightsecondry: #16141B;
+  --bgtheme: #ffffff;
+}
+
+
+.bg-theme {
+  background-color: var(--bgtheme);
 }
 
 /* Set dynamic color according Tailwind v4 */
@@ -310,6 +316,14 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
     font-size: 40px;
     line-height: 60px;
   }
+
+  .bg_image_none {
+    background-image: none !important;
+  }
+
+  .newgenbg {
+    background-image: url(../../public/images/bluebg.webp) !important;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -345,9 +359,10 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
     min-height: 36px !important;
     padding: 0 14px !important;
   }
+
   span.swiper-pagination-bullet.swiper-pagination-bullet-active {
-  width: 30px;
-}
+    width: 30px;
+  }
 
 }
 
@@ -355,9 +370,10 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
 @theme  {
    --breakpoint-2xl: 1680px;
 } */
- .tradingview-widget-container.min-h-\[500px\].h-full {
-    width: auto !important;
+.tradingview-widget-container.min-h-\[500px\].h-full {
+  width: auto !important;
 }
+
 /* Chrome, Safari, Edge, Opera */
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
@@ -370,3 +386,10 @@ input[type=number] {
   -moz-appearance: textfield;
 }
 
+.custome_faq a {
+  color: var(--primary);
+}
+
+.newgenbg {
+  background-image: url(../../public/images/nextgenbg.webp);
+}
