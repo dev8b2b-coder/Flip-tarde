@@ -4,12 +4,12 @@ import Accountgetstarted from "../Components/Pagecomponents/Accouttypes/Accountg
 import Accountchoose from "../Components/Pagecomponents/Accouttypes/Accountchoose";
 import Accountcards from "../Components/Pagecomponents/Accouttypes/Accountcards";
 import Accountgetstart from "../Components/Pagecomponents/Accouttypes/Accountgetstart";
-import standardaccgrap from "../../../public/images/standardaccgrap.webp";
-import standardaccgrapph from "../../../public/images/standardaccgrapph.webp";
+import classicaccgrap from "../../../public/images/classicaccgrap.webp";
+import classicaccgrapph from "../../../public/images/classicaccgrapph.webp";
 import Accountgrap from "../Components/Pagecomponents/Accouttypes/Accountgrap";
 import Title from "../Components/Uiux/Title";
 import Faq from "../Components/Pagecomponents/Faq";
-import standardbannerright from "/public/images/standardbannerright.webp";
+import classicbannerright from "/public/images/classicbannerright.webp";
 import acountcard1 from "/public/icons/acountcard1.svg";
 import acountcard2 from "/public/icons/acountcard2.svg";
 import acountcard3 from "/public/icons/acountcard3.svg";
@@ -45,66 +45,70 @@ const features = [
   {
     icon: acountcard1,
     title: "Experienced Traders",
-    description: "Trade frequently with <br/> defined strategies.",
+    description: "For those ready to trade <br/> more consistently.",
     class: "z-[4]"
   },
   {
     icon: acountcard2,
-    title: "High-Capital Traders",
-    description: "Maximize efficiency where <br /> spreads matter.",
+    title: "Cost-Efficient Trading",
+    description: "Tighter spreads without <br/> commissions.",
     class: "xl:w-[120%] left-[-20%] z-[3]"
   },
   {
     icon: acountcard3,
-    title: "Algo Traders",
-    description: "Seek optimal execution <br /> and speed.",
+    title: "Swap-Free Flexibility",
+    description: "Trade without paying or <br/> receiving swaps.",
     class: "xl:w-[120%] left-[-20%] z-[2]"
   }
 ];
 
 const cardphdata = [
-  "Register your account on FlipTrade.",
-  "Complete the KYC (Know Your Customer) process.",
-  "Deposit at least the minimum ($25).",
-  "Choose “Standard Account” as your account type in the dashboard.",
-  "Begin trading."
+  "Sign in / register with FlipTrade.",
+  "Pass the required verification / KYC.",
+  "Deposit at least $100.",
+  "Select the Classic Account type.",
+  "Set up your trading platform and strategies."
 ];
 const page = () => {
   return (
     <div>
       <Accountsbanner
-        title={"Standard Account – Your  Step into Trading"}
+        title={"Classic Account – Trade with Confidence"}
         description={
-          "Get started with minimal risk—our Standard Account is designed for new  traders ready to grow."
+          "Step up your trading game with the Classic Account — perfect  for traders who want tighter spreads, faster execution, and  more control over their strategies."
         }
-        bannerposter={standardbannerright}
+        bannerposter={classicbannerright}
       />
       <Accountgetstarted
         description={
-          "Essential features designed for new traders—simple, <br/> transparent, and ready for your first trade."
+          "Advanced features for growing traders—competitive, <br/> reliable, and built for consistent performance."
         }
-        mini_depo={"$25"}
-        spreads_from={"1.2 pips"}
+        mini_depo={"$100"}
+        spreads_from={"0.8 pips"}
         swap_free={"Yes"}
         commission={"No"}
       />
       <Accountchoose
-        title={"Why Choose the <br/> Standard Account?"}
+        title={"Why Choose the <br/> Classic Account?"}
         description={
-          "Trade easily, transparently, and flexibly—perfect <br/> for beginners exploring the markets."
+          "Trade with greater precision, tighter spreads, and <br/> enhanced tools—ideal for traders ready to take <br/> their skills to the next level."
         }
-        cardtitle1={"Low barrier to entry"}
-        card_desc1={"Just a small deposit to begin trading."}
-        cardtitle2={"Simple cost structure"}
-        card_desc2={"No hidden commissions, clear spreads."}
-        cardtitle3={"Flexibility"}
+        cardtitle1={"Tighter Spreads"}
+        card_desc1={
+          "Lower trading costs compared to Standard, <br/> giving you more value per trade."
+        }
+        cardtitle2={"Swap-Free Option"}
+        card_desc2={
+          "Available for traders who cannot pay or receive swaps <br/> due to regulatory or religious reasons."
+        }
+        cardtitle3={"Optimized for Serious Traders"}
         card_desc3={
-          "Suits traders exploring forex, indices, commodities, crypto <br/> and more under the FlipTrade platform."
+          "Designed for cost-conscious traders ready to <br/> trade with precision and confidence."
         }
       />
       <Accountcards
         description={
-          "Ideal for beginners, part-time traders, or anyone <br/> starting small before scaling up."
+          "Perfect for growing traders, part-time traders, or anyone <br/> ready to step up from a Standard Account."
         }
         carddata={features}
       />
@@ -112,20 +116,18 @@ const page = () => {
         description={
           "Essential features designed for new traders—simple, <br/> transparent, and ready for your first trade."
         }
-        card1desk={"Register your account <br/> on FlipTrade."}
-        card2desk={"Complete the KYC (Know <br/> Your Customer) process."}
-        card3desk={"Deposit at least the <br/> minimum ($25)."}
-        card4desk={
-          "Choose “Standard Account” <br/> as your account type in the <br/>  dashboard."
-        }
-        card5desk={"Begin <br/> trading."}
+        card1desk={"Sign in / register with <br/> FlipTrade."}
+        card2desk={"Pass the required <br/> verification / KYC."}
+        card3desk={"Deposit at least <br /> $100."}
+        card4desk={"Select the Classic <br/> Account type."}
+        card5desk={"Set up your trading <br/> platform and strategies."}
         cardphdata={cardphdata}
       />
       <Accountgrap
-        desktopbanner={standardaccgrap}
-        phonetabbanner={standardaccgrapph}
-        title={"Trade Easy <br/> with Standard"}
-        description={`Open a Standard Account with just $25 and take <br/> your first step into the markets.`}
+        desktopbanner={classicaccgrap}
+        phonetabbanner={classicaccgrapph}
+        title={"Classic Trading <br/> Made Easy"}
+        description={'Open a Classic Account with just $100 and <br/> elevate your trading experience.'}
         btnname={"Open Account Now"}
       />
       <div className="bg-white py-12 md:py-18 lg:py-24">

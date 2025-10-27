@@ -4,12 +4,12 @@ import Accountgetstarted from "../Components/Pagecomponents/Accouttypes/Accountg
 import Accountchoose from "../Components/Pagecomponents/Accouttypes/Accountchoose";
 import Accountcards from "../Components/Pagecomponents/Accouttypes/Accountcards";
 import Accountgetstart from "../Components/Pagecomponents/Accouttypes/Accountgetstart";
-import standardaccgrap from "../../../public/images/standardaccgrap.webp";
-import standardaccgrapph from "../../../public/images/standardaccgrapph.webp";
+import encaccgrap from "../../../public/images/encaccgrap.webp";
+import encaccgrapph from "../../../public/images/encaccgrapph.webp";
 import Accountgrap from "../Components/Pagecomponents/Accouttypes/Accountgrap";
 import Title from "../Components/Uiux/Title";
 import Faq from "../Components/Pagecomponents/Faq";
-import standardbannerright from "/public/images/standardbannerright.webp";
+import encbannerright from "/public/images/encbannerright.webp";
 import acountcard1 from "/public/icons/acountcard1.svg";
 import acountcard2 from "/public/icons/acountcard2.svg";
 import acountcard3 from "/public/icons/acountcard3.svg";
@@ -44,88 +44,92 @@ const faqData = [
 const features = [
   {
     icon: acountcard1,
-    title: "Experienced Traders",
-    description: "Trade frequently with <br/> defined strategies.",
+    title: "High-Capital Traders",
+    description: "Trade frequently with <br/> well-defined strategies.",
     class: "z-[4]"
   },
   {
     icon: acountcard2,
-    title: "High-Capital Traders",
-    description: "Maximize efficiency where <br /> spreads matter.",
+    title: "Seasoned Traders",
+    description: "Take advantage of tight <br/> spreads on larger trades.",
     class: "xl:w-[120%] left-[-20%] z-[3]"
   },
   {
     icon: acountcard3,
-    title: "Algo Traders",
-    description: "Seek optimal execution <br /> and speed.",
+    title: "Automated Traders",
+    description: "Optimized for algorithmic <br/> and professional trading.",
     class: "xl:w-[120%] left-[-20%] z-[2]"
   }
 ];
 
 const cardphdata = [
-  "Register your account on FlipTrade.",
-  "Complete the KYC (Know Your Customer) process.",
-  "Deposit at least the minimum ($25).",
-  "Choose “Standard Account” as your account type in the dashboard.",
-  "Begin trading."
+  "Register or log in to FlipTrade.",
+  "Complete KYC verification.",
+  "Deposit a minimum of $200.",
+  "Select ECN Account.",
+  "Review commission and trading costs."
 ];
 const page = () => {
   return (
     <div>
       <Accountsbanner
-        title={"Standard Account – Your  Step into Trading"}
+        title={"ECN Account – Trade Like a Pro"}
         description={
-          "Get started with minimal risk—our Standard Account is designed for new  traders ready to grow."
+          "Take your trading to the next level with the ECN Account — designed for serious traders seeking ultra-tight spreads, lightning-fast  execution, and direct market access."
         }
-        bannerposter={standardbannerright}
+        bannerposter={encbannerright}
       />
       <Accountgetstarted
         description={
-          "Essential features designed for new traders—simple, <br/> transparent, and ready for your first trade."
+          "Advanced features for growing traders—competitive, <br/> reliable, and built for consistent performance."
         }
-        mini_depo={"$25"}
-        spreads_from={"1.2 pips"}
+        mini_depo={"$200"}
+        spreads_from={"Raw Spreads"}
         swap_free={"Yes"}
         commission={"No"}
       />
       <Accountchoose
-        title={"Why Choose the <br/> Standard Account?"}
+        title={"Why Choose the <br/> EDN Account?"}
         description={
-          "Trade easily, transparently, and flexibly—perfect <br/> for beginners exploring the markets."
+          "Trade with ultra-tight spreads, lightning-fast execution, <br/> and direct market access—perfect for professional <br/> and high-volume traders."
         }
-        cardtitle1={"Low barrier to entry"}
-        card_desc1={"Just a small deposit to begin trading."}
-        cardtitle2={"Simple cost structure"}
-        card_desc2={"No hidden commissions, clear spreads."}
-        cardtitle3={"Flexibility"}
+        cardtitle1={"Ultra-Tight Spreads"}
+        card_desc1={
+          "Ideal for high-volume or frequent traders <br/> seeking lower trading costs."
+        }
+        cardtitle2={"Transparent Pricing"}
+        card_desc2={
+          "Raw spreads provide full market transparency, more <br/> competitive than standard spreads."
+        }
+        cardtitle3={"Advanced Strategy Ready"}
         card_desc3={
-          "Suits traders exploring forex, indices, commodities, crypto <br/> and more under the FlipTrade platform."
+          "Perfect for scalping or frequent trading where <br/> cost-efficiency is crucial."
         }
       />
       <Accountcards
         description={
-          "Ideal for beginners, part-time traders, or anyone <br/> starting small before scaling up."
+          "Designed for professional traders, scalpers, and <br/> high-volume traders seeking the fastest execution <br/> and tightest spreads."
         }
         carddata={features}
       />
       <Accountgetstart
         description={
-          "Essential features designed for new traders—simple, <br/> transparent, and ready for your first trade."
+          "Sign up, complete verification, deposit $200 or more, <br/> and start trading with ECN conditions."
         }
-        card1desk={"Register your account <br/> on FlipTrade."}
-        card2desk={"Complete the KYC (Know <br/> Your Customer) process."}
-        card3desk={"Deposit at least the <br/> minimum ($25)."}
-        card4desk={
-          "Choose “Standard Account” <br/> as your account type in the <br/>  dashboard."
-        }
-        card5desk={"Begin <br/> trading."}
+        card1desk={"Register or log in to <br/> FlipTrade."}
+        card2desk={"Complete KYC <br/> verification."}
+        card3desk={"Deposit a <br/> minimum of $200."}
+        card4desk={"Select ECN <br/> Account."}
+        card5desk={"Review commission <br/> and trading costs."}
         cardphdata={cardphdata}
       />
       <Accountgrap
-        desktopbanner={standardaccgrap}
-        phonetabbanner={standardaccgrapph}
-        title={"Trade Easy <br/> with Standard"}
-        description={`Open a Standard Account with just $25 and take <br/> your first step into the markets.`}
+        desktopbanner={encaccgrap}
+        phonetabbanner={encaccgrapph}
+        title={"ECN Trading <br/> Made Precise"}
+        description={
+          "Open an ECN Account with just $200 <br/> and trade like a professional."
+        }
         btnname={"Open Account Now"}
       />
       <div className="bg-white py-12 md:py-18 lg:py-24">

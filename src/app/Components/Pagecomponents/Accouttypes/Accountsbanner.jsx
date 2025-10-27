@@ -2,11 +2,10 @@ import React from "react";
 import copytradingbanner from "/public/banners/copytradingbanner.webp";
 import firebtn from "/public/icons/firebtnicon.svg";
 import Image from "next/image";
-import standardbannerright from "/public/images/standardbannerright.webp";
 import Title from "../../Uiux/Title";
 import Discription from "../../Uiux/Discription";
 import Button from "../../Uiux/Button";
-const Accountsbanner = () => {
+const Accountsbanner = ({title,description,bannerposter}) => {
   return (
     <div
       className=""
@@ -16,14 +15,12 @@ const Accountsbanner = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 ms-[7%]">
           <div className="flex flex-col justify-center text-center lg:text-start">
             <Title
-              title={"Standard Account – Your  Step into Trading"}
+              title={title}
               color={"gradient_text"}
             />
             <div className="py-6">
               <Discription
-                dispription={
-                  "Get started with minimal risk—our Standard Account is designed for new <br/> traders ready to grow."
-                }
+                dispription={description}
                 color={"text-[#D0D0D0]"}
               />
             </div>
@@ -38,7 +35,7 @@ const Accountsbanner = () => {
           </div>
           <div className="pt-12 lg:pt-0">
             <Image
-              src={standardbannerright}
+              src={bannerposter}
               alt="side banner"
               width={1000}
               height={500}

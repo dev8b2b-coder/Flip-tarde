@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import boxbg from "/public/banners/box-bg.webp";
 import Title from "../../Uiux/Title";
@@ -6,7 +7,15 @@ import accountarrowsecondary from "../../../../../public/images/accountarrowseco
 import accountarrowprimary from "../../../../../public/images/accountarrowprimary.webp";
 import bgarrow from "../../../../../public/images/accountwhyarrow.webp";
 import Image from "next/image";
-const Accountgetstarted = () => {
+const Accountgetstarted = ({
+  description,
+  mini_depo,
+  spreads_from,
+  swap_free,
+  commission
+}) => {
+  console.log(spreads_from);
+
   return (
     <div className="bg-white">
       <div
@@ -21,10 +30,7 @@ const Accountgetstarted = () => {
               hovercolor="gradient_text_title"
             />
             <div className="flex justify-center items-center">
-              <Discription
-                dispription={`Essential features designed for new traders—simple, <br/> transparent, and ready for your first trade.`}
-                color="text-ternary"
-              />
+              <Discription dispription={description} color="text-ternary" />
             </div>
           </div>
 
@@ -44,7 +50,7 @@ const Accountgetstarted = () => {
                 <div className="lg:absolute left-[-25%] top-[45%]">
                   <h5 className="lg:pe-16 text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl lg:leading-[35px]  font-medium text-secondary text-center lg:text-end">
                     Minimum <br /> Deposit:{" "}
-                    <span className="text-primary">$25</span>
+                    <span className="text-primary">{mini_depo}</span>
                   </h5>
                 </div>
               </div>
@@ -59,7 +65,7 @@ const Accountgetstarted = () => {
                 <div className="lg:absolute lg:w-[120%] left-[-22%]">
                   <h5 className="lg:pe-16 text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl lg:leading-[35px]  font-medium text-secondary text-center lg:text-end">
                     Spreads: From <br />
-                    <span className="text-primary">1.2 pips</span>
+                    <span className="text-primary"> {spreads_from} </span>
                   </h5>
                 </div>
               </div>
@@ -74,7 +80,7 @@ const Accountgetstarted = () => {
                 <div className="lg:absolute right-[-70%] xl:right-[-60%] bottom-0 xl:bottom-[10%]">
                   <h5 className="lg:pe-16 text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl lg:leading-[35px]  font-medium text-secondary text-center lg:text-end">
                     Swap-Free: <br />
-                    <span className="text-primary">Yes</span>
+                    <span className="text-primary">{swap_free}</span>
                   </h5>
                 </div>
               </div>
@@ -89,7 +95,7 @@ const Accountgetstarted = () => {
                 <div className="lg:absolute top-[20%] right-[-50%]">
                   <h5 className="lg:pe-16 text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl lg:leading-[35px]  font-medium text-secondary text-center lg:text-end">
                     Commission: <br />
-                    <span className="text-primary">No</span>
+                    <span className="text-primary">{commission}</span>
                   </h5>
                 </div>
               </div>

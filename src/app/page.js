@@ -7,6 +7,8 @@ import Exploremarket from "./Components/Pagecomponents/Exploremarket";
 import Workprocess from "./Components/Pagecomponents/Workprocess";
 import Tradingaccounts from "./Components/Pagecomponents/Tradingaccounts";
 import Tradeyourway from "./Components/Pagecomponents/Tradeyourway";
+import Nextgennew from "./Components/Pagecomponents/Nextgennew";
+import Calculatepipvalue from "./Components/Pagecomponents/Calculatepipvalue";
 
 function page() {
   return (
@@ -14,8 +16,10 @@ function page() {
       <Banner />
       <Homemarquee />
       <Buildtrader />
-      <Nextgen />
+      {/* <Nextgen /> */}
+      <Nextgennew />
       <Exploremarket />
+      <Calculatepipvalue />
       <Workprocess />
       <Tradingaccounts />
       <Tradeyourway/>

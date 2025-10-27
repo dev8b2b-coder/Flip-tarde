@@ -9,6 +9,7 @@ import Instaicon from "../../../../public/icons/Insta.svg";
 import youtue from "../../../../public/icons/youtube.svg";
 import Link from "next/link";
 import Worldbroker from "../Pagecomponents/Worldbroker";
+import telegram from "../../../../public/icons/telegram.svg"
 const footerdata = {
   linkingdata: [
     {
@@ -81,6 +82,11 @@ const footerdata = {
       alt: "You Tube",
       pagelink: "https://www.youtube.com/@fliptradegroup",
       icon: youtue
+    },
+    {
+      alt: 'Telegram',
+      pagelink : 'https://t.me/fliptradegroup',
+      icon : telegram 
     }
   ]
 };

@@ -6,6 +6,12 @@
   --secondary: #212121;
   --ternary: #434343;
   --lightsecondry: #16141B;
+  --bgtheme: #ffffff;
+}
+
+
+.bg-theme {
+  background-color: var(--bgtheme);
 }
 
 /* Set dynamic color according Tailwind v4 */
