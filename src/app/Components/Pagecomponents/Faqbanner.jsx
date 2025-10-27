@@ -6,6 +6,7 @@ import Button from "../Uiux/Button";
 import firebtn from "../../../../public/icons/firebtnicon.svg";
 import Image from "next/image";
 import faqsideimage from "../../../../public/images/faqsideimage.webp";
+import Link from "next/link";
 const Faqbanner = () => {
   return (
     <div className="" style={{ backgroundImage: `url(${faqbanner.src})` }}>
@@ -21,14 +22,18 @@ const Faqbanner = () => {
                 color={"text-[#D0D0D0]"}
               />
             </div>
-            <Button
-              btn_name="View Pip Calculator"
-              border_color="border-primary"
-              btn_bg={"bg-primary"}
-              shadow={true}
-              text_color={"text-white"}
-              icon={firebtn}
-            />
+            <Link
+              href={"https://client.fliptradegroup.com/trader/registration"}
+            >
+              <Button
+                btn_name="Join Now"
+                border_color="border-primary"
+                btn_bg={"bg-primary"}
+                shadow={true}
+                text_color={"text-white"}
+                icon={firebtn}
+              />
+            </Link>
           </div>
           <div>
             <Image

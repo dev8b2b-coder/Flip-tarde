@@ -6,6 +6,7 @@ import Button from "../Uiux/Button";
 import firebtn from "../../../../public/icons/firebtnicon.svg";
 import Image from "next/image";
 import whyfliptrade from "../../../../public/images/whyfliptrade.webp";
+import Link from "next/link";
 const Whyflipbanner = () => {
   return (
     <div className="" style={{ backgroundImage: `url(${faqbanner.src})` }}>
@@ -21,14 +22,18 @@ const Whyflipbanner = () => {
                 color={"text-[#D0D0D0]"}
               />
             </div>
-            <Button
-              btn_name="Start Trading"
-              border_color="border-primary"
-              btn_bg={"bg-primary"}
-              shadow={true}
-              text_color={"text-white"}
-              icon={firebtn}
-            />
+            <Link
+              href={"https://client.fliptradegroup.com/trader/registration"}
+            >
+              <Button
+                btn_name="Start Trading"
+                border_color="border-primary"
+                btn_bg={"bg-primary"}
+                shadow={true}
+                text_color={"text-white"}
+                icon={firebtn}
+              />
+            </Link>
           </div>
           <div>
             <Image

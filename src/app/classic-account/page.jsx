@@ -13,33 +13,34 @@ import classicbannerright from "/public/images/classicbannerright.webp";
 import acountcard1 from "/public/icons/acountcard1.svg";
 import acountcard2 from "/public/icons/acountcard2.svg";
 import acountcard3 from "/public/icons/acountcard3.svg";
+
+export const metadata = {
+  title : 'Classic Account – Forex Trading Platforms | Fliptrade Group',
+  description : 'Explore the Classic Account at FlipTrade Group: enjoy tighter spread, low minimum deposit, and advanced tools for serious traders. Sign up and start trading today.'
+}
 const faqData = [
   {
-    question: "What is the minimum deposit for the Standard Account?",
-    answer:
-      "The minimum deposit is $25, making it easy for beginners to start trading with FlipTrade."
+    question: "What is the minimum deposit for a Classic Account?",
+    answer: "The minimum deposit is $100 to start trading."
   },
   {
-    question: "Does the Standard Account charge any commission?",
-    answer:
-      "Social Trading allows traders to share, follow, and learn from each other’s strategies in real time."
+    question: "Are spreads lower than the Standard Account?",
+    answer: "Yes, Classic Account offers tighter spreads than the Standard Account."
   },
   {
-    question: "Is the Standard Account swap-free?",
-    answer:
-      "Simply create an account, choose an expert trader to copy, and set your investment amount."
+    question: "Can I trade swap-free?",
+    answer: "Yes, the Classic Account supports swap-free trading."
   },
   {
-    question: "Who is the Standard Account best suited for?",
-    answer:
-      "Yes, you can manage your risk by setting limits, adjusting trade size, or stopping copying anytime."
+    question: "Is there any commission on trades?",
+    answer: "No, there’s no commission on Classic Account trades."
   },
   {
-    question: "How do I open a Standard Account?",
-    answer:
-      "Yes, experienced traders can apply to become strategy providers and earn from their followers’ trades."
+    question: "Who is the Classic Account for?",
+    answer: "It’s designed for experienced traders seeking better spreads and flexibility."
   }
 ];
+
 
 const features = [
   {

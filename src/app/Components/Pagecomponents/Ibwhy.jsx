@@ -4,18 +4,19 @@ import Title from "../Uiux/Title";
 import Discription from "../Uiux/Discription";
 import firebtn from "../../../../public/icons/firebtnicon.svg";
 import Button from "../Uiux/Button";
+import Link from "next/link";
 const tradeInfo = [
   {
-    title: "Commissions",
-    description: "Earn rewards for every <br/> referral."
+    title: "Referral",
+    description: "Get started by referring <br/> friends and family."
   },
   {
     title: "Dashboard",
     description: "Track your referrals and <br/> earnings easily."
   },
   {
-    title: "Marketing",
-    description: "Get tools to grow your <br/> network."
+    title: "Commission",
+    description: "Earn rewards for every <br/> referral."
   },
   {
     title: "Earnings",
@@ -93,14 +94,18 @@ const Ibwhy = () => {
             )}
           </div>
           <div className="flex justify-center pt-12 md:pt-18">
-            <Button
-              btn_name="Join Now"
-              border_color="border-primary"
-              btn_bg={"bg-primary"}
-              shadow={true}
-              text_color={"text-white"}
-              icon={firebtn}
-            />
+            <Link
+              href={"https://client.fliptradegroup.com/trader/registration"}
+            >
+              <Button
+                btn_name="Join Now"
+                border_color="border-primary"
+                btn_bg={"bg-primary"}
+                shadow={true}
+                text_color={"text-white"}
+                icon={firebtn}
+              />
+            </Link>
           </div>
         </div>
       </div>

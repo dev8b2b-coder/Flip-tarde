@@ -6,6 +6,7 @@ import Image from "next/image";
 import Title from "../Uiux/Title";
 import Discription from "../Uiux/Discription";
 import Button from "../Uiux/Button";
+import Link from "next/link";
 const Whatcopytrading = () => {
   return (
     <div className="bg-white pt-12 md:pt-18 lg:pt-32 2xl:pt-40">
@@ -36,14 +37,18 @@ const Whatcopytrading = () => {
                 color={"text-ternary"}
               />
             </div>
-            <Button
-              btn_name="Start Calculating Now"
-              border_color="border-primary"
-              btn_bg={"bg-primary"}
-              shadow={true}
-              text_color={"text-white"}
-              icon={firebtn}
-            />
+            <Link
+              href={"https://client.fliptradegroup.com/trader/registration"}
+            >
+              <Button
+                btn_name="Start Trading Now"
+                border_color="border-primary"
+                btn_bg={"bg-primary"}
+                shadow={true}
+                text_color={"text-white"}
+                icon={firebtn}
+              />
+            </Link>
           </div>
         </div>
       </div>

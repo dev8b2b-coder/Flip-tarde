@@ -6,13 +6,17 @@ import Button from "../Uiux/Button";
 import firebtn from "../../../../public/icons/firebtnicon.svg";
 import Image from "next/image";
 import ibpartnerright from "../../../../public/images/ib-partnerright.webp";
+import Link from "next/link";
 const Ibpartnerbanner = () => {
   return (
     <div className="" style={{ backgroundImage: `url(${ibbanner.src})` }}>
       <div className="inn_container pt-40 pb-20 lg:py-40">
         <div className="grid grid-cols-1 lg:grid-cols-2 ">
           <div className="flex flex-col justify-center text-center lg:text-start">
-            <Title title={"Become a Fliptrade <br/> IB Partner"} color={"gradient_text"} />
+            <Title
+              title={"Become a Fliptrade <br/> IB Partner"}
+              color={"gradient_text"}
+            />
             <div className="py-6">
               <Discription
                 dispription={
@@ -21,14 +25,18 @@ const Ibpartnerbanner = () => {
                 color={"text-[#D0D0D0]"}
               />
             </div>
-            <Button
-              btn_name="Join Now"
-              border_color="border-primary"
-              btn_bg={"bg-primary"}
-              shadow={true}
-              text_color={"text-white"}
-              icon={firebtn}
-            />
+            <Link
+              href={"https://client.fliptradegroup.com/trader/registration"}
+            >
+              <Button
+                btn_name="Join Now"
+                border_color="border-primary"
+                btn_bg={"bg-primary"}
+                shadow={true}
+                text_color={"text-white"}
+                icon={firebtn}
+              />
+            </Link>
           </div>
           <div className="pt-12 lg:pt-0">
             <Image
@@ -46,4 +54,3 @@ const Ibpartnerbanner = () => {
 };
 
 export default Ibpartnerbanner;
-

@@ -16,30 +16,26 @@ import acountcard3 from "/public/icons/acountcard3.svg";
 const faqData = [
   {
     question: "What is the minimum deposit for the Standard Account?",
-    answer:
-      "The minimum deposit is $25, making it easy for beginners to start trading with FlipTrade."
+    answer: "The minimum deposit is $25, making it ideal for beginners."
   },
   {
     question: "Does the Standard Account charge any commission?",
-    answer:
-      "Social Trading allows traders to share, follow, and learn from each other’s strategies in real time."
+    answer: "No, the Standard Account has zero commission fees."
   },
   {
     question: "Is the Standard Account swap-free?",
-    answer:
-      "Simply create an account, choose an expert trader to copy, and set your investment amount."
+    answer: "Yes, it’s swap-free, suitable for all traders."
   },
   {
     question: "Who is the Standard Account best suited for?",
-    answer:
-      "Yes, you can manage your risk by setting limits, adjusting trade size, or stopping copying anytime."
+    answer: "It’s perfect for beginner and intermediate traders."
   },
   {
     question: "How do I open a Standard Account?",
-    answer:
-      "Yes, experienced traders can apply to become strategy providers and earn from their followers’ trades."
+    answer: "Simply sign up on FlipTrade Group’s website and complete the quick registration process."
   }
 ];
+
 
 const features = [
   {
@@ -69,6 +65,10 @@ const cardphdata = [
   "Choose “Standard Account” as your account type in the dashboard.",
   "Begin trading."
 ];
+export const metadata = {
+  title : 'Standard Account – Forex Trading – Trading Account Types',
+  description : 'Create your Standard Account with FlipTrade Group: minimum deposit range, no commission, from 1.2 pips spreads. Start forex trading , indices & crypto today.'
+}
 const page = () => {
   return (
     <div>

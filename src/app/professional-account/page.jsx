@@ -15,29 +15,28 @@ import acountcard2 from "/public/icons/acountcard2.svg";
 import acountcard3 from "/public/icons/acountcard3.svg";
 const faqData = [
   {
-    question: "What is the minimum deposit for the Standard Account?",
-    answer:
-      "The minimum deposit is $25, making it easy for beginners to start trading with FlipTrade."
+    question: "What is the minimum deposit for a Professional Account?",
+    answer: "The minimum deposit is $500 to access premium trading features."
   },
   {
-    question: "Does the Standard Account charge any commission?",
+    question: "Who is eligible for a Professional Account?",
     answer:
-      "Social Trading allows traders to share, follow, and learn from each other’s strategies in real time."
+      "It’s ideal for experienced and institutional traders seeking advanced conditions."
   },
   {
-    question: "Is the Standard Account swap-free?",
+    question: "Are spreads better than Classic or ECN Accounts?",
     answer:
-      "Simply create an account, choose an expert trader to copy, and set your investment amount."
+      "Yes, Professional Accounts offer ultra-low spreads for higher trading volumes."
   },
   {
-    question: "Who is the Standard Account best suited for?",
+    question: "What additional services are included?",
     answer:
-      "Yes, you can manage your risk by setting limits, adjusting trade size, or stopping copying anytime."
+      "Access to priority support, advanced tools, and personalized trading analytics."
   },
   {
-    question: "How do I open a Standard Account?",
+    question: "Can I trade with advanced tools and high liquidity?",
     answer:
-      "Yes, experienced traders can apply to become strategy providers and earn from their followers’ trades."
+      "Yes, you can trade with top-tier liquidity and cutting-edge trading platforms."
   }
 ];
 
@@ -69,6 +68,11 @@ const cardphdata = [
   "Choose “Professional Account.”",
   "Confirm Benefits with Your Rep"
 ];
+export const metadata = {
+  title: "Professional Account – Forex Market | Fliptrade Group Trading",
+  description:
+    "Open the Professional Account with FlipTrade Group: minimum deposit, raw spreads, commission-based pricing, and swap-free options ideal for serious traders."
+};
 const page = () => {
   return (
     <div>
@@ -119,7 +123,7 @@ const page = () => {
         card1desk={"Register or log in to <br /> FlipTrade."}
         card2desk={"Complete enhanced <br/> verification."}
         card3desk={"Deposit a <br/> minimum of $500."}
-        card4desk={'Choose <br/> “Professional Account.” '}
+        card4desk={"Choose <br/> “Professional Account.” "}
         card5desk={"Confirm Benefits <br/> with Your Rep"}
         cardphdata={cardphdata}
       />

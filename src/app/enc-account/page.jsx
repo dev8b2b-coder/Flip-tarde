@@ -15,31 +15,27 @@ import acountcard2 from "/public/icons/acountcard2.svg";
 import acountcard3 from "/public/icons/acountcard3.svg";
 const faqData = [
   {
-    question: "What is the minimum deposit for the Standard Account?",
-    answer:
-      "The minimum deposit is $25, making it easy for beginners to start trading with FlipTrade."
+    question: "What is the minimum deposit for an ECN Account?",
+    answer: "The minimum deposit is $200 to start trading under ECN conditions."
   },
   {
-    question: "Does the Standard Account charge any commission?",
-    answer:
-      "Social Trading allows traders to share, follow, and learn from each other’s strategies in real time."
+    question: "Are spreads lower than Classic or Standard Accounts?",
+    answer: "Yes, ECN Accounts offer the lowest spreads, starting from 0.0 pips."
   },
   {
-    question: "Is the Standard Account swap-free?",
-    answer:
-      "Simply create an account, choose an expert trader to copy, and set your investment amount."
+    question: "Is there a swap-free option?",
+    answer: "Yes, a swap-free option is available upon request."
   },
   {
-    question: "Who is the Standard Account best suited for?",
-    answer:
-      "Yes, you can manage your risk by setting limits, adjusting trade size, or stopping copying anytime."
+    question: "Are there commissions on trades?",
+    answer: "Yes, ECN Accounts charge a small commission per trade."
   },
   {
-    question: "How do I open a Standard Account?",
-    answer:
-      "Yes, experienced traders can apply to become strategy providers and earn from their followers’ trades."
+    question: "Who should trade the ECN Account?",
+    answer: "It’s ideal for professional and high-volume traders seeking transparency and fast execution."
   }
 ];
+
 
 const features = [
   {
@@ -69,6 +65,10 @@ const cardphdata = [
   "Select ECN Account.",
   "Review commission and trading costs."
 ];
+export const metadata = {
+  title : 'Ecn Account – Forex Market Trading | Fliptrade Group Account Types',
+  description : 'Open the ECN Account with FlipTrade Group: minimal deposit, raw spreads, commission-based pricing ideal for the advanced traders seeking transparent costs.'
+}
 const page = () => {
   return (
     <div>

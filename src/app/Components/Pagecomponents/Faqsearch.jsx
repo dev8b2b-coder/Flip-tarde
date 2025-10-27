@@ -193,12 +193,12 @@ const faqsmaindata = [
             {
                 question: "Who are FlipTrade Group’s liquidity providers?",
                 answer:
-                    "FlipTrade Group partners with leading global liquidity providers to ensure deep liquidity, competitive spreads, and fast execution for traders in CFDs, crypto, indices, forex, and more. Our relationships with top-tier institutions in the US and UK markets allow us to deliver reliable pricing and seamless trading conditions for all clients."
+                    "FlipTrade Group partners with leading global liquidity providers to ensure deep liquidity, competitive spreads, and fast execution for traders in CFDs, crypto, indices, forex, and more. Our relationships with top-tier institutions in the Saint Lucia markets allow us to deliver reliable pricing and seamless trading conditions for all clients."
             },
             {
                 question: "Who is FlipTrade Group regulated by?",
                 answer:
-                    "FlipTrade Group is a regulated broker registered in Saint Lucia and licensed under Mauritius Forex regulations, providing a secure, fully compliant, and trustworthy trading environment for clients in the US, UK, and worldwide.<br/><br/><strong>Company Registration Number:</strong> 2025-00621"
+                    "FlipTrade Group is a regulated broker registered in Saint Lucia and licensed under Mauritius Forex regulations, providing a secure, fully compliant, and trustworthy trading environment for clients worldwide."
             },
             {
                 question: "Why choose FlipTrade Group?",
@@ -211,72 +211,111 @@ const faqsmaindata = [
                     'You can contact FlipTrade Group by visiting our Contact Us page, where you’ll find all the details to reach our support team for assistance. <a href="https://www.fliptradegroup.com/contact-us" target="_blank" rel="noopener noreferrer">Contact Us</a>.'
             }
         ]
-
     },
     {
         id: 4,
         faqtitle: "Safety and Security of Funds",
         faqicon: wallet,
         faqiconwhite: walletwhite,
-       faqlist: [
-  {
-    question: "Where are my deposits held and is my money safe?",
-    answer:
-      "At FlipTrade Group, client funds are held in segregated accounts with 'AA-' rated banks, separate from the company’s funds, ensuring your money is secure and fully protected."
-  },
-  {
-    question: "Are my funds held in segregated bank accounts?",
-    answer:
-      "Yes, at FlipTrade Group, all client funds are securely held in segregated bank accounts, keeping them separate from the company’s funds for maximum safety."
-  },
-  {
-    question: "How is my personal information stored?",
-    answer:
-      "For full details on how your personal information is stored and protected, please refer to FlipTrade Group’s Privacy Policy here: https://www.fliptradegroup.com/privacy-policy/"
-  },
-  {
-    question: "Can you delete all my records from your system?",
-    answer:
-      "Due to regulations, FlipTrade Group retains transaction records securely but will remove you from all mailing lists."
-  }
-]
-
+        faqlist: [
+            {
+                question: "Where are my deposits held and is my money safe?",
+                answer:
+                    "At FlipTrade Group, client funds are held in segregated accounts with 'AA-' rated banks, separate from the company’s funds, ensuring your money is secure and fully protected."
+            },
+            {
+                question: "Are my funds held in segregated bank accounts?",
+                answer:
+                    "Yes, at FlipTrade Group, all client funds are securely held in segregated bank accounts, keeping them separate from the company’s funds for maximum safety."
+            },
+            {
+                question: "How is my personal information stored?",
+                answer:
+                    "For full details on how your personal information is stored and protected, please refer to FlipTrade Group’s Privacy Policy here: https://www.fliptradegroup.com/privacy-policy/"
+            },
+            {
+                question: "Can you delete all my records from your system?",
+                answer:
+                    "Due to regulations, FlipTrade Group retains transaction records securely but will remove you from all mailing lists."
+            }
+        ]
     },
     {
         id: 5,
-        faqtitle: "Trading & Platforms",
+        faqtitle: "Funding ",
         faqicon: candle,
         faqiconwhite: candlewhite,
         faqlist: [
             {
-                question: "Is FlipTrade regulated?",
+                question: "How do I deposit into my account?",
                 answer:
-                    "Yes, FlipTrade complies with international regulatory standards to ensure transparency and security."
+                    "To deposit funds into your FlipTrade Group account, simply log in to your Client Portal. From the left-hand menu, click on “Funding”, select “Deposit”, choose the trading account you want to fund, and then click “Submit” to complete your transaction.\nhttps://client.fliptradegroup.com/trader"
             },
             {
-                question: "Where is FlipTrade based?",
+                question: "What is the minimum deposit for trading accounts?",
                 answer:
-                    "FlipTrade operates globally with offices in multiple financial hubs."
+                    "The minimum deposit required to open a Standard or Raw account with FlipTrade Group is $100 USD or the equivalent in your local currency."
+            },
+            {
+                question: "Do you charge any fees for deposits?",
+                answer: "We do not charge any deposit fees."
+            },
+            {
+                question: "Which currencies do you accept for deposits?",
+                answer:
+                    "We offer multiple funding currencies for our accounts which include AUD, USD, EUR, GBP, SGD, HKD, NZD, CHF, CAD, JPY, PLN, CZK and AED."
+            },
+            {
+                question: "Do you accept Prepaid cards?",
+                answer: "Yes, we do."
             }
         ]
     },
     {
         id: 6,
-        faqtitle: "Partners / Introducing Brokers (IB)",
+        faqtitle: "MT5",
         faqicon: handsheck,
         faqiconwhite: handsheckwhite,
         faqlist: [
             {
-                question: "Is FlipTrade regulated?",
+                question: "Which instruments can I trade?",
                 answer:
-                    "Yes, FlipTrade complies with international regulatory standards to ensure transparency and security."
+                    "With FlipTrade Group, you can trade a wide range of CFDs including Forex, Equities, Commodities, Metals, Indices, and Cryptocurrencies."
             },
             {
-                question: "Where is FlipTrade based?",
+                question: "What is a CFD?",
                 answer:
-                    "FlipTrade operates globally with offices in multiple financial hubs."
+                    "A CFD (Contract for Difference) is a financial instrument that allows you to trade based on price movements without owning the underlying asset. With FlipTrade Group, you can speculate on whether the price of an asset will rise or fall, giving you flexibility to trade in both market directions."
+            },
+            {
+                question: "What are the market trading hours?",
+                answer: "The Forex market is open 24 hours a day, 5 days a week."
+            },
+            {
+                question: "What is your execution model?",
+                answer: "We offer Raw pricing on our MT5 account."
+            },
+            {
+                question: "Do you offer guaranteed stop losses?",
+                answer:
+                    "FlipTrade Group does not offer guaranteed stop losses. Once your stop loss is triggered, the order will be executed at the first available market price, which may differ during periods of high volatility."
+            },
+            {
+                question: "What leverage do you offer?",
+                answer:
+                    "We offer leverage from 1:1 up to 1:500, depending on your preference and the instrument you are trading."
+            },
+            {
+                question: "Do you allow copy trading?",
+                answer: "Yes, we do offer Copy trading program."
+            },
+            {
+                question: "Can I place a trade over the phone?",
+                answer:
+                    "Yes, our dealing desk will be more than happy to take your instructions over the phone."
             }
         ]
+
     }
 ];
 const Faqsearch = () => {

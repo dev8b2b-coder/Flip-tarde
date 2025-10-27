@@ -320,6 +320,10 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
   .bg_image_none {
     background-image: none !important;
   }
+
+  .newgenbg {
+    background-image: url(../../public/images/bluebg.webp) !important;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -384,4 +388,8 @@ input[type=number] {
 
 .custome_faq a {
   color: var(--primary);
+}
+
+.newgenbg {
+  background-image: url(../../public/images/nextgenbg.webp);
 }

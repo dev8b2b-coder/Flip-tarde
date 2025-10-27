@@ -1,5 +1,5 @@
 import React from "react";
-import tradeyourway from "../../../../public/images/Calculatepipvalue.webp";
+import tradeyourway from "../../../../public/images/tradeyourway.webp";
 import Title from "../Uiux/Title";
 import Discription from "../Uiux/Discription";
 import Button from "../Uiux/Button";
@@ -13,17 +13,17 @@ const Yourway = () => {
         className="bg-cover bg-no-repeat bg-center"
         style={{ backgroundImage: `url(${tradeyourway.src})` }}
       >
-        <div className="inn_container grid grid-cols-2 py-12 md:py-18 lg:py-24 xl:py-32">
-          <div>
+        <div className="inn_container grid grid-cols-1 lg:grid-cols-2 pt-12 md:pt-18">
+          <div className="hidden lg:block">
             <Image
               src={tradeyourwayleft}
               alt=""
-              width={2000}
+              width={3000}
               height={500}
               className=""
             />
           </div>
-          <div className="ps-8">
+          <div className="lg:ps-8 pb-8">
             <Title
               title={"Trade It Your Way <br/> with Confidence."}
               color={"text-white"}
@@ -36,7 +36,7 @@ const Yourway = () => {
                 color={"text-white"}
               />
             </div>
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-wrap flex-col gap-4">
               <Button
                 btn_name={"0% Commission"}
                 icon={bluedot}
