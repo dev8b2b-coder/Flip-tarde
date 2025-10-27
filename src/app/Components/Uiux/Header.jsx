@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { useState, useRef, useEffect } from "react";
 import Logo from "../../../../public/images/Logo.webp";
-import Logo2 from "../../../../public/images/Logo2.webp";
+import Logo2 from "../../../../public/images/logo2.webp";
 import Logoblack from "../../../../public/images/Logoblack.webp";
 import Button from "./Button";
 import firebtnicon from "../../../../public/icons/firebtnicon.svg";
