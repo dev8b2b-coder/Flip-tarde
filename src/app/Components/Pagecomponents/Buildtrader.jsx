@@ -35,7 +35,7 @@ const buildtradetagcard = [
 const Buildtrader = () => {
   return (
     <div className="bg-white">
-      <div className="inn_container pt-16 md:pt-20 lg:pt-40">
+      <div className="inn_container pt-16 md:pt-20 lg:pt-30">
         <div className="grid grid-col-1 text-center lg:text-start lg:grid-cols-2">
           <Title
             title="Built for Traders. <br/> Backed by Trust."
