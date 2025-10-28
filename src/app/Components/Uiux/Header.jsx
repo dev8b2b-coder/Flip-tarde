@@ -5,14 +5,12 @@ import { usePathname } from "next/navigation";
 import React, { useState, useRef, useEffect } from "react";
 import Logo from "../../../../public/images/Logo.webp";
 import Logo2 from "../../../../public/images/logo2.webp";
-import Logoblack from "../../../../public/images/Logoblack.webp";
 import Button from "./Button";
 import firebtnicon from "../../../../public/icons/firebtnicon.svg";
 import menuicon from "../../../../public/icons/menuicon.svg";
 import menucross from "../../../../public/icons/menucross.svg";
 import downarrow from "../../../../public/icons/downarrow.svg";
 import usericon from "../../../../public/icons/user.svg";
-import giftbtnicon from "../../../../public/icons/giftbtnicon.svg";
 import giftwhite from "../../../../public/icons/giftwhite.svg";
 const navlistdata = [
   {
@@ -253,46 +251,64 @@ const navlistdata = [
 ];
 
 // Mobile Dropdown Item Component
-const MobileDropdownItem = ({ data, isOpen, setIsOpen, setIsMenu }) => {
+const MobileDropdownItem = ({ data, isOpen, setIsOpen, setIsMenu, pathname }) => {
   const sections = data.sections;
+  
+  // Check if any child item is active
+  const isChildActive = sections?.some(section => 
+    section.items?.some(item => item.link === pathname)
+  );
 
   return (
-    <div>
-      <p
-        className="relative z-10 flex items-center gap-2 text-secondary text-base font-medium py-2 px-3 cursor-pointer"
+    <div className="w-full">
+      <div
+        className={`flex items-center justify-between text-base font-medium py-4 px-4 cursor-pointer border-b border-gray-100 transition-colors ${
+          isChildActive 
+            ? "text-white bg-primary" 
+            : "text-gray-800 hover:bg-gray-50"
+        }`}
         onClick={() => setIsOpen(!isOpen)}
       >
-        {data.nav_name}
+        <span>{data.nav_name}</span>
         <Image
           src={downarrow}
           alt="dropdown"
-          width={18}
-          height={18}
-          className={`max-w-[18px] duration-500 transition-all ease-in-out ${
+          width={16}
+          height={16}
+          className={`max-w-[16px] duration-300 transition-all ease-in-out ${
             isOpen ? "rotate-180" : "rotate-0"
           }`}
         />
-      </p>
+      </div>
       <div
         className={`${
-          isOpen ? "scale-[1] h-auto" : "scale-[0] h-0"
-        } w-[250px] duration-500 transition-all ease-in-out rounded-2xl bg-primary`}
+          isOpen ? "opacity-100" : "max-h-0 opacity-0"
+        } overflow-hidden duration-300 transition-all ease-in-out bg-gray-50`}
       >
         {sections?.map((section) => (
-          <div key={section.heading} className="p-2">
-            <h4 className="text-white font-bold text-sm mb-2">
+          <div key={section.heading} className="px-4 py-2 border-b border-primary">
+            <h4 className="text-black-600 font-semibold text-sm mb-3 uppercase tracking-wide">
               {section.heading}
             </h4>
-            {section.items.map((item) => (
-              <Link
-                key={item.id}
-                href={item.link}
-                className="relative z-10 text-white font_secondary py-1 px-3 block rounded-lg text-sm font-medium ml-2"
-                onClick={() => setIsMenu(false)}
-              >
-                {item.name}
-              </Link>
-            ))}
+            <div className="space-y-1">
+              {section.items.map((item) => (
+                <Link
+                  key={item.id}
+                  href={item.link}
+                  className={`block py-2 text-sm font-medium rounded-md transition-colors ${
+                    item.link === pathname
+                      ? "text-primary bg-primary/10 font-semibold"
+                      : "text-gray-700 hover:text-primary hover:bg-white"
+                  }`}
+                  onClick={() => {
+                    setIsMenu(false);
+                    setIsOpen(false);
+                  }}
+                >
+                  {item.name}
+                </Link>
+              ))}
+            </div>
           </div>
         ))}
       </div>
@@ -305,10 +321,41 @@ export default function Header() {
   const [hoverPos, setHoverPos] = useState({ left: 0, width: 0 });
   const [activePos, setActivePos] = useState({ left: 0, width: 0 });
   const [isMenu, setIsMenu] = useState(false);
-  const [isMarket, setIsMarket] = useState(false);
-  const [isTools, setIsTools] = useState(false);
+  const [openMobileDropdown, setOpenMobileDropdown] = useState(null);
+
+  // Prevent background scroll when mobile menu is open
+  useEffect(() => {
+    if (isMenu) {
+      document.body.style.overflow = 'hidden';
+      document.body.style.position = 'fixed';
+      document.body.style.width = '100%';
+    } else {
+      document.body.style.overflow = 'unset';
+      document.body.style.position = 'unset';
+      document.body.style.width = 'unset';
+    }
+    
+    // Cleanup on unmount
+    return () => {
+      document.body.style.overflow = 'unset';
+      document.body.style.position = 'unset';
+      document.body.style.width = 'unset';
+    };
+  }, [isMenu]);
   const [openDropdown, setOpenDropdown] = useState(null);
-  const [hoveredItem, setHoveredItem] = useState(1); // Default to Quick Start (id: 1)
+  const [hoveredItem, setHoveredItem] = useState(() => {
+    // If on home page, no highlight
+    if (pathname === '/') return null;
+    
+    // Initialize based on current pathname
+    const matchingNav = navlistdata.find(nav => 
+      nav.sections?.some(section => 
+        section.items?.some(item => item.link === pathname)
+      )
+    );
+    return matchingNav ? matchingNav.id : null; // No default highlight
+  });
+  const [tempHoveredItem, setTempHoveredItem] = useState(null); // For temporary hover effect
   const containerRef = useRef(null);
   const leaveTimeoutRef = useRef(null);
 
@@ -316,20 +363,35 @@ export default function Header() {
     const timeoutId = setTimeout(() => {
       if (!containerRef.current) return;
 
-      const marketsDropdown =
-        navlistdata.find((n) => n.nav_name === "Markets")?.dropdown || [];
-      const marketsLinks = new Set(marketsDropdown.map((d) => d.link));
-      const isMarketsPath = marketsLinks.has(pathname);
-      const selector = isMarketsPath
-        ? '[data-link="/forex"]'
-        : `[data-link="${pathname}"]`;
+      // If on home page, clear all highlights
+      if (pathname === '/') {
+        setActivePos({ left: 0, width: 0 });
+        setHoveredItem(null);
+        return;
+      }
 
-      const target = containerRef.current.querySelector(selector);
-      if (!target) return;
+      // Check if current pathname matches any navigation link
+      const matchingNav = navlistdata.find(nav => 
+        nav.sections?.some(section => 
+          section.items?.some(item => item.link === pathname)
+        )
+      );
 
-      const rect = target.getBoundingClientRect();
-      const parentRect = containerRef.current.getBoundingClientRect();
-      setActivePos({ left: rect.left - parentRect.left, width: rect.width });
+      if (matchingNav) {
+        // If we found a matching navigation, highlight that nav item
+        const navItem = containerRef.current.querySelector(`[data-nav-id="${matchingNav.id}"]`);
+        if (navItem) {
+          const rect = navItem.getBoundingClientRect();
+          const parentRect = containerRef.current.getBoundingClientRect();
+          setActivePos({ left: rect.left - parentRect.left, width: rect.width });
+          setHoveredItem(matchingNav.id);
+          return;
+        }
+      }
+
+      // If no matching navigation found, clear highlights
+      setActivePos({ left: 0, width: 0 });
+      setHoveredItem(null);
     }, 50);
 
     return () => clearTimeout(timeoutId);
@@ -384,6 +446,7 @@ export default function Header() {
               <div
                 key={data.id}
                 className="relative group"
+                data-nav-id={data.id}
                 onMouseEnter={(e) => {
                   // Clear any pending timeout
                   if (leaveTimeoutRef.current) {
@@ -393,20 +456,22 @@ export default function Header() {
                   const anchor = e.currentTarget.querySelector("[data-link]");
                   moveHighlightTo(anchor);
                   setOpenDropdown(data.sections ? data.nav_name : null);
-                  setHoveredItem(data.id);
+                  setTempHoveredItem(data.id); // Set temporary hover for text color
                 }}
                 onMouseLeave={() => {
                   leaveTimeoutRef.current = setTimeout(() => {
                     setHoverPos({ left: 0, width: 0 });
                     setOpenDropdown(null);
-                    setHoveredItem(1); // Reset to Quick Start
+                    setTempHoveredItem(null); // Clear temporary hover
                   }, 100);
                 }}
               >
                 <p
                   data-link="#"
                   className={`relative z-10 list_text font-medium py-2 px-3 block cursor-pointer transition-colors duration-300 ${
-                    hoveredItem === data.id
+                    tempHoveredItem === data.id
+                      ? "text-primary"
+                      : hoveredItem === data.id
                       ? "text-primary"
                       : openDropdown === null
                       ? "text-white"
@@ -468,61 +533,64 @@ export default function Header() {
 
       {/* Mobile Dropdown Menu */}
       <div
-        className={`fixed bg-white h-[120vh] w-[100vw] z-[5] duration-700 transition-all ${
+        className={`fixed bg-white h-screen w-screen z-[999] duration-300 transition-all flex flex-col ${
           !isMenu
-            ? "right-[-300%] scale-0 top-[-300%]"
-            : "right-0 top-0 scale-[1]"
+            ? "translate-x-full opacity-0 pointer-events-none"
+            : "translate-x-0 opacity-100 pointer-events-auto top-[6rem]"
         }`}
       >
-        <div className="relative flex flex-col w-[80%] m-auto justify-around items-start pt-[110px] py-1 font_secondary">
-          {navlistdata.map((data) => (
-            <div key={data.id} className="relative group">
-              {data.sections ? (
-                data.nav_name === "Markets" ? (
+        {/* Navigation Content */}
+        <div className="flex-1 overflow-y-auto" style={{ maxHeight: 'calc(100vh - 200px)' }}>
+          <div className="">
+            {navlistdata.map((data) => (
+              <div key={data.id}>
+                {data.sections ? (
                   <MobileDropdownItem
                     data={data}
-                    isOpen={isMarket}
-                    setIsOpen={setIsMarket}
+                    isOpen={openMobileDropdown === data.id}
+                    setIsOpen={(isOpen) => {
+                      if (isOpen) {
+                        setOpenMobileDropdown(data.id);
+                      } else {
+                        setOpenMobileDropdown(null);
+                      }
+                    }}
                     setIsMenu={setIsMenu}
+                    pathname={pathname}
                   />
                 ) : (
-                  <MobileDropdownItem
-                    data={data}
-                    isOpen={isTools}
-                    setIsOpen={setIsTools}
-                    setIsMenu={setIsMenu}
-                  />
-                )
-              ) : (
-                <Link
-                  onClick={() => setIsMenu(false)}
-                  data-link="#"
-                  href="#"
-                  className="relative z-10 text-secondary text-base font-medium py-2 px-3 block"
-                >
-                  {data.nav_name}
-                </Link>
-              )}
-            </div>
-          ))}
+                  <Link
+                    onClick={() => setIsMenu(false)}
+                    href="#"
+                    className="block text-gray-800 text-base font-medium py-4 px-6 border-b border-gray-100 hover:bg-gray-50 transition-colors"
+                  >
+                    {data.nav_name}
+                  </Link>
+                )}
+              </div>
+            ))}
+          </div>
         </div>
 
-        <div className="lg:hidden flex items-center w-[80%] pt-5 m-auto gap-8">
-          <Link href={"https://client.fliptradegroup.com/trader/registration"}>
-            <Button
-              icon={usericon}
-              btn_name="Sign Up"
-              btn_bg="bg-primary"
-              text_color="text-white"
-              border_color="border-primary"
-              shadow={true}
-            />
-          </Link>
-          <Link href={"https://client.fliptradegroup.com/trader"}>
-            <button className="text-secondary hover:text-[var(--subprimary)] list_text font-medium px-8 cursor-pointer hover:underline hover:scale-[1.1] duration-300 transition-all">
-              Login
-            </button>
-          </Link>
+        {/* Footer Buttons */}
+        <div className="p-6 border-t border-gray-200 bg-gray-50">
+          <div className="flex gap-4 items-center justify-center">
+            <Link href={"https://client.fliptradegroup.com/trader/registration"}>
+              <Button
+                icon={usericon}
+                btn_name="Sign Up"
+                btn_bg="bg-primary"
+                text_color="text-white"
+                border_color="border-primary"
+                shadow={true}
+              />
+            </Link>
+            <Link href={"https://client.fliptradegroup.com/trader"}>
+              <button className="w-full text-gray-700 hover:text-primary text-base font-medium py-3 px-6 cursor-pointer hover:underline transition-all">
+                Login
+              </button>
+            </Link>
+          </div>
         </div>
       </div>
 
@@ -537,6 +605,7 @@ export default function Header() {
         onMouseLeave={() => {
           setOpenDropdown(null);
           setHoverPos({ left: 0, width: 0 });
+          setTempHoveredItem(null); // Clear temporary hover
         }}
         className={`absolute left-0 top-0 z-20 origin-top transition-all duration-300 ease-in-out w-full ${
           openDropdown
@@ -597,7 +666,12 @@ export default function Header() {
                             <Link
                               key={item.id}
                               href={item.link}
-                              className="relative z-10 text-black hover:text-primary font_secondary hover:underline py-1 block rounded-lg text-base font-medium transition-all duration-500"
+                              className={`relative z-10 font_secondary py-1 block rounded-lg text-base font-medium transition-all duration-500 ${
+                                item.link === pathname
+                                  ? "text-primary font-semibold"
+                                  : "text-black hover:text-primary hover:underline"
+                              }`}
+                              onClick={() => setOpenDropdown(null)}
                             >
                               {item.name}
                             </Link>

@@ -7,7 +7,7 @@ import Image from "next/image";
 const Marketaccess = () => {
   return (
     <div className="bg-white">
-      <div className="inn_container pt-16 md:pt-20 lg:pt-40">
+      <div className="inn_container pt-16 md:pt-20 lg:pt-30">
         <div className="grid grid-cols-1 lg:grid-cols-2 text-center lg:text-start">
           <div>
             <Title title="Global Market <br/> Access" color="text-secondary" />

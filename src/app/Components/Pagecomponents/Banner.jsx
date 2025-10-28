@@ -32,7 +32,7 @@ export default function Banner() {
                 dispription="Access the world’s largest financial market and trade <br/> multiple instruments in one place."
                 color="text-do"
               />
-              <div className="pt-8 xl:pt-10 2xl:pt-14  flex justify-center lg:justify-start flex-row lg:flex-col xl:flex-row gap-6 xl:gap-12 ">
+              <div className="pt-8 xl:pt-10 2xl:pt-14  flex justify-center lg:justify-start flex-row lg:flex-col xl:flex-row gap-5 xl:gap-12 ">
                 <Link
                   href={"https://client.fliptradegroup.com/trader/registration"}
                 >
