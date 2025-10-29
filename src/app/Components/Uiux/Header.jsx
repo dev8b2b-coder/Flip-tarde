@@ -20,22 +20,22 @@ const navlistdata = [
       {
         heading: "Introduction",
         items: [
-          { id: "whyflip", name: "Why FlipTrade?", link: "/why-fliptrade" },
-          { id: "whattrade", name: "What Can You Trade?", link: "#" },
-          { id: "onlinetrading", name: "What is Online Trading", link: "#" },
-          { id: "howtostart", name: "How to Start Trading", link: "#" },
-          { id: "whychooseus", name: "Why Traders Choose Us", link: "#" },
-          { id: "faqs", name: "FAQs", link: "/faq" },
-        ],
+          { id: 1, name: "Why FlipTrade?", link: "/why-fliptrade" },
+          { id: 2, name: "What is Online Trading", link: "#" },
+          { id: 4, name: "How to Start Trading", link: "#" },
+          { id: 5, name: "Why Traders Choose Us", link: "#" },
+          { id: 6, name: "Contact Us", link: "/contact-us" },
+          { id: 7, name: "FAQs", link: "/faq" }
+        ]
       },
       {
         heading: "Trade",
         items: [
-          { id: "typesmarkets", name: "Types of Markets", link: "#" },
-          { id: "tradingconditions", name: "Trading Conditions", link: "#" },
-          { id: "accounttypes", name: "Account Types Overview", link: "#" },
-          { id: "riskmanagement", name: "Risk Management Tips", link: "#" },
-        ],
+          { id: 8, name: "Types of Markets", link: "#" },
+          { id: 9, name: "Trading Conditions", link: "#" },
+          { id: 10, name: "Account Types Overview", link: "#" },
+          { id: 11, name: "Risk Management Tips", link: "#" }
+        ]
       },
       {
         heading: "Trading Platforms",
@@ -44,229 +44,209 @@ const navlistdata = [
           { id: "mobileapp", name: "Mobile App", link: "#" },
           { id: "mt5", name: "MetaTrader 5 (MT5)", link: "/platform" },
           {
-            id: "platformfeatures",
+            id: "Platform Features",
             name: "Platform Features",
-            link: "/platform",
-          },
-        ],
+            link: "/platform"
+          }
+        ]
       },
-    ],
+      {
+        heading: "Tools & Resources",
+        items: [
+          { id: "webtrader", name: "Pip Calculator", link: "/pip-calculator" },
+          {
+            id: "mobileapp",
+            name: "Economic Calendar",
+            link: "/economic-calendar"
+          },
+          { id: "mt5", name: "IB Partner", link: "/ib-partner" },
+          {
+            id: "Platform Features",
+            name: "Why Partner with Us",
+            link: "/why-fliptrade"
+          }
+        ]
+      }
+    ]
   },
   {
     id: 2,
     nav_name: "Markets",
     sections: [
       {
-        heading: "Markets",
+        heading: "Introduction",
         items: [
-          { id: "onlinetrading", name: "Forex", link: "/forex" },
-          { id: "howtostart", name: "Indices", link: "/indices" },
-          { id: "whychooseus", name: "Commodities", link: "/commodities" },
+          {
+            id: "onlinetrading",
+            name: "Benefits of Forex with FlipTrade",
+            link: "#"
+          },
+          { id: "howtostart", name: "Global Index Overview", link: "#" },
+          { id: "whychooseus", name: "Why Trade Commodities", link: "#" },
           {
             id: "whychooseus",
-            name: "Crypto Currency",
-            link: "/cryptocurrency",
+            name: "Discover Stock Trading",
+            link: "#"
           },
-          { id: "whychooseus", name: "Metals", link: "/metals" },
-          { id: "whychooseus", name: "Stocks", link: "/stocks" },
-        ],
+          { id: "whychooseus", name: "What are Indices", link: "#" },
+          { id: "whychooseus", name: "FAQs", link: "#" }
+        ]
       },
       {
-        heading: "Trade",
+        heading: "Markets Type",
         items: [
-          { id: "typesmarkets", name: "Types of Markets", link: "#" },
-          { id: "tradingconditions", name: "Trading Conditions", link: "#" },
-          { id: "accounttypes", name: "Account Types Overview", link: "#" },
-          { id: "riskmanagement", name: "Risk Management Tips", link: "#" },
-        ],
-      },
-      {
-        heading: "Trading Platforms",
-        items: [
-          { id: "webtrader", name: "WebTrader", link: "/web-trading" },
-          { id: "mobileapp", name: "Mobile App", link: "#" },
-          { id: "mt5", name: "MetaTrader 5 (MT5)", link: "/platform" },
+          { id: "typesmarkets", name: "Forex", link: "/forex" },
+          { id: "tradingconditions", name: "Indices", link: "/indices" },
+          { id: "accounttypes", name: "Commodities", link: "/commodities" },
+          { id: "riskmanagement", name: "Metals", link: "/metals" },
           {
-            id: "platformfeatures",
-            name: "Platform Features",
-            link: "/platform",
+            id: "riskmanagement",
+            name: "Cryptocurrency",
+            link: "/cryptocurrency"
           },
-        ],
-      },
-    ],
+          { id: "riskmanagement", name: "Stocks", link: "/stocks" }
+        ]
+      }
+    ]
   },
   {
     id: 3,
     nav_name: "Account Type",
     sections: [
       {
-        heading: "Account Type",
+        heading: "Introduction",
         items: [
           {
             id: "onlinetrading",
-            name: "Standard Account",
-            link: "/standard-account",
+            name: "Account Overview",
+            link: "#"
           },
           {
             id: "howtostart",
-            name: "Classic Account",
-            link: "/classic-account",
+            name: "Why Choose Classic Account",
+            link: "#"
           },
-          { id: "whychooseus", name: "ECN Account", link: "/enc-account" },
+          { id: "whychooseus", name: "Who Should Trade ECN Account", link: "#" },
           {
             id: "whychooseus",
-            name: "Professional Account",
-            link: "/professional-account",
+            name: "How to Upgrade",
+            link: "#"
           },
-        ],
-      },
-      {
-        heading: "Trade",
-        items: [
-          { id: "typesmarkets", name: "Types of Markets", link: "#" },
-          { id: "tradingconditions", name: "Trading Conditions", link: "#" },
-          { id: "accounttypes", name: "Account Types Overview", link: "#" },
-          { id: "riskmanagement", name: "Risk Management Tips", link: "#" },
-        ],
-      },
-      {
-        heading: "Trading Platforms",
-        items: [
-          { id: "webtrader", name: "WebTrader", link: "/web-trading" },
-          { id: "mobileapp", name: "Mobile App", link: "#" },
-          { id: "mt5", name: "MetaTrader 5 (MT5)", link: "/platform" },
           {
-            id: "platformfeatures",
-            name: "Platform Features",
-            link: "/platform",
+            id: "whychooseus",
+            name: "Benefits of Professional Account",
+            link: "#"
           },
-        ],
+          {
+            id: "whychooseus",
+            name: "FAQs",
+            link: "#"
+          },
+        ]
       },
-    ],
+      {
+        heading: "Account Type",
+        items: [
+          { id: "typesmarkets", name: "Standard Account", link: "/standard-account" },
+          { id: "tradingconditions", name: "Classic Account", link: "/classic-account" },
+          { id: "accounttypes", name: "ECN Account", link: "/enc-account" },
+          { id: "riskmanagement", name: "Professional Account", link: "/professional-account" }
+        ]
+      }
+    ]
   },
   {
     id: 4,
     nav_name: "Platforms",
     sections: [
       {
-        heading: "Platforms",
-        items: [{ id: "whyflip", name: "Mt-5", link: "/platform" }],
-      },
-      {
-        heading: "Trade",
+        heading: "Introduction",
         items: [
-          { id: "typesmarkets", name: "Types of Markets", link: "#" },
-          { id: "tradingconditions", name: "Trading Conditions", link: "#" },
-          { id: "accounttypes", name: "Account Types Overview", link: "#" },
-          { id: "riskmanagement", name: "Risk Management Tips", link: "#" },
-        ],
+          { id: "whyflip", name: "Why Choose Our Platform", link: "/#" },
+          { id: "whyflip", name: "Key Features", link: "/#" },
+          { id: "whyflip", name: "Trade Anywhere", link: "/#" },
+          { id: "whyflip", name: "Download (MT5)", link: "/#" },
+          { id: "whyflip", name: "FAQs", link: "/#" },
+        ]
       },
       {
         heading: "Trading Platforms",
         items: [
-          { id: "webtrader", name: "WebTrader", link: "/web-trading" },
-          { id: "mobileapp", name: "Mobile App", link: "#" },
-          { id: "mt5", name: "MetaTrader 5 (MT5)", link: "/platform" },
-          {
-            id: "platformfeatures",
-            name: "Platform Features",
-            link: "/platform",
-          },
-        ],
+          { id: "2", name: "MetaTrader 5 (MT5)", link: "/platform" },
+          { id: "tradingcondidstions", name: "WebTrader", link: "/web-trading" },
+          { id: "accounttfdsfypes", name: "Mobile App", link: "/" },
+          { id: "riskmanafdsgement", name: "Social & Copy Trading", link: "/social-&-copy-trading" }
+        ]
       },
-    ],
+    ]
   },
   {
     id: 5,
     nav_name: "Tools",
     sections: [
       {
-        heading: "Tools",
+        heading: "Introduction",
         items: [
-          { id: "whyflip", name: "Pip Calculator", link: "/pip-calculator" },
-          {
-            id: "whattrade",
-            name: "Economic Calendar",
-            link: "/economic-calendar",
-          },
-          { id: "howtostart", name: "Web Trading", link: "/web-trading" },
-        ],
+          { name: "Calendar Overview", link: "#" },
+          { name: "Why Use Economic Calendar", link: "#" },
+          { name: "Trade Anywhere", link: "#" },
+          { name: "What is a Pip", link: "#" },
+          { name: "Calculator", link: "#" },
+          { name: "FAQs", link: "#" }
+        ]
       },
       {
-        heading: "Trade",
+        heading: "Trading Tools",
         items: [
-          { id: "typesmarkets", name: "Types of Markets", link: "#" },
-          { id: "tradingconditions", name: "Trading Conditions", link: "#" },
-          { id: "accounttypes", name: "Account Types Overview", link: "#" },
-          { id: "riskmanagement", name: "Risk Management Tips", link: "#" },
-        ],
-      },
-      {
-        heading: "Trading Platforms",
-        items: [
-          { id: "webtrader", name: "WebTrader", link: "/web-trading" },
-          { id: "mobileapp", name: "Mobile App", link: "#" },
-          { id: "mt5", name: "MetaTrader 5 (MT5)", link: "/platform" },
-          {
-            id: "platformfeatures",
-            name: "Platform Features",
-            link: "/platform",
-          },
-        ],
-      },
-    ],
+          { name: "Pip Calculator", link: "/pip-calculator" },
+          { name: "Economic Calendar", link: "/economic-calendar" }
+        ]
+      }
+    ]
+
   },
   {
     id: 6,
     nav_name: "Contact",
     sections: [
       {
-        heading: "Contact",
-        items: [{ id: "whyflip", name: "Contact us", link: "/contact-us" }],
+        heading: "Introduction",
+        items: [
+          { name: "Office & Contact Details", link: "#" },
+          { name: "Sign Up Form", link: "#" },
+          { name: "Social Links", link: "#" },
+          { name: "How IB Partner Works", link: "#" },
+          { name: "Why Join as IB", link: "#" },
+          { name: "FAQs", link: "#" }
+        ]
       },
       {
-        heading: "Trade",
+        heading: "Partnership & Support",
         items: [
-          { id: "typesmarkets", name: "Types of Markets", link: "#" },
-          { id: "tradingconditions", name: "Trading Conditions", link: "#" },
-          { id: "accounttypes", name: "Account Types Overview", link: "#" },
-          { id: "riskmanagement", name: "Risk Management Tips", link: "#" },
-        ],
-      },
-      {
-        heading: "Trading Platforms",
-        items: [
-          { id: "webtrader", name: "WebTrader", link: "/web-trading" },
-          { id: "mobileapp", name: "Mobile App", link: "#" },
-          { id: "mt5", name: "MetaTrader 5 (MT5)", link: "/platform" },
-          {
-            id: "platformfeatures",
-            name: "Platform Features",
-            link: "/platform",
-          },
-        ],
-      },
-    ],
-  },
+          { name: "IB Partner", link: "/ib-partner" },
+          { name: "Contact Us", link: "/contact-us" }
+        ]
+      }
+    ]
+  }
 ];
 
 // Mobile Dropdown Item Component
 const MobileDropdownItem = ({ data, isOpen, setIsOpen, setIsMenu, pathname }) => {
   const sections = data.sections;
-  
+
   // Check if any child item is active
-  const isChildActive = sections?.some(section => 
+  const isChildActive = sections?.some(section =>
     section.items?.some(item => item.link === pathname)
   );
 
   return (
     <div className="w-full">
       <div
-        className={`flex items-center justify-between text-base font-medium py-4 px-4 cursor-pointer border-b border-gray-100 transition-colors ${
-          isChildActive 
-            ? "text-white bg-primary" 
-            : "text-gray-800 hover:bg-gray-50"
-        }`}
+        className={`flex items-center justify-between text-base font-medium py-4 px-4 cursor-pointer border-b border-gray-100 transition-colors ${isChildActive
+          ? "text-white bg-primary"
+          : "text-gray-800 hover:bg-gray-50"
+          }`}
         onClick={() => setIsOpen(!isOpen)}
       >
         <span>{data.nav_name}</span>
@@ -275,15 +255,13 @@ const MobileDropdownItem = ({ data, isOpen, setIsOpen, setIsMenu, pathname }) =>
           alt="dropdown"
           width={16}
           height={16}
-          className={`max-w-[16px] duration-300 transition-all ease-in-out ${
-            isOpen ? "rotate-180" : "rotate-0"
-          }`}
+          className={`max-w-[16px] duration-300 transition-all ease-in-out ${isOpen ? "rotate-180" : "rotate-0"
+            }`}
         />
       </div>
       <div
-        className={`${
-          isOpen ? "opacity-100" : "max-h-0 opacity-0"
-        } overflow-hidden duration-300 transition-all ease-in-out bg-gray-50`}
+        className={`${isOpen ? "opacity-100" : "max-h-0 opacity-0"
+          } overflow-hidden duration-300 transition-all ease-in-out bg-gray-50`}
       >
         {sections?.map((section) => (
           <div key={section.heading} className="px-4 py-2 border-b border-primary">
@@ -291,15 +269,14 @@ const MobileDropdownItem = ({ data, isOpen, setIsOpen, setIsMenu, pathname }) =>
               {section.heading}
             </h4>
             <div className="space-y-1">
-              {section.items.map((item) => (
+              {section.items.map((item, index) => (
                 <Link
-                  key={item.id}
+                  key={index}
                   href={item.link}
-                  className={`block py-2 text-sm font-medium rounded-md transition-colors ${
-                    item.link === pathname
-                      ? "text-primary bg-primary/10 font-semibold"
-                      : "text-gray-700 hover:text-primary hover:bg-white"
-                  }`}
+                  className={`block py-2 text-sm font-medium rounded-md transition-colors ${item.link === pathname
+                    ? "text-primary bg-primary/10 font-semibold"
+                    : "text-gray-700 hover:text-primary hover:bg-white"
+                    }`}
                   onClick={() => {
                     setIsMenu(false);
                     setIsOpen(false);
@@ -334,7 +311,7 @@ export default function Header() {
       document.body.style.position = 'unset';
       document.body.style.width = 'unset';
     }
-    
+
     // Cleanup on unmount
     return () => {
       document.body.style.overflow = 'unset';
@@ -346,10 +323,10 @@ export default function Header() {
   const [hoveredItem, setHoveredItem] = useState(() => {
     // If on home page, no highlight
     if (pathname === '/') return null;
-    
+
     // Initialize based on current pathname
-    const matchingNav = navlistdata.find(nav => 
-      nav.sections?.some(section => 
+    const matchingNav = navlistdata.find(nav =>
+      nav.sections?.some(section =>
         section.items?.some(item => item.link === pathname)
       )
     );
@@ -371,8 +348,8 @@ export default function Header() {
       }
 
       // Check if current pathname matches any navigation link
-      const matchingNav = navlistdata.find(nav => 
-        nav.sections?.some(section => 
+      const matchingNav = navlistdata.find(nav =>
+        nav.sections?.some(section =>
           section.items?.some(item => item.link === pathname)
         )
       );
@@ -437,9 +414,8 @@ export default function Header() {
             className="relative flex w-[98%] 2xl:w-[95%] justify-around items-center 2xl:py-1 font_secondary"
           >
             <div
-              className={`${
-                isMenu ? "fixed" : "absolute"
-              } bottom-[-2px] h-[2px] bg-primary transition-all duration-300 ease-in-out`}
+              className={`${isMenu ? "fixed" : "absolute"
+                } bottom-[-2px] h-[2px] bg-primary transition-all duration-300 ease-in-out`}
               style={{ left: showPos.left, width: showPos.width }}
             />
             {navlistdata.map((data) => (
@@ -468,15 +444,14 @@ export default function Header() {
               >
                 <p
                   data-link="#"
-                  className={`relative z-10 list_text font-medium py-2 px-3 block cursor-pointer transition-colors duration-300 ${
-                    tempHoveredItem === data.id
-                      ? "text-primary"
-                      : hoveredItem === data.id
+                  className={`relative z-10 list_text font-medium py-2 px-3 block cursor-pointer transition-colors duration-300 ${tempHoveredItem === data.id
+                    ? "text-primary"
+                    : hoveredItem === data.id
                       ? "text-primary"
                       : openDropdown === null
-                      ? "text-white"
-                      : "text-black"
-                  }`}
+                        ? "text-white"
+                        : "text-black"
+                    }`}
                 >
                   {data.nav_name}
                 </p>
@@ -490,9 +465,8 @@ export default function Header() {
           <div className="hidden lg:flex items-center gap-6">
             <Link href={"https://client.fliptradegroup.com/trader"}>
               <button
-                className={`hover:text-[var(--subprimary)] list_text font-medium px-8 cursor-pointer hover:underline hover:scale-[1.1] duration-300 transition-all ${
-                  openDropdown ? "text-black" : "text-white"
-                }`}
+                className={`hover:text-[var(--subprimary)] list_text font-medium px-8 cursor-pointer hover:underline hover:scale-[1.1] duration-300 transition-all ${openDropdown ? "text-black" : "text-white"
+                  }`}
               >
                 Login
               </button>
@@ -514,9 +488,8 @@ export default function Header() {
           </div>
           <div className="flex xl:hidden gap-6">
             <div
-              className={`relative z-[999] duration-700 transition-all ${
-                isMenu ? "rotate-0" : "rotate-[225deg]"
-              }`}
+              className={`relative z-[999] duration-700 transition-all ${isMenu ? "rotate-0" : "rotate-[225deg]"
+                }`}
               onClick={() => setIsMenu(!isMenu)}
             >
               <Image
@@ -533,11 +506,10 @@ export default function Header() {
 
       {/* Mobile Dropdown Menu */}
       <div
-        className={`fixed bg-white h-screen w-screen z-[999] duration-300 transition-all flex flex-col ${
-          !isMenu
-            ? "translate-x-full opacity-0 pointer-events-none"
-            : "translate-x-0 opacity-100 pointer-events-auto top-[6rem]"
-        }`}
+        className={`fixed bg-white h-screen w-screen z-[999] duration-300 transition-all flex flex-col ${!isMenu
+          ? "translate-x-full opacity-0 pointer-events-none"
+          : "translate-x-0 opacity-100 pointer-events-auto top-[6rem]"
+          }`}
       >
         {/* Navigation Content */}
         <div className="flex-1 overflow-y-auto" style={{ maxHeight: 'calc(100vh - 200px)' }}>
@@ -607,21 +579,20 @@ export default function Header() {
           setHoverPos({ left: 0, width: 0 });
           setTempHoveredItem(null); // Clear temporary hover
         }}
-        className={`absolute left-0 top-0 z-20 origin-top transition-all duration-300 ease-in-out w-full ${
-          openDropdown
-            ? "scale-100 opacity-100 pointer-events-auto"
-            : "scale-0 opacity-0 pointer-events-none"
-        }`}
+        className={`absolute left-0 top-0 z-20 origin-top transition-all duration-300 ease-in-out w-full ${openDropdown
+          ? "scale-100 opacity-100 pointer-events-auto"
+          : "scale-0 opacity-0 pointer-events-none"
+          }`}
       >
         <div className="h-full">
-          <div className="m-auto bg-[#F2F7FF] border border-[#75757526] shadow-lg overflow-hidden h-[471px]">
-            <div className="relative grid grid-cols-[2fr_3fr] gap-4 py-16 ps-32 top-[90px] h-[400px]">
+          <div className="m-auto bg-[#F2F7FF] border border-[#75757526] shadow-lg overflow-hidden">
+            <div className="relative grid grid-cols-[2fr_3fr] gap-4 pt-[120px] pb-12  inn_container">
               <div className="flex flex-col items-start">
-                <div className="text-secondary text-5xl leading-16">
+                <div className="text-secondary text-4xl 2xl:text-5xl leading-16">
                   Where Smart Traders
                   <br /> Flip the Game.
                 </div>
-                <div className="flex pt-8 gap-2.5">
+                <div className="flex flex-wrap pt-8 gap-2.5">
                   <Link
                     href={
                       "https://client.fliptradegroup.com/trader/registration"
@@ -652,25 +623,24 @@ export default function Header() {
                 </div>
               </div>
 
-              <div className="max-w-[80%]">
-                <div className="grid grid-cols-3 gap-4 py-4 px-6 h-max">
+              <div className="w-full">
+                <div className="grid grid-cols-4 gap-4 py-4 px-6 h-max">
                   {navlistdata
                     .find((n) => n.nav_name === openDropdown)
                     ?.sections?.map((section) => (
                       <div key={section.heading} className="text-start">
-                        <h3 className="text-xl font-bold text-black mb-4">
+                        <h3 className="text-xl font_ternary font-semibold text-black mb-4">
                           {section.heading}
                         </h3>
                         <div className="space-y-2">
-                          {section.items.map((item) => (
+                          {section.items.map((item, index) => (
                             <Link
-                              key={item.id}
+                              key={index}
                               href={item.link}
-                              className={`relative z-10 font_secondary py-1 block rounded-lg text-base font-medium transition-all duration-500 ${
-                                item.link === pathname
-                                  ? "text-primary font-semibold"
-                                  : "text-black hover:text-primary hover:underline"
-                              }`}
+                              className={`relative z-10 font_secondary py-1 block rounded-lg text-base text-ternary transition-all duration-500 ${item.link === pathname
+                                ? "text-primary font-semibold"
+                                : "text-black hover:text-primary hover:underline"
+                                }`}
                               onClick={() => setOpenDropdown(null)}
                             >
                               {item.name}

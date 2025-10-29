@@ -6,6 +6,7 @@ import Canonical from "./Canonical";
 import GoogleAnalytics from "./GoogleAnalytics";
 import Metalinksseo from "./Metalinksseo";
 import Telegramlink from "./Telegramlink";
+import Aosinit from "./Components/Pagecomponents/Aosinit";
 const monaSans = localFont({
   src: [{ path: "../../public/fonts/Mona-Sans-MediumWide.ttf" }],
 
@@ -52,9 +53,10 @@ export default function RootLayout({ children }) {
           <div className="absolute w-full max-w-[1960px] z-[999] bg-[linear-gradient(1deg,rgba(255,255,255,0)_15%,rgb(0_0_0_/_76%)_99%)]">
             <Header />
           </div>
+          <Aosinit />
           {children}
           <Fotter />
-          <div className="fixed left-0 bottom-0">
+          <div className="fixed left-0 bottom-0 z-[999]">
             <Telegramlink />
           </div>
         </div>

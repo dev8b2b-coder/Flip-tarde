@@ -13,23 +13,28 @@ import Link from "next/link";
 const buildtradetagcard = [
   {
     title: "20,000 +",
-    sub_title: "Tradable <br/> Instruments"
+    sub_title: "Tradable <br/> Instruments",
+    data_duration: "800"
   },
   {
     title: "1:500",
-    sub_title: "Leverage <br/> up to"
+    sub_title: "Leverage <br/> up to",
+    data_duration: "1000"
   },
   {
     title: "1 MS",
-    sub_title: "Trade <br/> Execution"
+    sub_title: "Trade <br/> Execution",
+    data_duration: "1200"
   },
   {
     title: "$0 Deposit",
-    sub_title: "& Withdrawals <br/> fees"
+    sub_title: "& Withdrawals <br/> fees",
+    data_duration: "1400"
   },
   {
     title: "24/7",
-    sub_title: "Client <br/> Support"
+    sub_title: "Client <br/> Support",
+    data_duration: "1600"
   }
 ];
 const Buildtrader = () => {
@@ -53,6 +58,8 @@ const Buildtrader = () => {
           {buildtradetagcard.map((data, index) =>
             <div
               key={index}
+              data-aos="fade-up"
+              data-aos-duration={data.data_duration}
               className={` flex flex-col items-center gap-2 lg:gap-4 2xl:gap-5 py-[24px] md:py-[30px] lg:py-[46px] rounded-2xl 
                 ${index % 2 === 0
                   ? "[clip-path:polygon(0_0,80%_0,100%_25%,100%_100%,20%_100%,0_75%)] bg-[#6A40EB] shadow-[inset_1px_0px_20px_20px_#462A9C]"
