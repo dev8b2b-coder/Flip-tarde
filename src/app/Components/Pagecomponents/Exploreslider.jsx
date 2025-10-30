@@ -31,7 +31,7 @@ const Exploreslider = ({ sliderdata }) => {
           <Swiper
             effect="coverflow"
             loop
-            autoplay={{ delay: 2000, disableOnInteraction: false }}
+            // autoplay={{ delay: 2000, disableOnInteraction: false }}
             speed={1000}
             slidesPerView={slideitem}
             pagination={{ clickable: true }}
@@ -52,7 +52,7 @@ const Exploreslider = ({ sliderdata }) => {
                 <SwiperSlide key={index}>
                   <div
                     className={`w-max flex justify-center relative cursor-pointer transition-all duration-300
-                                ${isActive ? "scale-100 ring-4 ring-white/70" : "scale-95 ring-0"}`}
+                                ${isActive ? "scale-100 " : "scale-95 ring-0"}`}
                     onClick={() => swiperRef.current?.slideToLoop(index)}
                   >
                     <Image

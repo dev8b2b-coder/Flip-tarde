@@ -35,15 +35,15 @@ const faqData = [
 
 const Tradeyourway = () => {
   return (
-    <div className="bg-white">
+    <div className="bg-theme">
       <div className="">
         <Yourway />
         <div>
           <div className="inn_container pt-20 md:pt-12 lg:pt-18 xl:pt-24">
             <div className="text-center">
               <Title
-                title={`Frequently Asked <br/> Questions`}
-                color="text-secondary"
+                title={`Frequently Asked <br/> <span class='text-subprimary'> Questions </span>`}
+                color="text-white"
               />
             </div>
             <Faq faqData={faqData} />
@@ -65,13 +65,13 @@ const Tradeyourway = () => {
               <div className="flex flex-col justify-center items-center">
                 <div className="text-center lg:text-start pt-12 md:pt-0 px-5 md:px-0">
                   <Title
-                    title={`Trade on the Go <br/> Anytime and <br/> Anywhere`}
-                    color="text-secondary"
+                    title={`Trade on the Go <br/> <span class='gradient_text'> Anytime and <br/> Anywhere </span>`}
+                    color="text-white"
                   />
                   <p className="pt-4" />
                   <Discription
                     dispription={`Trade with us from anywhere, anytime, on <br/> desktop and mobile devices with MT5's <br/> deep liquidity and ultra-fast execution.`}
-                    color="text-ternary"
+                    color="text-white"
                   />
                 </div>
 

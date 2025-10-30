@@ -1,4 +1,5 @@
-import React from "react";
+"use client"
+import React, { useEffect } from "react";
 import boxbg from "../../../../public/banners/box-bg.webp";
 import mainbanner from "../../../../public/images/mt5where.webp";
 import Image from "next/image";
@@ -17,8 +18,23 @@ const Mt5anywhere = () => {
   //     return "/" ;
   //   }
   // };
+  useEffect(() => {
+    const shouldScroll = sessionStorage.getItem("scrollTotrade");
+    if (shouldScroll === "true") {
+      const el = document.getElementById("trade");
+      if (el) {
+        setTimeout(() => {
+          el.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+          });
+          sessionStorage.removeItem("scrollTotrade");
+        }, 800);
+      }
+    }
+  }, []);
   return (
-    <div className="bg-white">
+    <div className="bg-white" id="trade">
       <div
         className="bg-cover"
         style={{ backgroundImage: `url(${boxbg.src})` }}

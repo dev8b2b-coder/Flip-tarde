@@ -1,5 +1,5 @@
 "use client";
-import React, { useMemo, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import Image from "next/image";
 
 import pipcalculator from "../../../../public/banners/pipcalculator.webp";
@@ -21,6 +21,21 @@ const Pipcalculator = () => {
     convRate: ""
   });
 
+    useEffect(() => {
+    const shouldScroll = sessionStorage.getItem("scrollToContact");
+    if (shouldScroll === "true") {
+      const el = document.getElementById("calculator");
+      if (el) {
+        setTimeout(() => {
+          el.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+          });
+          sessionStorage.removeItem("scrollToContact");
+        }, 800);
+      }
+    }
+  }, []);
   const handelchange = (e) => {
     const { name, value } = e.target;
     setPipdata((d) => ({ ...d, [name]: value }));
@@ -88,7 +103,7 @@ const Pipcalculator = () => {
     isFinite(n) ? Number(n).toLocaleString(undefined, { maximumFractionDigits: d }) : "—";
 
   return (
-    <div className="bg-cover relative overflow-hidden" style={{ backgroundImage: `url(${pipcalculator.src})` }}>
+    <div className="bg-cover relative overflow-hidden" style={{ backgroundImage: `url(${pipcalculator.src})` }} id="calculator">
       <div className="absolute hidden 2xl:block right-[-2%] top-[-1%] z-[1]">
         <Image
           src={piphandupper}

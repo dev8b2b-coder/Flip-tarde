@@ -19,19 +19,19 @@ const Faq = ({ faqData, pt }) => {
         {faqData.map((faq, index) =>
           <div
             key={index}
-            className="bg-[#F3EFFF] px-6 2xl:px-8 py-3 2xl:py-4  border-[2px] border-solid border-[#2962FF40] rounded-[10px] md:rounded-[20px] 2xl:rounded-3xl  transition-all duration-500 ease-in-out"
+            className="gradient_line_bg px-6 2xl:px-8 py-3 2xl:py-4 rounded-[10px] md:rounded-[20px] 2xl:rounded-3xl  transition-all duration-500 ease-in-out"
           >
             {/* Question */}
             <div
               onClick={() => toggleAnswer(index)}
-              className={` cursor-pointer text-primary font-normal text-[17px] md:text-xl 2xl:text-[25px] flex justify-between items-center transition-all duration-500   ease-in-out`}
+              className={` cursor-pointer text-[#2D00B9] font_normal font-semibold  text-[17px] md:text-xl 2xl:text-[25px] flex justify-between items-center transition-all duration-500   ease-in-out`}
             >
               {index + 1}. {faq.question}
               <span
                 className={`ml-2 transform   transition-all duration-500 ease-in-out ${activeIndex ===
                 index
                   ? "rotate-135"
-                  : "rotate-0"}`}
+                  : "rotate-0"}`} 
               >
                 <Image
                   src={plus}

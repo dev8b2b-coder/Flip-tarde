@@ -1,4 +1,5 @@
-import React from "react";
+"use client"
+import React, { useEffect } from "react";
 
 import Image from "next/image";
 import Discription from "../../Uiux/Discription";
@@ -6,8 +7,23 @@ import Title from "../../Uiux/Title";
 
 
 const Accountcards = ({description ,carddata}) => {
+    useEffect(() => {
+    const shouldScroll = sessionStorage.getItem("scrollToContact");
+    if (shouldScroll === "true") {
+      const el = document.getElementById("trade-acc");
+      if (el) {
+        setTimeout(() => {
+          el.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+          });
+          sessionStorage.removeItem("scrollToContact");
+        }, 100);
+      }
+    }
+  }, []);
   return (
-    <div className="bg-white">
+    <div className="bg-white" id="trade-acc">
       <div className="inn_container ">
         <div className="grid grid-col-1 text-center lg:text-start lg:grid-cols-2">
           <Title

@@ -73,7 +73,7 @@ const Marketaccess = () => {
               <div className="absolute top-0 w-full h-[72%] flex justify-center items-center">
                 <div className="">
                   <p className="text-xl md:text-2xl lg:text-4xl xl:text-3xl 2xl:text-4xl null  font-medium text-white text-center">
-                    24/5 Access
+                    24/7 Access
                   </p>
                   <span className="list_text font-light text-center max-w-[350px] md:max-w-[unset] m-auto  pt-4 font_ternary leading-[28px] max-w[330px] min-h-[65px] h-full flex text-white justify-center">
                     Trade global markets <br /> anytime

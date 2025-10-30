@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Title from "../Uiux/Title";
 import Discription from "../Uiux/Discription";
 
@@ -17,8 +17,23 @@ const workstep = [
   }
 ];
 export default function Pipworkstep() {
+    useEffect(() => {
+    const shouldScroll = sessionStorage.getItem("scrollToContact");
+    if (shouldScroll === "true") {
+      const el = document.getElementById("pip-cal");
+      if (el) {
+        setTimeout(() => {
+          el.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+          });
+          sessionStorage.removeItem("scrollToContact");
+        }, 800);
+      }
+    }
+  }, []);
   return (
-    <div className="bg-white py-12 md:py-18 lg:py-32">
+    <div className="bg-white py-12 md:py-18 lg:py-32" id="pip-cal">
       <div className="inn_container">
         <div className="grid grid-cols-1 lg:grid-cols-2 text-center lg:text-start">
           <div>

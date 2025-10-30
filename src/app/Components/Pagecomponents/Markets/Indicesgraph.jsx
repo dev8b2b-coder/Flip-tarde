@@ -3,7 +3,21 @@ import React, { useEffect, useRef, memo } from "react";
 
 const Indicesgraph = ({ darkMode }) => {
   const container = useRef();
-
+useEffect(() => {
+    const shouldScroll = sessionStorage.getItem("scrollToContact");
+    if (shouldScroll === "true") {
+      const el = document.getElementById("graph");
+      if (el) {
+        setTimeout(() => {
+          el.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+          });
+          sessionStorage.removeItem("scrollToContact");
+        }, 800);
+      }
+    }
+  }, []);
   useEffect(
     () => {
       container.current.innerHTML = "";
@@ -76,7 +90,7 @@ const Indicesgraph = ({ darkMode }) => {
   );
 
   return (
-    <div className="tradingview-widget-container" ref={container}>
+    <div className="tradingview-widget-container" ref={container} id="graph">
       <div className="tradingview-widget-container__widget" />
     </div>
   );

@@ -1,4 +1,5 @@
-import React from "react";
+"use client"
+import React, { useEffect } from "react";
 import tradingaccounts from "../../../../public/banners/tradingaccounts.webp";
 import Title from "../Uiux/Title";
 import Discription from "../Uiux/Discription";
@@ -12,11 +13,12 @@ import Zcash from "../../../../public/icons/Zcash.svg";
 import Bitcoin from "../../../../public/icons/Bitcoin.svg";
 import Tradingaccountsph from "./Tradingaccountsph";
 import Link from "next/link";
+import accountcardbg from "../../../../public/images/accountcardbg.webp";
 const accountinfo = [
   {
     acount_title: "Standard <br/>  Account",
     min_deposit: "$25",
-    Swap_Free: "Yes",
+    Swap_Free: "No",
     spreads: "1.2",
     Commission: false,
     pagelink: "/standard-account"
@@ -24,7 +26,7 @@ const accountinfo = [
   {
     acount_title: "Classic <br/> Account",
     min_deposit: "$100",
-    Swap_Free: "Yes",
+    Swap_Free: "No",
     spreads: "0.8",
     Commission: false,
     pagelink: "/classic-account"
@@ -33,7 +35,7 @@ const accountinfo = [
   {
     acount_title: "ECN  <br/>  Account",
     min_deposit: "$200",
-    Swap_Free: "Yes",
+    Swap_Free: "No",
     spreads: "Raw Spread",
     Commission: true,
     pagelink: "/enc-account"
@@ -41,7 +43,7 @@ const accountinfo = [
   {
     acount_title: "Professional <br/>  Account",
     min_deposit: "$500",
-    Swap_Free: "Yes",
+    Swap_Free: "No",
     spreads: "Raw Spread",
     Commission: true,
     pagelink: "/professional-account"
@@ -52,7 +54,7 @@ const accountinfoph = [
   {
     acount_title: "Standard <br/>  Account",
     min_deposit: "$25",
-    Swap_Free: "Yes",
+    Swap_Free: "No",
     spreads: "1.2",
     Commission: false,
     pagelink: "/standard-account"
@@ -60,7 +62,7 @@ const accountinfoph = [
   {
     acount_title: "Classic <br/> Account",
     min_deposit: "$100",
-    Swap_Free: "Yes",
+    Swap_Free: "No",
     spreads: "0.8",
     Commission: false,
     pagelink: "/classic-account"
@@ -69,7 +71,7 @@ const accountinfoph = [
   {
     acount_title: "ECN  <br/>  Account",
     min_deposit: "$200",
-    Swap_Free: "Yes",
+    Swap_Free: "No",
     spreads: "Raw Spread",
     Commission: true,
     pagelink: "/enc-account"
@@ -77,7 +79,7 @@ const accountinfoph = [
   {
     acount_title: "Professional <br/>  Account",
     min_deposit: "$500",
-    Swap_Free: "Yes",
+    Swap_Free: "No",
     spreads: "Raw Spread",
     Commission: true,
     pagelink: "/professional-account"
@@ -87,7 +89,7 @@ const accountinfoph = [
   {
     acount_title: "Standard <br/>  Account",
     min_deposit: "$25",
-    Swap_Free: "Yes",
+    Swap_Free: "No",
     spreads: "1.2",
     Commission: false,
     pagelink: "/standard-account"
@@ -95,7 +97,7 @@ const accountinfoph = [
   {
     acount_title: "Classic <br/> Account",
     min_deposit: "$100",
-    Swap_Free: "Yes",
+    Swap_Free: "No",
     spreads: "0.8",
     Commission: false,
     pagelink: "/classic-account"
@@ -104,7 +106,7 @@ const accountinfoph = [
   {
     acount_title: "ECN  <br/>  Account",
     min_deposit: "$200",
-    Swap_Free: "Yes",
+    Swap_Free: "No",
     spreads: "Raw Spread",
     Commission: true,
     pagelink: "/enc-account"
@@ -112,16 +114,38 @@ const accountinfoph = [
   {
     acount_title: "Professional <br/>  Account",
     min_deposit: "$500",
-    Swap_Free: "Yes",
+    Swap_Free: "No",
     spreads: "Raw Spread",
     Commission: true,
     pagelink: "/professional-account"
   }
 ];
 function Tradingaccounts() {
+  useEffect(() => {
+    const shouldScroll = sessionStorage.getItem("scrollToContact");
+    if (shouldScroll === "true") {
+      const el = document.getElementById("account-type");
+      if (el) {
+        setTimeout(() => {
+          el.scrollIntoView({ behavior: "smooth", block: "start" });
+          sessionStorage.removeItem("scrollToContact");
+        }, 800);
+      }
+    }
+  }, []);
   return (
-    <div className="bg-white">
-      <div className="pt-12 xl:pt-24 2xl:pt-36">
+    <div className="bg-theme relative">
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute top-0 left-0 w-full h-full object-cover opacity-50"
+      >
+        <source src="/videos/accounttyps.mp4" type="video/mp4" />
+      </video>
+
+      <div className="pt-12 xl:pt-24">
         <div
           className="bg-cover"
           style={{ backgroundImage: `url(${tradingaccounts.src})` }}
@@ -129,19 +153,19 @@ function Tradingaccounts() {
           <div className="inn_container">
             <div className="grid grid-col-1 md:grid-cols-2 pb-5 text-center md:text-start relative z-[2]">
               <Title
-                title="Trading Made <br/> Personal"
-                color="text-secondary"
+                title="Trading Made <br/> <span class='gradient_text'> Personal </span> "
+                color="text-white"
               />
               <div className="flex justify-center items-center">
                 <Discription
                   dispription={`Ustomize your trading journey with accounts <br/> built to enhance your experience and <br/> strategies.`}
-                  color="text-ternary"
+                  color="text-white"
                 />
               </div>
             </div>
           </div>
 
-          <div className="relative hidden xl:block overflow-hidden pt-20 h-[750px] xl:h-auto">
+          <div className="relative hidden xl:block overflow-hidden pt-20 h-[750px] xl:h-auto" id="account-type">
             <Image
               src={accountsserface.src}
               alt="Banner"
@@ -149,15 +173,16 @@ function Tradingaccounts() {
               height={500}
               className="relative left-[-10%] h-full xl:h-auto"
             />
-            <div className="absolute top-0 h-full w-full flex items-center">
+            <div className="absolute top-0 h-full w-full flex items-center" >
               <div className="max-w-[1440px] px-[3%] xl:px-[unset] m-auto relative bottom-[20%]">
                 <div className="grid grid-cols-4 gap-5">
                   {accountinfo.map((data, index) =>
                     <div
                       key={index}
-                      className="max-w-[300px] xl:max-w-[350px] 2xl:max-w-[400px] border-[12px] rounded-3xl border-[#DCD0FFCC] relative z-[2]"
+                      className="max-w-[300px] xl:max-w-[350px] 2xl:max-w-[400px] rounded-3xl border-transparent relative z-[2] bg-no-repeat bg-cover"
+                      style={{ backgroundImage: `url(${accountcardbg.src})` }}
                     >
-                      <div>
+                      <div className="p-3">
                         <div className="py-1 xl:py-3 2xl:py-5 px-16 lg:px-10 2xl:px-12 text-center bg-white rounded-tl-[18px] rounded-tr-[18px]">
                           <h5
                             className="text-xl lg:text-2xl xl:text-3xl min-h-16 2xl:text-4xl lg:leading-[35px]  font-medium text-primary lg:max-w-[250px] text-center"
@@ -166,7 +191,7 @@ function Tradingaccounts() {
                             }}
                           />
                         </div>
-                        <div className="bg-[#DCD0FFCC] border-2 border-white rounded-bl-[14px] rounded-br-[14px] flex flex-col items-center">
+                        <div className="bg-traborder-transparent border-2 border-white rounded-bl-[14px] rounded-br-[14px] flex flex-col items-center">
                           <li className="list-none text-center py-2 2xl:py-4 min-w-[195px] border-b-3 border-dashed border-white ">
                             <p className="text-base lg:text-lg 2xl:text-[22px] text-center">
                               Min Deposit
@@ -203,9 +228,7 @@ function Tradingaccounts() {
                           </li>
                           <div className="relative top-8">
                             {index % 2 === 0
-                              ? <Link
-                                  href={data.pagelink}
-                                >
+                              ? <Link href={data.pagelink}>
                                   <Button
                                     btn_name={"Open Account"}
                                     icon={firebtniconblue.src}
@@ -215,9 +238,7 @@ function Tradingaccounts() {
                                     shadow={true}
                                   />
                                 </Link>
-                              : <Link
-                                  href={data.pagelink}
-                                >
+                              : <Link href={data.pagelink}>
                                   <Button
                                     btn_name={"Open Account"}
                                     icon={firebtn.src}

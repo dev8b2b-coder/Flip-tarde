@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 import Title from "../../Uiux/Title";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
@@ -9,8 +9,24 @@ const Marketspoints = ({ pointdata }) => {
     .replace("/", "")
     .replace(/-/g, " ")
     .replace(/\b\w/g, c => c.toUpperCase());
+
+  useEffect(() => {
+    const shouldScroll = sessionStorage.getItem("scrollToContact");
+    if (shouldScroll === "true") {
+      const el = document.getElementById("benifits");
+      if (el) {
+        setTimeout(() => {
+          el.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+          });
+          sessionStorage.removeItem("scrollToContact");
+        }, 100);
+      }
+    }
+  }, []);
   return (
-    <div className="bg-white">
+    <div className="bg-white" id="benifits">
       <div className="inn_container pt-12">
         <div className="text-center lg:text-start max-w-[350px] md:max-w-[600px] lg:max-w-[unset] m-auto">
           <Title

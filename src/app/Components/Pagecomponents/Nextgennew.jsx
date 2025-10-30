@@ -2,97 +2,89 @@ import React from "react";
 import Title from "../Uiux/Title";
 import Discription from "../Uiux/Discription";
 import newgencardbg from "../../../../public/images/newgencardbg.webp";
+import mainbanner from "../../../../public/images/nextgenbg.webp";
+import Image from "next/image";
 const Nextgennew = () => {
   return (
-    <div className="pt-12 md:pt-18 lg:pt-28 xl:pt-38 bg-white">
-      <div
-        className="bg-cover bg-no-repeat bg-center newgenbg"
-      >
-        <div className="inn_container pt-12 md:pt-18">
-          <div className="grid grid-col-1 text-center lg:text-start lg:grid-cols-[3fr_2fr]">
-            <Title
-              title="Next-Gen Forex <br/> Trading for Everyone"
-              color="text-white"
-            />
-            <div className="flex justify-center items-center">
-              <Discription
-                dispription={`Trade with zero hidden fees, ultra-tight spreads, <br/> and lightning-fast execution. FlipTrade gives <br/>
+    <div className="relative pt-12 md:pt-18 lg:pt-28 xl:pt-38 bg-theme overflow-hidden">
+      <div className="relative inn_container mt-12 md:mt-18 text-white">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute top-0 left-0 w-full h-full object-cover opacity-50 z-[5]"
+        >
+          <source src="/videos/nextgen-bg.mp4" type="video/mp4" />
+        </video>
+
+        <div className="relative ">
+          <Image
+            src={mainbanner}
+            alt="mainbanner"
+            width={3000}
+            height={500}
+            className=""
+          />
+          <div className="absolute top-0 left-0 w-full h-full z-10">
+            <div className="grid grid-col-1 text-center lg:text-start lg:grid-cols-[3fr_2fr]  bg-[linear-gradient(180deg,rgba(0,0,0,1)_0%,rgba(255,255,255,0)_100%)]">
+              <div>
+                <Title
+                  title="Next-Gen Forex <br/> Trading for Everyone"
+                  color="text-white"
+                />
+              </div>
+              <div className="flex justify-center items-center">
+                <Discription
+                  dispription={`Trade with zero hidden fees, ultra-tight spreads, <br/> and lightning-fast execution. FlipTrade gives <br/>
                        you transparent pricing, expert insights, & <br/> a stable platform you can trust.`}
-                color="text-white"
-              />
+                  color="text-white"
+                />
+              </div>
             </div>
-          </div>
-          <div className="grid grid-col-1 lg:grid-cols-2 pt-6 md:pt-18 xl:pt-24  pb-18 md:pb-24 lg:pb-28  xl:pb-40 ">
+
             <div>
-              <div className="flex items-center">
-                <h4 className="text-[80px] lg:text-[100px] xl:text-[145px] leading-[80px]  lg:leading-[100px] xl:leading-[145px] gradient_text">
-                  1
-                </h4>
-                <div
-                  className="w-max h-max px-10 md:px-12 lg:px-16 py-10 bg-cover"
-                  style={{ backgroundImage: `url(${newgencardbg.src})` }}
-                >
-                  <p className="md:text-lg lg:text-xl xl:text-3xl 2xl:text-4xl font-semibold text-white min-w-[200px] text-start xl:text-center pb-2 2xl:pb-3 ">
-                    Exclusive Insights
-                  </p>
-                  <p className="list_text font-light text-center font_ternary leading-[28px] text-white">
-                    Signals & analysis.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="lg:pt-28 xl:pt-40">
-              <div className="flex items-center justify-end">
-                <div
-                  className="w-max h-max px-10 md:px-12 lg:px-16 py-10 bg-cover"
-                  style={{ backgroundImage: `url(${newgencardbg.src})` }}
-                >
-                  <p className="md:text-lg lg:text-xl xl:text-3xl 2xl:text-4xl font-semibold text-white min-w-[200px] text-start xl:text-center pb-2 2xl:pb-3 ">
-                    Fast Execution
-                  </p>
-                  <p className="list_text font-light text-center font_ternary leading-[28px] text-white">
-                    Milliseconds matter.
-                  </p>
-                </div>
-                <h4 className=" text-[80px] lg:text-[100px] xl:text-[145px] leading-[80px]  lg:leading-[100px] xl:leading-[145px] gradient_text">
-                  2
-                </h4>
-              </div>
-            </div>
-            <div className="lg:pt-12 xl:pt-16">
-              <div className="flex items-center">
-                <h4 className="text-[80px] lg:text-[100px] xl:text-[145px] leading-[80px]  lg:leading-[100px] xl:leading-[145px] gradient_text">
-                  3
-                </h4>
-                <div
-                  className="w-max h-max px-10 md:px-12 lg:px-16 py-10 bg-cover"
-                  style={{ backgroundImage: `url(${newgencardbg.src})` }}
-                >
-                  <p className="md:text-lg lg:text-xl xl:text-3xl 2xl:text-4xl font-semibold text-white min-w-[200px] text-start xl:text-center pb-2 2xl:pb-3 ">
+              <div className="grid grid-cols-2 pt-12 lg:pt-18 gap-x-16 gap-y-12">
+               <div className="flex justify-end">
+                 <div className="w-[433px] bg-contain bg-no-repeat py-6 " style={{ backgroundImage: `url(${newgencardbg.src})` }}>
+                  <p className="md:text-lg lg:text-xl xl:text-3xl 2xl:text-4xl font-semibold text-white min-w-[200px] text-center pb-2">
                     Ultra-Tight Spreads
                   </p>
                   <p className="list_text font-light text-center font_ternary leading-[28px] text-white">
                     Milliseconds matter.
                   </p>
                 </div>
-              </div>
-            </div>
-            <div className="lg:pt-40 xl:pt-56">
-              <div className="flex items-center justify-end">
-                <div
-                  className="w-max h-max px-10 md:px-12 lg:px-16 py-10 bg-cover"
-                  style={{ backgroundImage: `url(${newgencardbg.src})` }}
-                >
-                  <p className="md:text-lg lg:text-xl xl:text-3xl 2xl:text-4xl font-semibold text-white min-w-[200px] text-start xl:text-center pb-2 2xl:pb-3 ">
-                    Transparent Pricing
+               </div>
+               <div>
+                 <div className="max-w-[433px] bg-contain bg-no-repeat py-6 " style={{ backgroundImage: `url(${newgencardbg.src})` }}>
+                  <p className="md:text-lg lg:text-xl xl:text-3xl 2xl:text-4xl font-semibold text-white min-w-[200px] text-center pb-2">
+                    Fast Execution
                   </p>
                   <p className="list_text font-light text-center font_ternary leading-[28px] text-white">
-                    No hidden costs.
+                    Milliseconds matter.
                   </p>
                 </div>
-                <h4 className="text-[80px] lg:text-[100px] xl:text-[145px] leading-[80px]  lg:leading-[100px] xl:leading-[145px] gradient_text">
-                  4
-                </h4>
+               </div>
+               <div>
+                 <div className="max-w-[433px] bg-contain bg-no-repeat py-6 " style={{ backgroundImage: `url(${newgencardbg.src})` }}>
+                  <p className="md:text-lg lg:text-xl xl:text-3xl 2xl:text-4xl font-semibold text-white min-w-[200px] text-center pb-2">
+                    Ultra-Tight Spreads
+                  </p>
+                  <p className="list_text font-light text-center font_ternary leading-[28px] text-white">
+                    Milliseconds matter.
+                  </p>
+                </div>
+               </div>
+               <div className="flex justify-end">
+                 <div className="w-[433px] bg-contain bg-no-repeat py-6 " style={{ backgroundImage: `url(${newgencardbg.src})` }}>
+                  <p className="md:text-lg lg:text-xl xl:text-3xl 2xl:text-4xl font-semibold text-white min-w-[200px] text-center pb-2">
+                    Ultra-Tight Spreads
+                  </p>
+                  <p className="list_text font-light text-center font_ternary leading-[28px] text-white">
+                    Milliseconds matter.
+                  </p>
+                </div>
+               </div>
               </div>
             </div>
           </div>

@@ -1,4 +1,5 @@
-import React from "react";
+"use client"
+import React, { useEffect } from "react";
 import Title from "../Uiux/Title";
 import sidebanner from "../../../../public/images/mt5keyfeature.webp";
 import Image from "next/image";
@@ -26,8 +27,20 @@ const features = [
 ];
 
 function Mt5keyfeature() {
+    useEffect(() => {
+    const shouldScroll = sessionStorage.getItem("scrollToContact");
+    if (shouldScroll === "true") {
+      const el = document.getElementById("platform-features");
+      if (el) {
+        setTimeout(() => {
+          el.scrollIntoView({ behavior: "smooth", block: "start" });
+          sessionStorage.removeItem("scrollToContact");
+        }, 800);
+      }
+    }
+  }, []);
   return (
-    <div className="bg-white py-12 md:py-18 lg:py-28">
+    <div className="bg-white py-12 md:py-18 lg:py-28" >
       <div className="inn_container text-center pb-6 xl:text-start">
         <Title title={"Key Features"} color={"text-secondary"} />
       </div>
@@ -41,7 +54,7 @@ function Mt5keyfeature() {
             className="w-[70%] xl:w-full m-auto"
           />
         </div>
-        <div className="px-[5%] flex flex-col justify-center gap-6">
+        <div className="px-[5%] flex flex-col justify-center gap-6" id="platform-features">
           {features.map(data =>
             <div
               key={data.id}

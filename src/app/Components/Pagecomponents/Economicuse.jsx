@@ -1,4 +1,5 @@
-import React from "react";
+"use client"
+import React, { useEffect } from "react";
 import ecousebanner from "../../../../public/images/ecousebanner.webp";
 import Title from "../Uiux/Title";
 import Discription from "../Uiux/Discription";
@@ -35,6 +36,21 @@ const data = [
 ];
 
 function Economicuse() {
+    useEffect(() => {
+    const shouldScroll = sessionStorage.getItem("scrollToContact");
+    if (shouldScroll === "true") {
+      const el = document.getElementById("eco-calender");
+      if (el) {
+        setTimeout(() => {
+          el.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+          });
+          sessionStorage.removeItem("scrollToContact");
+        }, 800);
+      }
+    }
+  }, []);
   return (
     <div className="bg-white">
       <div className="md:py-12">
@@ -46,7 +62,7 @@ function Economicuse() {
             <div className="text-center lg:text-start pb-8 md:pb-0">
               <Title title={"Why Use It?"} color="text-secondary" />
             </div>
-            <div className=" max-w-[800px] 2xl:max-w-[961px] m-auto relative">
+            <div className=" max-w-[800px] 2xl:max-w-[961px] m-auto relative" id="eco-calender">
               {data.map((data, index) =>
                 <div
                   className={`flex ${index % 2 === 0

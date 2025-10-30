@@ -8,6 +8,7 @@ import Tradingaccounts from "./Components/Pagecomponents/Tradingaccounts";
 import Tradeyourway from "./Components/Pagecomponents/Tradeyourway";
 import Nextgennew from "./Components/Pagecomponents/Nextgennew";
 import Calculatepipvalue from "./Components/Pagecomponents/Calculatepipvalue";
+import Contestleaderboard from "./Components/Pagecomponents/Contestleaderboard";
 
 function page() {
   return (
@@ -20,6 +21,7 @@ function page() {
       <Exploremarket />
       <Calculatepipvalue />
       <Workprocess />
+      <Contestleaderboard />
       <Tradingaccounts />
       <Tradeyourway />
     </div>

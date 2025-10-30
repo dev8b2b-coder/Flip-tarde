@@ -1,4 +1,5 @@
-import React from "react";
+"use client"
+import React, { useEffect } from "react";
 import formsidebanner from "../../../../public/images/formsidebanner.webp";
 import Image from "next/image";
 import Maincontactform from "./Maincontactform";
@@ -8,10 +9,31 @@ import instablack from "../../../../public/icons/instablack.svg";
 import youtubeblack from "../../../../public/icons/youtubeblack.svg";
 import Link from "next/link";
 export default function Contactfrom() {
+useEffect(() => {
+    const shouldScroll = sessionStorage.getItem("scrollToContact");
+    const shouldScroll2 = sessionStorage.getItem("scrollTCont");
+    if (shouldScroll === "true") {
+      const el = document.getElementById("contact-me");
+      if (el) {
+        setTimeout(() => {
+          el.scrollIntoView({ behavior: "smooth", block: "start" });
+          sessionStorage.removeItem("scrollToContact");
+        }, 800);
+      }
+    }else if (shouldScroll2 === "true") {
+      const el = document.getElementById("social-link");
+      if (el) {
+        setTimeout(() => {
+          el.scrollIntoView({ behavior: "smooth", block: "start" });
+          sessionStorage.removeItem("scrollTCont");
+        }, 800);
+      }
+    }
+  }, []);
   return (
     <div>
       <div
-        className="py-12 md:py-16 lg:py-22 relative overflow-hidden bg-cover bg-no-repeat"
+        className="py-12 md:py-16 lg:py-22 relative overflow-hidden bg-cover bg-no-repeat" id="contact-me"
         style={{ backgroundImage: `url(${contactusbanner.src})` }}
       >
         <div className="inn_container">
@@ -32,7 +54,7 @@ export default function Contactfrom() {
         </div>
       </div>
 
-      <div className="bg-white py-10 md:py-20">
+      <div className="bg-white py-10 md:py-20" id="social-link">
         <div className="inn_container">
           <div className="flex flex-col justify-center items-center">
             <p className="text-3xl 2xl:text-4xl null  font-medium text-primary">

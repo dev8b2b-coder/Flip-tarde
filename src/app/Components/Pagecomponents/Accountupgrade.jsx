@@ -1,4 +1,5 @@
-import React from "react";
+"use client"
+import React, { useEffect } from "react";
 import workprocessbanner from "../../../../public/banners/workprocess.webp";
 import accountupgrade from "../../../../public/images/accountupgrade.webp";
 import Image from "next/image";
@@ -93,9 +94,26 @@ const upgradepointsph = [
     classname: "top-[34%] left-[4.5%] rotate-[9deg]"
   }
 ];
+
+
 const Accountupgrade = () => {
+      useEffect(() => {
+    const shouldScroll = sessionStorage.getItem("scrollToContact");
+    if (shouldScroll === "true") {
+      const el = document.getElementById("upgrade-acc");
+      if (el) {
+        setTimeout(() => {
+          el.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+          });
+          sessionStorage.removeItem("scrollToContact");
+        }, 800);
+      }
+    }
+  }, []);
   return (
-    <div className="bg-white relative">
+    <div className="bg-white relative" id="upgrade-acc">
       <div
         className="bg-cover bg-no-repeat"
         style={{ backgroundImage: `url(${workprocessbanner.src})` }}

@@ -1,4 +1,5 @@
-import React from "react";
+"use client"
+import React, { useEffect } from "react";
 import workprocessbanner from "../../../../public/banners/workprocess.webp";
 import Ibpartnerworkbanner from "../../../../public/images/Ibpartnerwork.webp";
 import Title from "../Uiux/Title";
@@ -14,8 +15,23 @@ import ibworkdash2 from "../../../../public/images/ibworkdash2.webp";
 import ibworkdash3 from "../../../../public/images/ibworkdash3.webp";
 import ibworkdash4 from "../../../../public/images/ibworkdash4.webp";
 const Ibpartnerwork = () => {
+  useEffect(() => {
+      const shouldScroll = sessionStorage.getItem("scrollToContact");
+      if (shouldScroll === "true") {
+        const el = document.getElementById("ib-partner");
+        if (el) {
+          setTimeout(() => {
+            el.scrollIntoView({
+              behavior: "smooth",
+              block: "start"
+            });
+            sessionStorage.removeItem("scrollToContact");
+          }, 800);
+        }
+      }
+    }, []);
   return (
-    <div className="bg-white">
+    <div className="bg-white" id="ib-partner">
       <div
         className="bg-cover"
         style={{ backgroundImage: `url(${workprocessbanner.src})` }}

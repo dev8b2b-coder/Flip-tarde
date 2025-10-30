@@ -336,6 +336,19 @@ const Faqsearch = () => {
     const finalData = search ? filteredFaqs : faqsmaindata;
 
     useEffect(() => {
+        const shouldScroll = sessionStorage.getItem("scrollToContact");
+        if (shouldScroll === "true") {
+          const el = document.getElementById("faq-scroll");
+          if (el) {
+            setTimeout(() => {
+              el.scrollIntoView({ behavior: "smooth", block: "start" });
+              sessionStorage.removeItem("scrollToContact");
+            }, 800);
+          }
+        }
+      }, []);
+      
+    useEffect(() => {
         const handleScroll = () => {
             sectionRefs.current.forEach((ref, index) => {
                 if (!ref) return;
@@ -355,7 +368,7 @@ const Faqsearch = () => {
     }, [finalData, faqtogle]);
 
     return (
-        <div className="bg-white">
+        <div className="bg-white" id="faq-scroll">
             <div className="inn_container pt-12 pb-12 xl:pt-24 xl:pb-24">
                 <div className="text-center">
                     <Title title="Search for Answers" color="text-black" />

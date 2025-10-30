@@ -8,72 +8,52 @@ import Title from "../Uiux/Title";
 import Button from "../Uiux/Button";
 import Image from "next/image";
 import Link from "next/link";
+import Worldbrokerbg from "../../../../public/images/Worldbrokerbg.webp";
+import Worldbrokerright from "../../../../public/images/Worldbrokerright.webp";
+import fireiconblue from "../../../../public/icons/firebtniconblue.svg";
+import giftwhite from "../../../../public/icons/giftwhite.svg";
 function Worldbroker() {
   return (
-    <div className="bg-white">
-      <div className="inn_container py-24 overflow-hidden">
-        <div className="grid grid-cols-[2fr_5fr_2fr] relative h-[340px] md:h-[280px] xl:h-[390px] z-[5px]">
-          <div className="bg-[#EAE3FF] rounded-br-[60px]" />
-          <div className="bg-[#EAE3FF] rounded-bl-[60px] rounded-tr-[60px] relative z-20" />
-          <div className="bg-[#EAE3FF] rounded-tl-[60px]" />
-          <div className="absolute top-0 h-full w-full flex items-center z-30">
-            <div className="px-[5%] pb-0 md:pb-12 xl:pb-0">
-              <Title
-                title={`Get Onboard with the World’s <br/> Rapidly Growing Broker`}
-                color="text-seondary"
+    <div className="bg-theme pt-12 md:pt-18 lg:pt-24 pb-12 md:pb-18">
+      <div
+        className="inn_container   bg-no-repeat bg-center bg-contain relative"
+        style={{ backgroundImage: `url(${Worldbrokerbg.src})` }}
+      >
+        <div className="grid grid-cols-[3fr_2fr] py-22  px-12">
+          <div>
+            <Title
+              title={
+                "Get Onboard with the <br/> World’s Rapidly <br/> Growing Broker"
+              }
+              color={"text-white"}
+            />
+
+            <div>
+              <Button
+                btn_name={`Open Live Account`}
+                btn_bg="bg-white"
+                text_color="text-primary"
+                border_color="border-transparent"
+                icon={fireiconblue}
+              />
+              <Button
+                btn_name={`Become a Partner`}
+                btn_bg="bg-[#00000099]"
+                text_color="text-white"
+                border_color="border-transparent"
+                icon={giftwhite}
               />
             </div>
           </div>
-          <div className="absolute right-[5%] bottom-[5%] flex flex-col gap-6 z-30">
-            <Link
-              href={"https://client.fliptradegroup.com/trader/registration"}
-            >
-              <Button
-                btn_name={`Open Live Account`}
-                icon={firebtnicon.src}
-                btn_bg={`bg-primary`}
-                text_color="text-white"
-                border_color="border-primary"
-                shadow={true}
-              />
-            </Link>
-            <Link
-              href={"https://client.fliptradegroup.com/trader/registration"}
-            >
-              <Button
-                btn_name={`Become a Partner`}
-                icon={giftbtnicon.src}
-                btn_bg={`bg-[#CAC2DE]`}
-                text_color="text-black"
-                border_color="border-[#FFFFFF87]"
-              />
-            </Link>
-          </div>
-          <div className="absolute top-[12%]  right-[-2%] z-30  rotate-[335deg]">
+
+          <div className="" />
+          <div className="absolute right-12 bottom-0">
             <Image
-              src={Ethereum}
-              alt="Ethereum"
+              src={Worldbrokerright}
+              alt="Worldbrokerright"
               width={1000}
               height={500}
-              className="max-w-[60px] lg:max-w-[100px] xl:max-w-[144px]"
-            />
-          </div>
-          <div className="absolute top-[-18%] left-[50%] z-10  rotate-[45deg]">
-            <Image
-              src={Zcash}
-              alt="Zcash"
-              width={1000}
-              height={500}
-              className="max-w-[50px] lg:max-w-[80px] xl:max-w-[117px]"
-            />
-          </div>
-          <div className="absolute bottom-[12%] left-[-8%] rotate-[45deg]">
-            <Image
-              src={Bitcoin}
-              alt="Bitcoin"
-              width={1000}
-              height={500}
-              className="max-w-[80px] lg:max-w-[120px] xl:max-w-[172px]"
+              className="max-w-[590px]"
             />
           </div>
         </div>

@@ -173,6 +173,10 @@ body {
       rgba(255, 255, 255, 1) 100%);
 }
 
+.gradient_line_bg {
+  background: linear-gradient(182deg, rgba(255, 255, 255, 1) -26%, rgb(150 121 240) 49%, rgba(255, 255, 255, 1) 106%);
+}
+
 strong {
   font-weight: 600 !important;
 }
@@ -392,4 +396,8 @@ input[type=number] {
 
 .newgenbg {
   background-image: url(../../public/images/nextgenbg.webp);
+}
+
+.swiper-pagination-bullet {
+  background-color: #fff !important;
 }

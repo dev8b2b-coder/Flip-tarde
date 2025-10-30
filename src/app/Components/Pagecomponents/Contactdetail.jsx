@@ -1,4 +1,5 @@
-import React from "react";
+"use client"
+import React, { useEffect } from "react";
 import Title from "../Uiux/Title";
 import locationicon from "../../../../public/icons/location.svg";
 import call from "../../../../public/icons/call.svg";
@@ -33,8 +34,24 @@ export default function Contactdetail() {
       cardicon: call
     }
   ];
+
+      useEffect(() => {
+      const shouldScroll = sessionStorage.getItem("scrollTDetails");
+      if (shouldScroll === "true") {
+        const el = document.getElementById("contact");
+        if (el) {
+          setTimeout(() => {
+            el.scrollIntoView({
+              behavior: "smooth",
+              block: "start"
+            });
+            sessionStorage.removeItem("scrollTDetails");
+          }, 800);
+        }
+      }
+    }, []);
   return (
-    <div className="bg-white">
+    <div className="bg-white" id="contact">
       <div className="inn_container py-16 md:py-24 lg:py-32">
         <div className="text-center">
           <Title
