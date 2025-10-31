@@ -2,13 +2,12 @@
 
 :root {
   --primary: #6a40ec;
-  --subprimary: #B46AFF;
+  --subprimary: #b46aff;
   --secondary: #212121;
   --ternary: #434343;
-  --lightsecondry: #16141B;
+  --lightsecondry: #16141b;
   --bgtheme: #000000;
 }
-
 
 .bg-theme {
   background-color: var(--bgtheme) !important;
@@ -83,7 +82,7 @@
 /* ------------------------------------------ */
 
 .text-do {
-  color: #D0D0D0;
+  color: #d0d0d0;
 }
 
 .list_text {
@@ -146,11 +145,13 @@ body {
 }
 
 .gradient_text {
-  background: linear-gradient(90deg,
-      rgba(255, 255, 255, 1) 0%,
-      rgb(176 156 240 / 94%) 26%,
-      rgb(159 135 234) 55%,
-      rgba(255, 255, 255, 1) 100%);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgb(176 156 240 / 94%) 26%,
+    rgb(159 135 234) 55%,
+    rgba(255, 255, 255, 1) 100%
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -158,7 +159,11 @@ body {
 }
 
 .gradient_text_secondary {
-  background: radial-gradient(circle, rgba(226, 164, 255, 1) 0%, rgba(146, 39, 255, 1) 100%);
+  background: radial-gradient(
+    circle,
+    rgba(226, 164, 255, 1) 0%,
+    rgba(146, 39, 255, 1) 100%
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -166,15 +171,22 @@ body {
 }
 
 .gradient_bg {
-  background: linear-gradient(90deg,
-      rgba(255, 255, 255, 1) 0%,
-      rgb(176 156 240 / 94%) 26%,
-      rgb(159 135 234) 55%,
-      rgba(255, 255, 255, 1) 100%);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgb(176 156 240 / 94%) 26%,
+    rgb(159 135 234) 55%,
+    rgba(255, 255, 255, 1) 100%
+  );
 }
 
 .gradient_line_bg {
-  background: linear-gradient(182deg, rgba(255, 255, 255, 1) -26%, rgb(150 121 240) 49%, rgba(255, 255, 255, 1) 106%);
+  background: linear-gradient(
+    182deg,
+    rgba(255, 255, 255, 1) -26%,
+    rgb(188 171 240 / 95%) 49%,
+    rgba(255, 255, 255, 1) 106%
+  );
 }
 
 strong {
@@ -240,7 +252,6 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
   .list_text {
     font-size: 18px;
   }
-
 }
 
 @media screen and (max-width: 1536px) {
@@ -367,7 +378,6 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
   span.swiper-pagination-bullet.swiper-pagination-bullet-active {
     width: 30px;
   }
-
 }
 
 /* 

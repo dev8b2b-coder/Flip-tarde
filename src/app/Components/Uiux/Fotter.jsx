@@ -113,6 +113,17 @@ const footerdata = {
       pagelink: "https://t.me/fliptradegroup",
       icon: telegram
     }
+  ],
+  policypages: [
+    { pagelink: "/aml-&-ctf-policy", pagename: "AML & CTF Policy" },
+    {
+      pagelink: "/complaint-handling-procedures",
+      pagename: "Complaint Handling Procedures"
+    },
+    { pagelink: "/cookies", pagename: "Cookies" },
+    { pagelink: "/refund-&-withdrawal", pagename: "Refund & Withdrawal" },
+    { pagelink: "/risk-warning", pagename: "Risk Warning" },
+    { pagelink: "/terms-and-conditions", pagename: "Terms & Conditions" }
   ]
 };
 const Fotter = () => {
@@ -151,7 +162,8 @@ const Fotter = () => {
               <div className="grid  grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 border-b-[0.5px] border-[#ffffff2e]">
                 {footerdata.linkingdata.map((data, index) =>
                   <div
-                    className={`pt-4 md:pt-8 xl:pt-12 pb-4 md:pb-12 xl:pb-16 ${index === 4
+                    className={`pt-4 md:pt-8 xl:pt-12 pb-4 md:pb-12 xl:pb-16 ${index ===
+                    4
                       ? null
                       : "border-r-[0.5px] border-[#ffffff2e]"}`}
                     key={index}
@@ -159,6 +171,26 @@ const Fotter = () => {
                     <Fotterlinks title={data.title} linklist={data.pagelinks} />
                   </div>
                 )}
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-4">  
+                {footerdata.policypages.map((data, index) =>
+                  <div
+                    className={`pt-4  w-[85%] md:w-[70%] m-auto ${index ===
+                    4
+                      ? null
+                      : "border-r-[0.5px] border-[#ffffff2e]"}`}
+                    key={index}
+                  >
+                    <Link
+                     href={data.pagelink}>
+                      <p className="text-[14px] md:text-lg 2xl:text-xl font-light text-white hover:underline text-center">
+                        {data.pagename}
+                      </p>
+                    </Link>
+                  </div>
+                )}
+              </div>
+              <div className="grid  grid-cols-2 md:grid-cols-3 lg:grid-cols-4  border-b-[0.5px] border-[#ffffff2e]">
                 {footerdata.social_links.map((data, index) =>
                   <div
                     key={index}
@@ -179,18 +211,13 @@ const Fotter = () => {
                             className="max-w-[16px] md:max-w-[20px]"
                           />
                         </div>
-                        <p className="text-base md:text-lg lg:text-xl 2xl:text-[25px] text-white">
+                        <p className="text-base md:text-lg lg:text-xl 2xl:text-[25px] text-white  duration-500 hover:underline">
                           {data.alt}
                         </p>
                       </div>
                     </Link>
                   </div>
                 )}
-                <div className="border-t-[0.5px] border-[#ffffff2e]">
-                  <div className="py-4 md:py-8 xl:py-12 w-[85%] xl:w-[70%] m-auto  text-[14px] md:text-base lg:text-lg text-[#AAAAAA]">
-                  © FlipTrade Group Limited 2025 | All Rights Reserved
-                </div>
-                </div>
               </div>
               <div className="hidden md:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 bg-primary py-8 md:py-12">
                 {footerdata.carddata.map((data, index) =>
@@ -207,14 +234,14 @@ const Fotter = () => {
                       {data.link !== false
                         ? <Link href={data.link}>
                             <p
-                              className="text-[15px] md:text-[13px] 2xl:text-base pt-1 md:pt-3 2xl:pt-4 font-light text-white leading-6"
+                              className="text-[15px] md:text-[13px] 2xl:text-base pt-1 md:pt-3 2xl:pt-4 font-light hover:underline text-white leading-6"
                               dangerouslySetInnerHTML={{
                                 __html: data.discription
                               }}
                             />
                           </Link>
                         : <p
-                            className="text-[15px] md:text-[13px] 2xl:text-base pt-1 md:pt-3 2xl:pt-4 font-light text-white leading-6 max-w-[90%] lg:max-w-max"
+                            className="text-[15px] md:text-[13px] 2xl:text-base pt-1 md:pt-3 2xl:pt-4 font-light  text-white leading-6 max-w-[90%] lg:max-w-max"
                             dangerouslySetInnerHTML={{
                               __html: data.discription
                             }}
@@ -242,7 +269,7 @@ const Fotter = () => {
                         {data.link !== false
                           ? <Link href={data.link}>
                               <p
-                                className="text-[15px] md:text-[13px] 2xl:text-base pt-1 md:pt-3 2xl:pt-4 font-light text-white leading-6"
+                                className="text-[15px] md:text-[13px] 2xl:text-base pt-1 md:pt-3 2xl:pt-4 font-light text-white leading-6 hover:underline"
                                 dangerouslySetInnerHTML={{
                                   __html: data.discription
                                 }}
@@ -277,6 +304,11 @@ const Fotter = () => {
                   Sudan, and its services are not intended for jurisdictions
                   where they would contravene local laws or regulations. Nothing
                   on this site should be considered financial advice.
+                </div>
+                <div className="border-t-[0.5px] border-[#ffffff2e] text-center">
+                  <div className="pt-6 w-[85%] xl:w-[70%] m-auto  text-[14px] md:text-base lg:text-lg text-[#AAAAAA]">
+                    © FlipTrade Group Limited 2025 | All Rights Reserved
+                  </div>
                 </div>
               </div>
             </div>

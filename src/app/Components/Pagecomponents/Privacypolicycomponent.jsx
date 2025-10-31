@@ -278,7 +278,7 @@ export const Card10 = () => {
       <span className="">
         <a
           href="mailto:support@fliptradegroup.com"
-          className="text-primary text-base 2xl:text-xl"
+          className="text-white text-base 2xl:text-xl underline"
         >
           support@fliptradegroup.com
         </a>

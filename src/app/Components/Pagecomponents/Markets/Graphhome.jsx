@@ -18,7 +18,7 @@ const Graphhome = ({ title, discription, pagepath }) => {
   };
 
   return (
-    <div className={`py-12 md:py-18 lg:py-24 xl:py-32 bg-theme`}>
+    <div className={`py-12   bg-theme`}>
       <div className="inn_container">
         {pagepath === "/economic-calendar"
           ? null
