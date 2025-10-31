@@ -23,20 +23,20 @@ const Yourway = () => {
               className=""
             />
           </div>
-          <div className="lg:ps-8 pb-8">
+          <div className="lg:ps-8 pb-8 text-center lg:text-start h-max m-auto">
             <Title
-              title={"Trade It Your Way <br/> with Confidence."}
+              title={"Trade It Your Way  with Confidence."}
               color={"text-white"}
             />
             <div className="py-6">
               <Discription
                 dispription={
-                  "Your strategy, your tools, your success — all united in <br/> one intelligent platform designed for traders like you."
+                  "Your strategy, your tools, your success — all united in one intelligent platform designed for traders like you."
                 }
                 color={"text-white"}
               />
             </div>
-            <div className="flex flex-wrap flex-col gap-4">
+            <div className="flex flex-wrap  justify-center gap-4">
               <Button
                 btn_name={"0% Commission"}
                 icon={bluedot}

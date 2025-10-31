@@ -26,7 +26,7 @@ const tradeInfo = [
 
 const Ibwhy = () => {
   return (
-    <div className="bg-white">
+    <div className="bg-theme">
       <div
         className="bg-contain"
         style={{ backgroundImage: `url(${boxbg.src})` }}
@@ -35,12 +35,12 @@ const Ibwhy = () => {
           <div className="grid grid-col-1 md:grid-cols-2 pb-5 text-center md:text-start relative z-[2]">
             <Title
               title="Why Become an <br/> IB Partner?"
-              color="text-secondary"
+              color="text-white"
             />
             <div className="flex justify-center items-center">
               <Discription
                 dispription={`What makes our IB program the best choice.`}
-                color="text-ternary"
+                color="text-white"
               />
             </div>
           </div>

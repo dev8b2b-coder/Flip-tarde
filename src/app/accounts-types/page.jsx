@@ -44,12 +44,12 @@ export default function page() {
       <Tradingaccounts />
       <Accountstep />
       <Accountupgrade />
-      <div className="bg-white pb-12 md:pb-18 lg:py-24">
+      <div className="bg-theme pb-12 md:pb-18 lg:py-24">
         <div className="inn_container">
           <div className="text-center">
             <Title
               title={"Frequently Asked <br/> Questions"}
-              color="text-secondary"
+              color="text-white"
             />
           </div>
           <div>

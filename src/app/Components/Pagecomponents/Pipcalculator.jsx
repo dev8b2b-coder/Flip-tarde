@@ -129,7 +129,7 @@ const Pipcalculator = () => {
                 >
                   <option value="">Select Currency</option>
                   {["USD", "EUR", "GBP", "JPY", "AUD", "CAD", "INR", "CHF", "NZD"].map((c) => (
-                    <option key={c} className="bg-white text-primary hover:bg-[#D8D8FF80]" value={c}>
+                    <option key={c} className="bg-theme text-primary hover:bg-[#D8D8FF80]" value={c}>
                       {c}
                     </option>
                   ))}
@@ -198,7 +198,7 @@ const Pipcalculator = () => {
                 >
                   <option value="">Currency Pair</option>
                   {["EUR/USD", "GBP/USD", "NZD/USD", "AUD/USD", "USD/JPY", "USD/CAD", "EUR/GBP", "EUR/JPY", "EUR/CAD"].map((p) => (
-                    <option key={p} className="bg-white text-primary hover:bg-[#D8D8FF80]" value={p}>{p}</option>
+                    <option key={p} className="bg-theme text-primary hover:bg-[#D8D8FF80]" value={p}>{p}</option>
                   ))}
                 </select>
                 <span className="absolute right-4 bottom-[14%] pointer-events-none text-primary">

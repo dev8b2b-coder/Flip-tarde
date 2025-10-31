@@ -157,7 +157,7 @@ function Homemarquee() {
   }, []);
 
   return (
-    <div className="bg-white py-4 relative z-[2]">
+    <div className="bg-theme py-4 relative z-[2]">
       <div className="tradingview-widget-container" ref={container}>
         <div className="tradingview-widget-container__widget" />
       </div>

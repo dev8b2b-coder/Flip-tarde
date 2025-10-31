@@ -23,18 +23,17 @@ const Accountcards = ({description ,carddata}) => {
     }
   }, []);
   return (
-    <div className="bg-white" id="trade-acc">
+    <div className="bg-theme" id="trade-acc">
       <div className="inn_container ">
         <div className="grid grid-col-1 text-center lg:text-start lg:grid-cols-2">
           <Title
             title="Who Should Trade <br/> This Account"
-            color="text-secondary"
-            hovercolor="gradient_text_title"
+            color="text-white"
           />
           <div className="flex justify-center items-center">
             <Discription
               dispription={description}
-              color="text-ternary"
+              color="text-white"
             />
           </div>
         </div>

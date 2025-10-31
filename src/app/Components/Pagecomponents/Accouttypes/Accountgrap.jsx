@@ -10,7 +10,7 @@ import Link from "next/link";
 
 const Accountgrap = ({desktopbanner,phonetabbanner,title,description,btnname}) => {
   return (
-    <div className="bg-white">
+    <div className="bg-theme">
       <div className="inn_container py-12 ">
 
         <div className="pt-16 hidden xl:block">

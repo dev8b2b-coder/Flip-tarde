@@ -10,7 +10,7 @@ const Calculatepipvalue = () => {
   return (
     <div className="pt-12 lg:pt-0 bg-theme px-[3%]">
       <div
-        className="bg-contain bg-no-repeat bg-center"
+        className="bg-cover lg:bg-contain bg-no-repeat bg-center"
         style={{ backgroundImage: `url(${calculatepipvaluebg.src})` }}
       >
         <div className="inn_container grid grid-cols-1 lg:grid-cols-2 py-12 md:py-18 xl:py-28">

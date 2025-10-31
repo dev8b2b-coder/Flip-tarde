@@ -48,6 +48,7 @@ const page = () => {
       <Copytradingbanner />
       <Whatcopytrading />
       <Copytradingwork />
+      {/* Ramnish guru kar dena monday ko */}
       <Tradefliptrade />
       <Grapsecondary
         desktopbanner={copytradingdesktop}
@@ -57,12 +58,12 @@ const page = () => {
         btnname={"Start Social & Copy Trading Now"}
       />
 
-      <div className="bg-white py-12 md:py-18 lg:py-24">
+      <div className="bg-theme py-12 md:py-18 lg:py-24">
         <div className="inn_container">
           <div className="text-center">
             <Title
               title={"Frequently Asked <br/> Questions"}
-              color="text-secondary"
+              color="text-white"
             />
           </div>
           <div>

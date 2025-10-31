@@ -30,16 +30,16 @@ const Accountchoose = ({
     }
   }, []);
   return (
-    <div className="bg-white" id="account-type">
+    <div className="bg-theme" id="account-type">
       <div className="inn_container">
         <div className="grid grid-col-1 text-center lg:text-start lg:grid-cols-2">
           <Title
             title={title}
-            color="text-secondary"
+            color="gradient_text"
             hovercolor="gradient_text_title"
           />
           <div className="flex justify-center items-center">
-            <Discription dispription={description} color="text-ternary" />
+            <Discription dispription={description} color="text-white" />
           </div>
         </div>
       </div>
@@ -57,42 +57,42 @@ const Accountchoose = ({
           <div className="pe-[3%] lg:pe-[15%] xl:pe-[20%] 2xl:pe-[25%]  lg:pt-12 hidden lg:block">
             <div className="pt-2 xl:pt-6 w-max ms-auto">
               <div className="relative z-[1]">
-                <Title title={"01"} color={"text-secondary"} />
+                <Title title={"01"} color={"gradient_text"} />
               </div>
-              <div className="shadow-[0_-15px_20px_-16px_#11111145,0_15px_16px_-15px_#11111145] w-max px-12 py-6 relative top-[-30px] z-[2]">
-                <h5 className="text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl lg:leading-[35px]  font-medium text-primary text-center lg:text-start">
+              <div className="shadow-[0_-15px_20px_-16px_#6a40ec,0_15px_16px_-15px_#6a40ec] w-max px-12 py-6 relative top-[-30px] z-[2]">
+                <h5 className="text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl lg:leading-[35px]  font-medium gradient_text text-center lg:text-start">
                   {cardtitle1}
                 </h5>
                 <p
-                  className="list_text font-light font_ternary  max-w-[400px]  text-center md:text-start pt-2 lg:max-w-[unset] md:text-[unset] leading-6 xl:leading-[28px]"
+                  className="!text-white list_text font-light font_ternary  max-w-[400px]  text-center md:text-start pt-2 lg:max-w-[unset] md:text-[unset] leading-6 xl:leading-[28px]"
                   dangerouslySetInnerHTML={{ __html: card_desc1 }}
                 />
               </div>
             </div>
             <div className="pt-2 xl:pt-6 w-max ps-[10%]">
               <div className="relative z-[1]">
-                <Title title={"02"} color={"text-secondary"} />
+                <Title title={"02"} color={"gradient_text"} />
               </div>
-              <div className="shadow-[0_-15px_20px_-16px_#11111145,0_15px_16px_-15px_#11111145] w-max px-12 py-6 relative top-[-30px] z-[2]">
-                <h5 className="text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl lg:leading-[35px]  font-medium text-primary text-center lg:text-start">
+              <div className="shadow-[0_-15px_20px_-16px_#6a40ec,0_15px_16px_-15px_#6a40ec] w-max px-12 py-6 relative top-[-30px] z-[2]">
+                <h5 className="text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl lg:leading-[35px]  font-medium gradient_text text-center lg:text-start">
                   {cardtitle2}
                 </h5>
                 <p
-                  className="list_text font-light font_ternary  max-w-[400px]  text-center md:text-start pt-2 lg:max-w-[unset] md:text-[unset] leading-6 xl:leading-[28px]"
+                  className="!text-white list_text font-light font_ternary  max-w-[400px]  text-center md:text-start pt-2 lg:max-w-[unset] md:text-[unset] leading-6 xl:leading-[28px]"
                   dangerouslySetInnerHTML={{ __html: card_desc2 }}
                 />
               </div>
             </div>
             <div className="pt-2 xl:pt-6 w-max relative left-[-15%]">
               <div className="relative z-[1]">
-                <Title title={"03"} color={"text-secondary"} />
+                <Title title={"03"} color={"gradient_text"} />
               </div>
-              <div className="shadow-[0_-15px_20px_-16px_#11111145,0_15px_16px_-15px_#11111145] w-max px-12 py-6 relative top-[-30px] z-[2]">
-                <h5 className="text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl lg:leading-[35px]  font-medium text-primary text-center lg:text-start">
+              <div className="shadow-[0_-15px_20px_-16px_#6a40ec,0_15px_16px_-15px_#6a40ec] w-max px-12 py-6 relative top-[-30px] z-[2]">
+                <h5 className="text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl lg:leading-[35px]  font-medium gradient_text text-center lg:text-start">
                   {cardtitle3}
                 </h5>
                 <p
-                  className="list_text font-light font_ternary  max-w-[400px]  text-center md:text-start pt-2 lg:max-w-[unset] md:text-[unset] leading-6 xl:leading-[28px]"
+                  className="!text-white list_text font-light font_ternary  max-w-[400px]  text-center md:text-start pt-2 lg:max-w-[unset] md:text-[unset] leading-6 xl:leading-[28px]"
                   dangerouslySetInnerHTML={{ __html: card_desc3 }}
                 />
               </div>
@@ -101,42 +101,42 @@ const Accountchoose = ({
           <div className=" inn_container lg:hidden grid md:grid-cols-2">
             <div className="pt-2 xl:pt-6 ">
               <div className="relative z-[1]">
-                <Title title={"01"} color={"text-secondary"} />
+                <Title title={"01"} color={"gradient_text"} />
               </div>
-              <div className="shadow-[0_-15px_20px_-16px_#11111145,0_15px_16px_-15px_#11111145] px-12 py-6 relative top-[-30px] z-[2]">
-                <h5 className="text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl lg:leading-[35px]  font-medium text-primary text-center lg:text-start">
+              <div className="shadow-[0_-15px_20px_-16px_#6a40ec,0_15px_16px_-15px_#6a40ec] px-12 py-6 relative top-[-30px] z-[2]">
+                <h5 className="text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl lg:leading-[35px]  font-medium gradient_text text-center lg:text-start">
                   {cardtitle1}
                 </h5>
                 <p
-                  className="list_text font-light font_ternary  max-w-[400px]  text-center md:text-start pt-2 lg:max-w-[unset] md:text-[unset] leading-6 xl:leading-[28px]"
+                  className="!text-white list_text font-light font_ternary  max-w-[400px]  text-center md:text-start pt-2 lg:max-w-[unset] md:text-[unset] leading-6 xl:leading-[28px]"
                   dangerouslySetInnerHTML={{ __html: card_desc1 }}
                 />
               </div>
             </div>
             <div className="pt-2 xl:pt-6 ps-[10%]">
               <div className="relative z-[1]">
-                <Title title={"02"} color={"text-secondary"} />
+                <Title title={"02"} color={"gradient_text"} />
               </div>
-              <div className="shadow-[0_-15px_20px_-16px_#11111145,0_15px_16px_-15px_#11111145] px-12 py-6 relative top-[-30px] z-[2]">
-                <h5 className="text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl lg:leading-[35px]  font-medium text-primary text-center lg:text-start">
+              <div className="shadow-[0_-15px_20px_-16px_#6a40ec,0_15px_16px_-15px_#6a40ec] px-12 py-6 relative top-[-30px] z-[2]">
+                <h5 className="text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl lg:leading-[35px]  font-medium gradient_text text-center lg:text-start">
                   {cardtitle2}
                 </h5>
                 <p
-                  className="list_text font-light font_ternary  max-w-[400px]  text-center md:text-start pt-2 lg:max-w-[unset] md:text-[unset] leading-6 xl:leading-[28px]"
+                  className="!text-white list_text font-light font_ternary  max-w-[400px]  text-center md:text-start pt-2 lg:max-w-[unset] md:text-[unset] leading-6 xl:leading-[28px]"
                   dangerouslySetInnerHTML={{ __html: card_desc2 }}
                 />
               </div>
             </div>
             <div className="pt-2 xl:pt-6 relative">
               <div className="relative z-[1]">
-                <Title title={"03"} color={"text-secondary"} />
+                <Title title={"03"} color={"gradient_text"} />
               </div>
-              <div className="shadow-[0_-15px_20px_-16px_#11111145,0_15px_16px_-15px_#11111145] px-12 py-6 relative top-[-30px] z-[2]">
-                <h5 className="text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl lg:leading-[35px]  font-medium text-primary text-center lg:text-start">
+              <div className="shadow-[0_-15px_20px_-16px_#6a40ec,0_15px_16px_-15px_#6a40ec] px-12 py-6 relative top-[-30px] z-[2]">
+                <h5 className="text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl lg:leading-[35px]  font-medium gradient_text text-center lg:text-start">
                   {cardtitle3}
                 </h5>
                 <p
-                  className="list_text font-light font_ternary  max-w-[400px]  text-center md:text-start pt-2 lg:max-w-[unset] md:text-[unset] leading-6 xl:leading-[28px]"
+                  className="!text-white list_text font-light font_ternary  max-w-[400px]  text-center md:text-start pt-2 lg:max-w-[unset] md:text-[unset] leading-6 xl:leading-[28px]"
                   dangerouslySetInnerHTML={{ __html: card_desc3 }}
                 />
               </div>

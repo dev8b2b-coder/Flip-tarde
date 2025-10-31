@@ -6,16 +6,16 @@ import cardarrowbgright from "../../../../public/images/cardarrowbgright.webp";
 import Image from "next/image";
 const Marketaccess = () => {
   return (
-    <div className="bg-white">
+    <div className="bg-theme">
       <div className="inn_container pt-16 md:pt-20 lg:pt-30">
         <div className="grid grid-cols-1 lg:grid-cols-2 text-center lg:text-start">
           <div>
-            <Title title="Global Market <br/> Access" color="text-secondary" />
+            <Title title="Global Market <br/> Access" color="gradient_text" />
           </div>
           <div className="flex justify-center items-center">
             <Discription
               dispription="Trade a wide range of instruments from a single <br /> account."
-              color="text-secondary"
+              color="text-white"
             />
           </div>
         </div>

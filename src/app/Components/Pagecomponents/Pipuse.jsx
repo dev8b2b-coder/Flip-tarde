@@ -23,14 +23,14 @@ const tradeInfo = [
 
 const Pipuse = () => {
   return (
-    <div className="bg-white">
+    <div className="bg-theme">
       <div
         className="bg-contain"
         style={{ backgroundImage: `url(${boxbg.src})` }}
       >
         <div className="max-w-[1340px] m-auto py-18 px-[3%] xl:px-0">
           <div className="text-center">
-            <Title title="Why Use It?" color="text-secondary" />
+            <Title title="Why Use It?" color="gradient_text" />
           </div>
           <div className="pt-12 grid grid-cols-1 lg:grid-cols-2 gap-y-18 gap-x-6">
             {tradeInfo.map((data, index) =>

@@ -18,16 +18,16 @@ const Graphhome = ({ title, discription, pagepath }) => {
   };
 
   return (
-    <div className={`py-12 md:py-18 lg:py-24 xl:py-32 bg-white`}>
+    <div className={`py-12 md:py-18 lg:py-24 xl:py-32 bg-theme`}>
       <div className="inn_container">
         {pagepath === "/economic-calendar"
           ? null
           : <div className="grid  text-center xl:text-start xl:grid-cols-2 max-w-[700px] md:max-w-[unset]">
               <div className="flex justify-center xl:justify-start">
-                <Title title={title} color={"text-secondary"} />
+                <Title title={title} color={"gradient_text"} />
               </div>
               <div className="flex justify-center xl:justify-start">
-                <Discription dispription={discription} color={"text-ternary"} />
+                <Discription dispription={discription} color={"text-white"} />
               </div>
             </div>}
 
@@ -54,7 +54,7 @@ const Graphhome = ({ title, discription, pagepath }) => {
               className="relative w-16 h-8 rounded-full bg-gray-300 transition-colors duration-500 p-1"
             >
               <span
-                className={`absolute top-1 left-1 w-6 h-6 bg-white rounded-full shadow-md transform transition-transform duration-500
+                className={`absolute top-1 left-1 w-6 h-6 bg-theme rounded-full shadow-md transform transition-transform duration-500
                 ${darkMode === "dark" ? "translate-x-8" : "translate-x-0"}`}
               />
               <span className="absolute left-2 top-1/2 -translate-y-1/2 text-yellow-500 text-xs">

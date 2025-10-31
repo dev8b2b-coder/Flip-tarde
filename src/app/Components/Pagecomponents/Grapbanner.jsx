@@ -3,7 +3,7 @@ import Title from "../Uiux/Title";
 import Discription from "../Uiux/Discription";
 import Image from "next/image";
 import buildtraderimage from "../../../../public/images/whyflipgrap.webp";
-import buildtraderimageloerph from "../../../../public/images/buildtraderimagelowerph.webp";
+import buildtraderimageloerph from "../../../../public/images/gradinet_bg.webp";
 import buildtraderimageuppervrph from "../../../../public/images/buildtraderimageuppervrph.webp";
 import buildtraderimageupperhzph from "../../../../public/images/whyflipgrapph.webp";
 import coinph from "../../../../public/images/coinph.webp";
@@ -13,7 +13,7 @@ import Link from "next/link";
 
 const Grapbanner = () => {
   return (
-    <div className="bg-white">
+    <div className="bg-theme">
       <div className="inn_container py-12 ">
 
         <div className="pt-16 hidden xl:block">
@@ -29,12 +29,12 @@ const Grapbanner = () => {
               <div className="">
                 <Title
                   title={`FlipTrade. Built <br/> for Traders.`}
-                  color="gradient_text"
+                  color="text-secondary"
                 />
                 <div className="pt-4">
                   <Discription
                     dispription={`Seamless trading across Forex, CFDs, metals, and <br/> more. Real-time insights, advanced tools, and <br/> reliable support — everything you need to grow.`}
-                    color="text-white"
+                    color="text-secondary"
                   />
                 </div>
                 <div className="pt-10">
@@ -45,8 +45,8 @@ const Grapbanner = () => {
                   >
                     <Button
                       btn_name={`Join Now`}
-                      btn_bg="gradient_bg"
-                      text_color="text-secondary"
+                      btn_bg="bg-primary"
+                      text_color="text-white"
                       border_color="border-transparent"
                     />
                   </Link>
@@ -102,12 +102,12 @@ const Grapbanner = () => {
                 <div className="relative top-8 lg:top-6 lg:left-2">
                   <Title
                     title={`FlipTrade. Built <br/> for Traders.`}
-                    color="gradient_text"
+                    color="text-secondary"
                   />
                   <div className="pt-4">
                     <Discription
                       dispription={`Seamless trading across Forex, CFDs, metals, and <br/> more. Real-time insights, advanced tools, and <br/> reliable support — everything you need to grow.`}
-                      color="text-white"
+                      color="text-secondary"
                     />
                   </div>
                   <div className="pt-10">
@@ -118,8 +118,8 @@ const Grapbanner = () => {
                     >
                       <Button
                         btn_name={`Join Now`}
-                        btn_bg="gradient_bg"
-                        text_color="text-secondary"
+                        btn_bg="bg-primary"
+                        text_color="text-white"
                         border_color="border-transparent"
                       />
                     </Link>
@@ -146,12 +146,12 @@ const Grapbanner = () => {
                     <div className="relative top-3 text-center px-4 md:px-0">
                       <Title
                         title={`FlipTrade. Built <br/> for Traders.`}
-                        color="gradient_text"
+                        color="text-secondary"
                       />
                       <div className="pt-4">
                         <Discription
                           dispription={`Seamless trading across Forex, CFDs, metals, and <br/> more. Real-time insights, advanced tools, and <br/> reliable support — everything you need to grow.`}
-                          color="text-white"
+                          color="text-secondary"
                         />
                       </div>
                       <div className="pt-4">
@@ -162,8 +162,8 @@ const Grapbanner = () => {
                         >
                           <Button
                             btn_name={`Join Now`}
-                            btn_bg="gradient_bg"
-                            text_color="text-secondary"
+                            btn_bg="bg-primary"
+                            text_color="text-white"
                             border_color="border-transparent"
                           />
                         </Link>

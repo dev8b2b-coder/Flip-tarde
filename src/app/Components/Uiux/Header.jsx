@@ -275,7 +275,7 @@ const MobileDropdownItem = ({ data, isOpen, setIsOpen, setIsMenu, pathname }) =>
                   href={item.link}
                   className={`block py-2 text-sm font-medium rounded-md transition-colors ${item.link === pathname
                     ? "text-primary bg-primary/10 font-semibold"
-                    : "text-gray-700 hover:text-primary hover:bg-white"
+                    : "text-gray-700 hover:text-primary hover:bg-theme"
                     }`}
                   onClick={() => {
                     setIsMenu(false);
@@ -507,7 +507,7 @@ export default function Header() {
 
       {/* Mobile Dropdown Menu */}
       <div
-        className={`fixed bg-white h-screen w-screen z-[999] duration-300 transition-all flex flex-col ${!isMenu
+        className={`fixed bg-theme h-screen w-screen z-[999] duration-300 transition-all flex flex-col ${!isMenu
           ? "translate-x-full opacity-0 pointer-events-none"
           : "translate-x-0 opacity-100 pointer-events-auto top-[6rem]"
           }`}

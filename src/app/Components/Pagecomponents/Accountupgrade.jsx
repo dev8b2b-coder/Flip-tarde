@@ -113,14 +113,14 @@ const Accountupgrade = () => {
     }
   }, []);
   return (
-    <div className="bg-white relative" id="upgrade-acc">
+    <div className="bg-theme relative" id="upgrade-acc">
       <div
         className="bg-cover bg-no-repeat"
         style={{ backgroundImage: `url(${workprocessbanner.src})` }}
       >
         <div className="py-12 overflow-hidden">
           <div className="inn_container text-center lg:text-start">
-            <Title title="How to Upgrade" color="text-secondary" />
+            <Title title="How to Upgrade" color="text-white" />
           </div>
           <div className="pt-32 lg:pt-72 ">
             {/* Desktop Section */}

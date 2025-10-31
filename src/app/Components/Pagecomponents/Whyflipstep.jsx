@@ -11,16 +11,16 @@ const Whyflipstep = ({ pointdata }) => {
     .replace(/-/g, " ")
     .replace(/\b\w/g, c => c.toUpperCase());
   return (
-    <div className="bg-white">
+    <div className="bg-theme">
       <div className="inn_container pt-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 text-center lg:text-start">
           <div>
-            <Title title="Advanced Trading <br/> Platforms" color="text-secondary" />
+            <Title title="Advanced Trading <br/> Platforms" color="gradient_text" />
           </div>
           <div className="flex justify-center items-center">
             <Discription
               dispription="Trade your way with industry-leading tools."
-              color="text-secondary"
+              color="text-white"
             />
           </div>
         </div>
@@ -40,11 +40,11 @@ const Whyflipstep = ({ pointdata }) => {
               04
             </div>
           </div>
-          <div className="flex justify-between bg-white relative top-[-55px] ">
+          <div className="flex justify-between bg-theme relative top-[-55px] ">
             {pointdata.map(data =>
               <div
                 key={data.id}
-                className={`py-12 flex items-center shadow-[0_-15px_20px_-16px_#11111145,0_15px_16px_-15px_#11111145] ${data.id %
+                className={`py-12 flex items-center shadow-[0_-15px_20px_-16px_#6a40ec,0_15px_16px_-15px_#6a40ec] ${data.id %
                   2 ===
                 0
                   ? "flex-col-reverse"
@@ -67,12 +67,12 @@ const Whyflipstep = ({ pointdata }) => {
                   <div
                     className={`text-3xl 2xl:text-4xl ${data.id % 2 === 0
                       ? null
-                      : "pt-8"}  font-medium text-primary text-center`}
+                      : "pt-8"}  font-medium gradient_text text-center`}
                   >
                     {data.title}
                   </div>
                   <p
-                    className="list_text font-light text-center  pt-6 font_ternary leading-[28px] max-w[330px]"
+                    className="list_text font-light text-center  pt-6 font_ternary leading-[28px] max-w[330px] text-white"
                     dangerouslySetInnerHTML={{ __html: data.description }}
                   />
                 </div>
@@ -91,11 +91,11 @@ const Whyflipstep = ({ pointdata }) => {
                 02
               </div>
             </div>
-            <div className="flex justify-between bg-white relative top-[-55px] ">
+            <div className="flex justify-between bg-theme relative top-[-55px] ">
               {pointdata.slice(0, 2).map(data =>
                 <div
                   key={data.id}
-                  className={`py-12 max-w-[320px] m-auto flex items-center shadow-[0_-15px_20px_-16px_#11111145,0_15px_16px_-15px_#11111145] ${data.id %
+                  className={`py-12 max-w-[320px] m-auto flex items-center shadow-[0_-15px_20px_-16px_#6a40ec,0_15px_16px_-15px_#6a40ec] ${data.id %
                     2 ===
                   0
                     ? "flex-col-reverse"
@@ -118,12 +118,12 @@ const Whyflipstep = ({ pointdata }) => {
                     <div
                       className={`text-3xl 2xl:text-4xl ${data.id % 2 === 0
                         ? null
-                        : "pt-8"}  font-medium text-primary text-center`}
+                        : "pt-8"}  font-medium gradient_text text-center`}
                     >
                       {data.title}
                     </div>
                     <p
-                      className="list_text font-light text-center  pt-6 font_ternary leading-[28px] max-w[330px]"
+                      className="list_text font-light text-center  pt-6 font_ternary leading-[28px] max-w[330px] text-white"
                       dangerouslySetInnerHTML={{ __html: data.description }}
                     />
                   </div>
@@ -140,11 +140,11 @@ const Whyflipstep = ({ pointdata }) => {
                 04
               </div>
             </div>
-            <div className="flex justify-between bg-white relative top-[-55px] ">
+            <div className="flex justify-between bg-theme relative top-[-55px] ">
               {pointdata.slice(2, 4).map(data =>
                 <div
                   key={data.id}
-                  className={`py-12 max-w-[320px] m-auto flex items-center shadow-[0_-15px_20px_-16px_#11111145,0_15px_16px_-15px_#11111145] ${data.id %
+                  className={`py-12 max-w-[320px] m-auto flex items-center shadow-[0_-15px_20px_-16px_#6a40ec,0_15px_16px_-15px_#6a40ec] ${data.id %
                     2 ===
                   0
                     ? "flex-col-reverse"
@@ -167,12 +167,12 @@ const Whyflipstep = ({ pointdata }) => {
                     <div
                       className={`text-3xl 2xl:text-4xl ${data.id % 2 === 0
                         ? null
-                        : "pt-8"}  font-medium text-primary text-center`}
+                        : "pt-8"}  font-medium gradient_text text-center`}
                     >
                       {data.title}
                     </div>
                     <p
-                      className="list_text font-light text-center  pt-6 font_ternary leading-[28px] max-w[330px]"
+                      className="list_text font-light text-center  pt-6 font_ternary leading-[28px] max-w[330px] text-white"
                       dangerouslySetInnerHTML={{ __html: data.description }}
                     />
                   </div>
@@ -183,7 +183,7 @@ const Whyflipstep = ({ pointdata }) => {
         </div>
         {/* for mobile */}
         <div className="py-12 block md:hidden">
-          <div className={`flex flex-col gap-4 justify-between bg-white `}>
+          <div className={`flex flex-col gap-4 justify-between bg-theme `}>
             {pointdata.map(data =>
               <div key={data.id}>
                 <div>
@@ -192,7 +192,7 @@ const Whyflipstep = ({ pointdata }) => {
                   </div>
                 </div>
                 <div
-                  className={`py-12 flex items-center shadow-[0_-15px_20px_-16px_#11111145,0_15px_16px_-15px_#11111145]  ${data.id %
+                  className={`py-12 flex items-center shadow-[0_-15px_20px_-16px_#6a40ec,0_15px_16px_-15px_#6a40ec]  ${data.id %
                     2 ===
                   0
                     ? "flex-col-reverse"
@@ -215,7 +215,7 @@ const Whyflipstep = ({ pointdata }) => {
                     <div
                       className={`text-2xl 2xl:text-4xl ${data.id % 2 === 0
                         ? null
-                        : "pt-8"}  font-medium text-primary text-center`}
+                        : "pt-8"}  font-medium gradient_text text-center`}
                     >
                       {data.title}
                     </div>

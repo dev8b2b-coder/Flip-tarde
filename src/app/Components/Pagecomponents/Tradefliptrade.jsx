@@ -38,17 +38,17 @@ const featureData = [
 
 const Tradefliptrade = () => {
   return (
-    <div className="bg-white py-12 md:py-18">
+    <div className="bg-theme py-12 md:py-18">
       <div className="inn_container">
         <div className="grid grid-col-1 md:grid-cols-2 pb-5 text-center md:text-start relative z-[2]">
           <Title
             title="Why Trade with <br/> Fliptrade"
-            color="text-secondary"
+            color="text-white"
           />
           <div className="flex justify-center items-center">
             <Discription
               dispription={`Experience the advantage of expert trading.`}
-              color="text-ternary"
+              color="text-white"
             />
           </div>
         </div>
@@ -172,12 +172,12 @@ const Tradefliptrade = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {featureData.map((item, index) =>
               <div className="p-3 ui_btn_shadow rounded-2xl" key={index}>
-                <h5 className="text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl lg:leading-[35px] font-medium text-primary text-center md:text-start">
+                <h5 className="text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl lg:leading-[35px] font-medium gradient_text text-center md:text-start">
                   {item.title}
                 </h5>
                 <p
                   dangerouslySetInnerHTML={{ __html: item.desc }}
-                  className="list_text font-light font_ternary max-w-[400px] text-center md:text-start lg:max-w-[unset] md:text-[unset] leading-6 xl:leading-[28px]"
+                  className="list_text font-light font_ternary max-w-[400px] text-center md:text-start lg:max-w-[unset] md:text-[unset] leading-6 xl:leading-[28px] !text-white"
                 />
               </div>
             )}

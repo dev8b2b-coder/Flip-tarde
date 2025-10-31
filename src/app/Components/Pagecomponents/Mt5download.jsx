@@ -33,7 +33,7 @@ const faqData = [
 
 const Mt5download = () => {
   return (
-    <div className="bg-white">
+    <div className="bg-theme">
       <div className="xl:py-24">
         <div>
           <div
@@ -54,12 +54,12 @@ const Mt5download = () => {
                 <div className="text-center lg:text-start pt-12 md:pt-0 px-5 md:px-0">
                   <Title
                     title={`Download MT5 and start trading with FlipTrade today.`}
-                    color="text-secondary"
+                    color="gradient_text"
                   />
                   <p className="pt-4" />
                   <Discription
                     dispription={`Access markets anytime, anywhere with <br/> the world’s most powerful trading platform.`}
-                    color="text-ternary"
+                    color="text-white"
                   />
                 </div>
 

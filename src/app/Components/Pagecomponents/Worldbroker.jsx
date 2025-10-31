@@ -1,9 +1,4 @@
 import React from "react";
-import firebtnicon from "../../../../public/icons/firebtnicon.svg";
-import giftbtnicon from "../../../../public/icons/giftbtnicon.svg";
-import Ethereum from "../../../../public/icons/Ethereum.svg";
-import Zcash from "../../../../public/icons/Zcash.svg";
-import Bitcoin from "../../../../public/icons/Bitcoin.svg";
 import Title from "../Uiux/Title";
 import Button from "../Uiux/Button";
 import Image from "next/image";
@@ -19,16 +14,16 @@ function Worldbroker() {
         className="inn_container   bg-no-repeat bg-center bg-contain relative"
         style={{ backgroundImage: `url(${Worldbrokerbg.src})` }}
       >
-        <div className="grid grid-cols-[3fr_2fr] py-22  px-12">
-          <div>
+        <div className="grid xl:grid-cols-[3fr_2fr] py-22  px-12">
+          <div className="text-center xl:text-start">
             <Title
               title={
-                "Get Onboard with the <br/> World’s Rapidly <br/> Growing Broker"
+                "Get Onboard with the  World’s Rapidly  Growing Broker"
               }
               color={"text-white"}
             />
 
-            <div>
+            <div className="flex flex-wrap justify-center xl:justify-start gap-4 pt-5">
               <Button
                 btn_name={`Open Live Account`}
                 btn_bg="bg-white"
@@ -44,10 +39,10 @@ function Worldbroker() {
                 icon={giftwhite}
               />
             </div>
-          </div>
+          </div> 
 
-          <div className="" />
-          <div className="absolute right-12 bottom-0">
+          <div className="hidden xl:block" />
+          <div className="absolute right-12 bottom-0 hidden xl:block">
             <Image
               src={Worldbrokerright}
               alt="Worldbrokerright"

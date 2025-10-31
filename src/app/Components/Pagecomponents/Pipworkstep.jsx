@@ -33,19 +33,19 @@ export default function Pipworkstep() {
     }
   }, []);
   return (
-    <div className="bg-white py-12 md:py-18 lg:py-32" id="pip-cal">
+    <div className="bg-theme py-12 md:py-18 lg:py-32" id="pip-cal">
       <div className="inn_container">
         <div className="grid grid-cols-1 lg:grid-cols-2 text-center lg:text-start">
           <div>
             <Title
               title="What Is a Pip? & <br/> How it works"
-              color="text-secondary"
+              color="gradient_text"
             />
           </div>
           <div className="flex justify-center items-center">
             <Discription
               dispription="A pip (percentage in point) is the <br/> smallest price movement a currency <br/> pair can make based on market convention."
-              color="text-secondary"
+              color="text-white"
             />
           </div>
         </div>
@@ -58,11 +58,11 @@ export default function Pipworkstep() {
                 </div>
                 <div className="pt-10">
                   <div className="text-center">
-                    <p className="text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl xl:pb-3 font-medium text-primary text-center">
+                    <p className="text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl xl:pb-3 font-medium gradient_text text-center">
                       {data.title}
                     </p>
                     <span
-                      className="list_text font-light text-center font_ternary leading-6 xl:leading-[28px]"
+                      className="list_text font-light text-center font_ternary leading-6 xl:leading-[28px] text-white"
                       dangerouslySetInnerHTML={{ __html: data.description }}
                     />
                   </div>

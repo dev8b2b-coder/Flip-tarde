@@ -13,6 +13,7 @@ import probannerright from "/public/images/probannerright.webp";
 import acountcard1 from "/public/icons/acountcard1.svg";
 import acountcard2 from "/public/icons/acountcard2.svg";
 import acountcard3 from "/public/icons/acountcard3.svg";
+import Righttextgrap from "../Components/Pagecomponents/Righttextgrap";
 const faqData = [
   {
     question: "What is the minimum deposit for a Professional Account?",
@@ -127,21 +128,22 @@ const page = () => {
         card5desk={"Confirm Benefits <br/> with Your Rep"}
         cardphdata={cardphdata}
       />
-      <Accountgrap
-        desktopbanner={proaccgrap}
-        phonetabbanner={proaccgrapph}
-        title={"Professional <br/> Trading Made <br/> Premium"}
-        description={
-          "Open a Professional Account with just $500 <br/> and access elite trading conditions."
-        }
-        btnname={"Open Account Now"}
-      />
-      <div className="bg-white py-12 md:py-18 lg:py-24">
+    <div className="inn_container">
+        <Righttextgrap
+          desktopbanner={proaccgrap}
+          phonetabbanner={proaccgrapph}
+          title={"<span class='text-primary'> Professional </span> Trading Made Premium"}
+          description={`Open a Professional Account with just $500 <br/> and access elite trading conditions.`}
+          btnname={"Open Account Now"}
+          position={'top-[22%] xl:w-[41%] right-0'}
+        />
+      </div>
+      <div className="bg-theme py-12 md:py-18 lg:py-24">
         <div className="inn_container">
           <div className="text-center">
             <Title
               title={"Frequently Asked <br/> Questions"}
-              color="text-secondary"
+              color="text-white"
             />
           </div>
           <div>

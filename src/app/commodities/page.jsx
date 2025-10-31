@@ -91,12 +91,12 @@ export default function page() {
         discoverleftimage={commoditiescoverleft}
         discoverrightimage={commoditiescoverright}
       />
-      <div className=" bg-white">
+      <div className=" bg-theme">
         <div className="inn_container pt-12 pb-16">
           <div className="text-center">
             <Title
               title={"Frequently Asked <br/> Questions"}
-              color={"text-secondary"}
+              color={"text-white"}
             />
           </div>
           <div className="pt-8">

@@ -3,7 +3,7 @@ import Thankyoubanner from '../Components/Pagecomponents/Thankyoubanner'
 
 export default function page() {
   return (
-    <div className='bg-white'>
+    <div className='bg-theme'>
        <div className="inn_container">
          <Thankyoubanner/>
        </div>

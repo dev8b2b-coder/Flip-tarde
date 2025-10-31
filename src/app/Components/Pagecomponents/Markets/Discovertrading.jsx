@@ -1,13 +1,13 @@
 "use client";
 import React from "react";
-import marketsdiscover from "../../../../../public/images/marketsdiscover.webp";
 import Title from "../../Uiux/Title";
 import Discription from "../../Uiux/Discription";
 import Button from "../../Uiux/Button";
-import firebtnicon from "../../../../../public/icons/firebtnicon.svg";
+import firebtnicon from "../../../../../public/icons/firebtniconblue.svg";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
+import discoverbg from "../../../../../public/images/discoverbg.webp"
 const Discovertrading = ({
   discription,
   discoverleftimage,
@@ -19,10 +19,10 @@ const Discovertrading = ({
     .replace(/-/g, " ")
     .replace(/\b\w/g, c => c.toUpperCase());
   return (
-    <div className="bg-white">
+    <div className="bg-theme">
       <div
-        className="inn_container bg-contain bg-no-repeat bg-center flex items-center justify-center"
-        style={{ backgroundImage: `url(${marketsdiscover.src})` }}
+        className="inn_container bg-cover bg-no-repeat bg-center flex items-center justify-center rounded-4xl"
+        style={{ backgroundImage: `url(${discoverbg.src})` }}
       >
         <div className="hidden lg:grid grid-cols-[2fr_3fr_2fr]">
           <div className="flex items-center">
@@ -37,10 +37,10 @@ const Discovertrading = ({
           <div className="text-center py-36 px-8">
             <Title
               title={`Discover <br/> ${pathname} Trading`}
-              color="text-primary"
+              color="text-white"
             />
             <div className="flex justify-center py-10">
-              <Discription dispription={discription} color={"text-ternary"} />
+              <Discription dispription={discription} color={"text-white"} />
             </div>
             <div>
               <Link
@@ -49,11 +49,11 @@ const Discovertrading = ({
               >
                 <Button
                   btn_name={`Start Trading ${pathname}`}
-                  border_color={"border-primary"}
-                  btn_bg={"bg-primary"}
+                  border_color={"border-white"}
+                  btn_bg={"bg-white"}
                   shadow={true}
                   icon={firebtnicon}
-                  text_color={"text-white"}
+                  text_color={"text-primary"}
                 />
               </Link>
             </div>
@@ -82,19 +82,19 @@ const Discovertrading = ({
             <div className="text-center relative z-[2]">
               <Title
                 title={`Discover <br/> ${pathname} Trading`}
-                color="text-primary"
+                color="text-white"
               />
               <div className="flex justify-center py-10">
-                <Discription dispription={discription} color={"text-ternary"} />
+                <Discription dispription={discription} color={"text-white"} />
               </div>
               <div>
                 <Button
                   btn_name={`Start Trading ${pathname}`}
-                  border_color={"border-primary"}
-                  btn_bg={"bg-primary"}
+                  border_color={"border-white"}
+                  btn_bg={"bg-white"}
                   shadow={true}
                   icon={firebtnicon}
-                  text_color={"text-white"}
+                  text_color={"text-primary"}
                 />
               </div>
             </div>

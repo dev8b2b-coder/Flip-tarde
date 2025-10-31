@@ -13,6 +13,7 @@ import encbannerright from "/public/images/encbannerright.webp";
 import acountcard1 from "/public/icons/acountcard1.svg";
 import acountcard2 from "/public/icons/acountcard2.svg";
 import acountcard3 from "/public/icons/acountcard3.svg";
+import Righttextgrap from "../Components/Pagecomponents/Righttextgrap";
 const faqData = [
   {
     question: "What is the minimum deposit for an ECN Account?",
@@ -123,21 +124,21 @@ const page = () => {
         card5desk={"Review commission <br/> and trading costs."}
         cardphdata={cardphdata}
       />
-      <Accountgrap
-        desktopbanner={encaccgrap}
-        phonetabbanner={encaccgrapph}
-        title={"ECN Trading <br/> Made Precise"}
-        description={
-          "Open an ECN Account with just $200 <br/> and trade like a professional."
-        }
-        btnname={"Open Account Now"}
-      />
-      <div className="bg-white py-12 md:py-18 lg:py-24">
+      <div className="inn_container">
+        <Righttextgrap
+          desktopbanner={encaccgrap}
+          phonetabbanner={encaccgrapph}
+          title={"<span class='text-primary'> ECN </span> Trading <br/> Made Precise"}
+          description={`Open an ECN Account with just $200 <br/> and trade like a professional.`}
+          btnname={"Open Account Now"}
+        />
+      </div>
+      <div className="bg-theme py-12 md:py-18 lg:py-24">
         <div className="inn_container">
           <div className="text-center">
             <Title
               title={"Frequently Asked <br/> Questions"}
-              color="text-secondary"
+              color="text-white"
             />
           </div>
           <div>

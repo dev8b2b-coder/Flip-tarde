@@ -31,18 +31,18 @@ const Ibpartnerwork = () => {
       }
     }, []);
   return (
-    <div className="bg-white" id="ib-partner">
+    <div className="bg-theme" id="ib-partner">
       <div
         className="bg-cover"
         style={{ backgroundImage: `url(${workprocessbanner.src})` }}
       >
         <div className="inn_container pt-12 xl:pt-24 2xl:pt-36">
           <div className="grid grid-col-1 md:grid-cols-2 pb-5 text-center md:text-start relative z-[2]">
-            <Title title="How It Works" color="text-secondary" />
+            <Title title="How It Works" color="text-white" />
             <div className="flex justify-center items-center">
               <Discription
                 dispription={`Turn your network into earnings with our simple <br/> IB program.`}
-                color="text-ternary"
+                color="text-white"
               />
             </div>
           </div>
@@ -58,10 +58,10 @@ const Ibpartnerwork = () => {
               />
               <div className="absolute w-[30%] top-[5%] left-[4%]">
                 <div className="w-max">
-                  <p className="text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl xl:pb-3 font-medium text-primary text-center">
+                  <p className="text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl xl:pb-3 font-medium gradient_text text-center">
                     Sign Up
                   </p>
-                  <span className="list_text font-light text-center font_ternary leading-6 xl:leading-[28px]">
+                  <span className="list_text font-light text-center font_ternary leading-6 xl:leading-[28px] text-white">
                     Register as an IB Partner.
                   </span>
                 </div>
@@ -102,10 +102,10 @@ const Ibpartnerwork = () => {
                   />
                 </div>
                 <div className="w-max text-center mt-3">
-                  <p className="text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl xl:pb-3 font-medium text-primary text-center">
+                  <p className="text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl xl:pb-3 font-medium gradient_text text-center">
                     Earn Commissions
                   </p>
-                  <span className="list_text font-light text-center font_ternary leading-6 xl:leading-[28px]">
+                  <span className="list_text font-light text-center font_ternary leading-6 xl:leading-[28px] text-white">
                     Receive a share of trading <br />
                     fees from your referred clients.
                   </span>
@@ -114,10 +114,10 @@ const Ibpartnerwork = () => {
 
               <div className="absolute w-[30%] top-[5%] right-[4%]">
                 <div className="w-max ml-auto">
-                  <p className="text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl xl:pb-3 font-medium text-primary text-center">
+                  <p className="text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl xl:pb-3 font-medium gradient_text text-center">
                     Refer Traders
                   </p>
-                  <span className="list_text font-light text-center font_ternary leading-6 xl:leading-[28px]">
+                  <span className="list_text font-light text-center font_ternary leading-6 xl:leading-[28px] text-white">
                     Share your unique referral link.
                   </span>
                 </div>
@@ -156,10 +156,10 @@ const Ibpartnerwork = () => {
                   />
                 </div>
                 <div className="w-max text-center ml-auto mt-3">
-                  <p className="text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl xl:pb-3 font-medium text-primary text-center">
+                  <p className="text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl xl:pb-3 font-medium gradient_text text-center">
                     Track Performance
                   </p>
-                  <span className="list_text font-light text-center font_ternary leading-6 xl:leading-[28px]">
+                  <span className="list_text font-light text-center font_ternary leading-6 xl:leading-[28px] text-white">
                     Monitor your referrals and <br />
                     earnings in real-time.
                   </span>
@@ -181,10 +181,10 @@ const Ibpartnerwork = () => {
                   />
                 </div>
                 <div>
-                  <p className="text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl xl:pb-3 font-medium text-primary">
+                  <p className="text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl xl:pb-3 font-medium gradient_text">
                     Sign Up
                   </p>
-                  <span className="list_text font-light text-center font_ternary leading-6 xl:leading-[28px]">
+                  <span className="list_text font-light text-center font_ternary leading-6 xl:leading-[28px] text-white">
                     Register as an IB Partner.
                   </span>
                 </div>
@@ -200,10 +200,10 @@ const Ibpartnerwork = () => {
                   />
                 </div>
                 <div>
-                  <p className="text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl xl:pb-3 font-medium text-primary">
+                  <p className="text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl xl:pb-3 font-medium gradient_text">
                     Refer Traders
                   </p>
-                  <span className="list_text font-light text-center font_ternary leading-6 xl:leading-[28px]">
+                  <span className="list_text font-light text-center font_ternary leading-6 xl:leading-[28px] text-white">
                     Share your unique referral link.
                   </span>
                 </div>
@@ -219,10 +219,10 @@ const Ibpartnerwork = () => {
                   />
                 </div>
                 <div>
-                  <p className="text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl xl:pb-3 font-medium text-primary">
+                  <p className="text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl xl:pb-3 font-medium gradient_text">
                     Earn Commissions
                   </p>
-                  <span className="list_text font-light text-center font_ternary leading-6 xl:leading-[28px]">
+                  <span className="list_text font-light text-center font_ternary leading-6 xl:leading-[28px] text-white">
                     Receive a share of trading fees from your referred clients.
                   </span>
                 </div>
@@ -238,10 +238,10 @@ const Ibpartnerwork = () => {
                   />
                 </div>
                 <div>
-                  <p className="text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl xl:pb-3 font-medium text-primary">
+                  <p className="text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl xl:pb-3 font-medium gradient_text">
                    Track Performance
                   </p>
-                  <span className="list_text font-light text-center font_ternary leading-6 xl:leading-[28px]">
+                  <span className="list_text font-light text-center font_ternary leading-6 xl:leading-[28px] text-white">
                     Monitor your referrals and earnings in real-time.
                   </span>
                 </div>

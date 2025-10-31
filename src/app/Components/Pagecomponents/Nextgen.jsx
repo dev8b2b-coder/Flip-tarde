@@ -10,7 +10,7 @@ import Bitcoin from "../../../../public/icons/Bitcoin.svg";
 import Litecoin from "../../../../public/icons/Litecoin.svg";
 const Nextgen = () => {
   return (
-    <div className="bg-white">
+    <div className="bg-theme">
       <div className="inn_container pt-12 md:pt-18 lg:pt-28 xl:pt-38">
         <div className="grid grid-col-1 text-center lg:text-start lg:grid-cols-[3fr_2fr]">
           <Title

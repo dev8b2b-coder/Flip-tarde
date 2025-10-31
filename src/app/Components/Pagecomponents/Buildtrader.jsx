@@ -2,7 +2,7 @@ import React from "react";
 import Title from "../Uiux/Title";
 import Discription from "../Uiux/Discription";
 import buildtraderimage from "../../../../public/images/buildtraderimage.webp";
-import buildtraderimageloerph from "../../../../public/images/buildtraderimagelowerph.webp";
+import buildtraderimageloerph from "../../../../public/images/buildtraderimagelower.webp";
 import Righttextgrap from "./Righttextgrap";
 const buildtradetagcard = [
   {

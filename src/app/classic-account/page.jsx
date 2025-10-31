@@ -6,18 +6,19 @@ import Accountcards from "../Components/Pagecomponents/Accouttypes/Accountcards"
 import Accountgetstart from "../Components/Pagecomponents/Accouttypes/Accountgetstart";
 import classicaccgrap from "../../../public/images/classicaccgrap.webp";
 import classicaccgrapph from "../../../public/images/classicaccgrapph.webp";
-import Accountgrap from "../Components/Pagecomponents/Accouttypes/Accountgrap";
 import Title from "../Components/Uiux/Title";
 import Faq from "../Components/Pagecomponents/Faq";
 import classicbannerright from "/public/images/classicbannerright.webp";
 import acountcard1 from "/public/icons/acountcard1.svg";
 import acountcard2 from "/public/icons/acountcard2.svg";
 import acountcard3 from "/public/icons/acountcard3.svg";
+import Righttextgrap from "../Components/Pagecomponents/Righttextgrap";
 
 export const metadata = {
-  title : 'Classic Account – Forex Trading Platforms | Fliptrade Group',
-  description : 'Explore the Classic Account at FlipTrade Group: enjoy tighter spread, low minimum deposit, and advanced tools for serious traders. Sign up and start trading today.'
-}
+  title: "Classic Account – Forex Trading Platforms | Fliptrade Group",
+  description:
+    "Explore the Classic Account at FlipTrade Group: enjoy tighter spread, low minimum deposit, and advanced tools for serious traders. Sign up and start trading today."
+};
 const faqData = [
   {
     question: "What is the minimum deposit for a Classic Account?",
@@ -25,7 +26,8 @@ const faqData = [
   },
   {
     question: "Are spreads lower than the Standard Account?",
-    answer: "Yes, Classic Account offers tighter spreads than the Standard Account."
+    answer:
+      "Yes, Classic Account offers tighter spreads than the Standard Account."
   },
   {
     question: "Can I trade swap-free?",
@@ -37,10 +39,10 @@ const faqData = [
   },
   {
     question: "Who is the Classic Account for?",
-    answer: "It’s designed for experienced traders seeking better spreads and flexibility."
+    answer:
+      "It’s designed for experienced traders seeking better spreads and flexibility."
   }
 ];
-
 
 const features = [
   {
@@ -124,19 +126,22 @@ const page = () => {
         card5desk={"Set up your trading <br/> platform and strategies."}
         cardphdata={cardphdata}
       />
-      <Accountgrap
-        desktopbanner={classicaccgrap}
-        phonetabbanner={classicaccgrapph}
-        title={"Classic Trading <br/> Made Easy"}
-        description={'Open a Classic Account with just $100 and <br/> elevate your trading experience.'}
-        btnname={"Open Account Now"}
-      />
-      <div className="bg-white py-12 md:py-18 lg:py-24">
+      <div className="inn_container">
+        <Righttextgrap
+          desktopbanner={classicaccgrap}
+          phonetabbanner={classicaccgrapph}
+          title={"Classic Trading <br/> Made Easy"}
+          description={`Open a Classic Account with just $100 and <br/> elevate your trading experience.`}
+          btnname={"Open Account Now"}
+        />
+      </div>
+
+      <div className="bg-theme py-12 md:py-18 lg:py-24">
         <div className="inn_container">
           <div className="text-center">
             <Title
               title={"Frequently Asked <br/> Questions"}
-              color="text-secondary"
+              color="text-white"
             />
           </div>
           <div>

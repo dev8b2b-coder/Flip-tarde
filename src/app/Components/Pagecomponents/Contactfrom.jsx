@@ -54,13 +54,13 @@ useEffect(() => {
         </div>
       </div>
 
-      <div className="bg-white py-10 md:py-20" id="social-link">
+      <div className="bg-theme py-10 md:py-20" id="social-link">
         <div className="inn_container">
           <div className="flex flex-col justify-center items-center">
-            <p className="text-3xl 2xl:text-4xl null  font-medium text-primary">
+            <p className="text-3xl 2xl:text-4xl null  font-medium  gradient_text">
               Stay Connected
             </p>
-            <span className="list_text font-light  pt-4 text-center  leading-[28px] font_ternary max-w[330px] min-h-[65px] h-full flex">
+            <span className="list_text font-light  pt-4 text-center  leading-[28px] font_ternary max-w[330px] min-h-[65px] h-full flex text-white">
               Follow us on our social media channels for updates, tips, and
               more.
             </span>
@@ -83,7 +83,7 @@ useEffect(() => {
                   }
                   target="_blank"
                 >
-                  <div className="text-xl md:text-3xl 2xl:text-4xl null flex items-center pt-8 justify-center gap-2.5  font-medium text-primary font_ternary">
+                  <div className="text-xl md:text-3xl 2xl:text-4xl null flex items-center pt-8 justify-center gap-2.5  font-medium text-white font_ternary">
                     Facebook
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -126,7 +126,7 @@ useEffect(() => {
                   href={"https://www.instagram.com/fliptradegroup/"}
                   target="_blank"
                 >
-                  <div className="text-xl md:text-3xl 2xl:text-4xl null flex justify-center pt-8 items-center gap-2.5  font-medium text-primary font_ternary">
+                  <div className="text-xl md:text-3xl 2xl:text-4xl null flex justify-center pt-8 items-center gap-2.5  font-medium text-white font_ternary">
                     Instagram
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -169,7 +169,7 @@ useEffect(() => {
                   href={"https://www.youtube.com/@fliptradegroup"}
                   target="_blank"
                 >
-                  <div className="text-xl md:text-3xl 2xl:text-4xl null flex justify-center pt-8 items-center gap-2.5  font-medium text-primary font_ternary">
+                  <div className="text-xl md:text-3xl 2xl:text-4xl null flex justify-center pt-8 items-center gap-2.5  font-medium text-white font_ternary">
                     Youtube
                     <svg
                       xmlns="http://www.w3.org/2000/svg"

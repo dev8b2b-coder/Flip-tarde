@@ -7,7 +7,7 @@ import Button from "../Uiux/Button";
 import fireicon from "../../../../public/icons/firebtnicon.svg";
 const Pipvalue = ({onScrollClick}) => {
   return (
-    <div className="bg-white">
+    <div className="bg-theme">
       <div className="inn_container py-12 md:py-18 lg:py-24">
         <div className="grid grid-cols-1 lg:grid-cols-2">
           <div>
@@ -23,12 +23,12 @@ const Pipvalue = ({onScrollClick}) => {
             <div>
               <Title
                 title="Calculate Your <br/> Pip Values Instantly"
-                color="text-secondary"
+                color="text-white"
               />
               <div className="pt-2">
                 <Discription
                   dispription="Know the value of each pip and make smarter <br /> trading decisions."
-                  color="text-ternary"
+                  color="text-white"
                 />
               </div>
               <div className="pt-8" onClick={onScrollClick}>

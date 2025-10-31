@@ -34,14 +34,14 @@ const Mt5anywhere = () => {
     }
   }, []);
   return (
-    <div className="bg-white" id="trade">
+    <div className="bg-theme" id="trade">
       <div
         className="bg-cover"
         style={{ backgroundImage: `url(${boxbg.src})` }}
       >
         <div className="inn_container py-12 lg:py-18">
           <div className="text-center pb-4 md:pb-8">
-            <Title title={"Trade Anywhere"} color={"text-secondary"} />
+            <Title title={"Trade Anywhere"} color={"text-white"} />
           </div>
           <div className="relative">
             <Image
@@ -57,14 +57,14 @@ const Mt5anywhere = () => {
               }
               target="_blank"
             >
-              <div className=" md:absolute mt-3 bottom-[15%] left-[10%] list_text font-light font_ternary leading-6 xl:leading-[28px] bg-subprimary md:w-max py-2.5 lg:py-5 px-8 lg:px-8 rounded-3xl md:rounded-[60px] text-white">
+              <div className=" md:absolute mt-3 bottom-[15%] left-[10%] list_text font-light font_ternary leading-6 xl:leading-[28px] gradient_bg md:w-max py-2.5 lg:py-5 px-8 lg:px-8 rounded-3xl md:rounded-[60px] text-secondary">
                 <span className="font-semibold">Android </span> android 
                 apps for trading on-the-go.
               </div>
             </Link>
             {/* mobile ios & android  */}
             <Link href={'https://download.mql5.com/cdn/mobile/mt5/ios?server=FlipTradeGroup-Server'} target="_blank">
-              <div className=" md:absolute mt-3 right-[10%] list_text font-light font_ternary leading-6 xl:leading-[28px] bg-subprimary md:w-max py-2.5 lg:py-5 px-8 lg:px-8 rounded-3xl md:rounded-[60px] text-white">
+              <div className=" md:absolute mt-3 right-[10%] list_text font-light font_ternary leading-6 xl:leading-[28px] gradient_bg md:w-max py-2.5 lg:py-5 px-8 lg:px-8 rounded-3xl md:rounded-[60px] text-secondary">
                 <span className="font-semibold"> iOS </span> – iOS 
                 apps for trading on-the-go.
               </div>
@@ -75,7 +75,7 @@ const Mt5anywhere = () => {
               }
               target="_blank"
             >
-              <div className=" md:absolute mt-3 top-[15%] right-[5%] list_text font-light font_ternary leading-6 xl:leading-[28px] bg-subprimary md:w-max py-2.5 lg:py-5 px-8 lg:px-8 rounded-3xl md:rounded-[60px] text-white">
+              <div className=" md:absolute mt-3 top-[15%] right-[5%] list_text font-light font_ternary leading-6 xl:leading-[28px] gradient_bg md:w-max py-2.5 lg:py-5 px-8 lg:px-8 rounded-3xl md:rounded-[60px] text-secondary">
                 <span className="font-semibold">Desktop </span> – Windows &
                 macOS.
               </div>

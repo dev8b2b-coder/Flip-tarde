@@ -14,16 +14,16 @@ const Accountgetstart = ({
   cardphdata
 }) => {
   return (
-    <div className="bg-white">
+    <div className="bg-theme">
       <div className="inn_container pt-12 md:pt-18 lg:pt-28">
         <div className="grid grid-col-1 text-center lg:text-start lg:grid-cols-2">
           <Title
-            title="Get Started Easily"
-            color="text-secondary"
+            title="How to Get Started"
+            color="text-white"
             hovercolor="gradient_text_title"
           />
           <div className="flex justify-center items-center">
-            <Discription dispription={description} color="text-ternary" />
+            <Discription dispription={description} color="text-white" />
           </div>
         </div>
       </div>

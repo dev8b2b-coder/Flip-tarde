@@ -47,12 +47,12 @@ function page() {
       <Mt5anywhere />
       <Mt5card />
       <Mt5download />
-      <div className=" bg-white ">
+      <div className=" bg-theme ">
         <div className="inn_container py-12">
           <div className="text-center">
             <Title
               title={"Frequently Asked <br /> Questions"}
-              color={"text-secondary"}
+              color={"text-white"}
             />
           </div>
           <div>

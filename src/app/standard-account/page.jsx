@@ -13,6 +13,7 @@ import standardbannerright from "/public/images/standardbannerright.webp";
 import acountcard1 from "/public/icons/acountcard1.svg";
 import acountcard2 from "/public/icons/acountcard2.svg";
 import acountcard3 from "/public/icons/acountcard3.svg";
+import Righttextgrap from "../Components/Pagecomponents/Righttextgrap";
 const faqData = [
   {
     question: "What is the minimum deposit for the Standard Account?",
@@ -121,14 +122,16 @@ const page = () => {
         card5desk={"Begin <br/> trading."}
         cardphdata={cardphdata}
       />
-      <Accountgrap
-        desktopbanner={standardaccgrap}
-        phonetabbanner={standardaccgrapph}
-        title={"Trade Easy <br/> with Standard"}
-        description={`Open a Standard Account with just $25 and take <br/> your first step into the markets.`}
-        btnname={"Open Account Now"}
-      />
-      <div className="bg-white py-12 md:py-18 lg:py-24">
+      <div className="inn_container">
+        <Righttextgrap
+          desktopbanner={standardaccgrap}
+          phonetabbanner={standardaccgrapph}
+          title={"Trade Easy with <span class='text-primary'> Standard </span>"}
+          description={`Open a Standard Account with just $25 and take your first step into the markets.`}
+          btnname={"Open Account Now"}
+        />
+      </div>
+      <div className="bg-theme py-12 md:py-18 lg:py-24">
         <div className="inn_container">
           <div className="text-center">
             <Title

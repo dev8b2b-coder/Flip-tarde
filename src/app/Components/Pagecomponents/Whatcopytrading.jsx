@@ -9,7 +9,7 @@ import Button from "../Uiux/Button";
 import Link from "next/link";
 const Whatcopytrading = () => {
   return (
-    <div className="bg-white pt-12 md:pt-18 lg:pt-32 2xl:pt-40">
+    <div className="bg-theme pt-12 md:pt-18 lg:pt-32 2xl:pt-40">
       <div
         className=" bg-left bg-no-repeat bg-contain"
         style={{ backgroundImage: `url(${whatcopytradingbg.src})` }}
@@ -27,14 +27,14 @@ const Whatcopytrading = () => {
           <div className="text-center lg:text-start">
             <Title
               title={"What Is Social & <br/> Copy Trading?"}
-              color={"text-secondary"}
+              color={"gradient_text"}
             />
             <div className="py-6">
               <Discription
                 dispription={
                   "Social & Copy Trading lets you learn from professionals <br/> and trade like them, without deep market knowledge. <br/> You can watch expert traders, follow their strategies, <br/> and instantly replicate their trades in your own account <br/> — automatically and transparently."
                 }
-                color={"text-ternary"}
+                color={"text-white"}
               />
             </div>
             <Link

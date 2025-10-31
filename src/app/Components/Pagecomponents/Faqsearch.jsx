@@ -368,21 +368,21 @@ const Faqsearch = () => {
     }, [finalData, faqtogle]);
 
     return (
-        <div className="bg-white" id="faq-scroll">
+        <div className="bg-theme" id="faq-scroll">
             <div className="inn_container pt-12 pb-12 xl:pt-24 xl:pb-24">
                 <div className="text-center">
-                    <Title title="Search for Answers" color="text-black" />
+                    <Title title="Search for Answers" color="gradient_text" />
                     <div className="text-center pt-6">
-                        <p className="text-lg md:text-2xl xl:text-3xl 2xl:text-4xl font-semibold text-primary pb-2">
+                        <p className="text-lg md:text-2xl xl:text-3xl 2xl:text-4xl font-semibold text-white pb-2">
                             How do I use the Help Centre?
                         </p>
-                        <span className="text-secondary list_text">
+                        <span className="text-white list_text">
                             Type your question to get instant answers. If you don’t find what
                             you need, check the <br /> FAQ below or contact us via live chat,
                             email, or callback.
                         </span>
                     </div>
-                    <div className="flex w-full md:w-max md:mx-auto my-6 items-center gap-4 py-[16px] md:py-[22px] px-[40px] border-2 border-primary rounded-full md:min-w-[65%]">
+                    <div className="flex w-full md:w-max md:mx-auto my-6 items-center gap-4 py-[16px] md:py-[22px] px-[40px] border-2 border-primary rounded-full md:min-w-[65%] bg-white">
                         <Image
                             src={searchicon}
                             alt="search icon"
@@ -404,7 +404,7 @@ const Faqsearch = () => {
                 <div className="flex flex-col xl:flex-row xl:pt-14 gap-4 relative">
                     <div className={` hidden xl:block xl:w-[30%] 2xl:w-[25%]`}>
                         <div className="bg-primary xl:max-w-[380px] p-6 rounded-3xl sticky top-10">
-                            <p className="text-[30px] font-medium text-white">FAQ Categories</p>
+                            <p className="text-xl md:text-2xl xl:text-[30px] font-medium text-white">FAQ Categories</p>
                             <div className="pt-4 grid grid-cols-2 xl:grid-cols-1 gap-3">
                                 {faqsmaindata.map((data, index) => (
                                     <div
@@ -455,7 +455,7 @@ const Faqsearch = () => {
 
                             <div className={` absolute top-[57px] left-0 ${faqtogle ? ' w-full md:w-[80%]' : ' w-[1px] h-[1px]'} top-[2%] xl:top-0 xl:relative overflow-hidden  xl:h-auto xl:w-[30%] 2xl:w-[25%]`}>
                                 <div className={`bg-primary xl:max-w-[380px] p-6 rounded-3xl sticky top-10 ${activeSection === faqsmaindata.length ? 'hidden' : 'block'}`}>
-                                    <p className="text-[30px] font-medium text-white">FAQ Categories</p>
+                                    <p className="text-xl md:text-2xl xl:text-[30px] font-medium text-white">FAQ Categories</p>
                                     <div className="pt-4 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-1 gap-3">
                                         {faqsmaindata.map((data, index) => (
                                             <div
@@ -502,13 +502,13 @@ const Faqsearch = () => {
                                     >
                                         <div className="flex items-center gap-3 max-w-[900px] 2xl:max-w-7xl m-auto">
                                             <Image
-                                                src={data.faqicon}
+                                                src={data.faqiconwhite}
                                                 alt="icon"
                                                 width={1000}
                                                 height={500}
                                                 className="max-w-[34px]"
                                             />
-                                            <p className={`text-[30px] font-medium ${activeSection === data.id ? 'text-primary' : 'text-secondary'} `}>
+                                            <p className={`text-xl md:text-2xl xl:text-[30px] font-medium ${activeSection === data.id ? 'gradient_text' : 'text-white'} `}>
                                                 {data.faqtitle}
                                             </p>
                                         </div>
