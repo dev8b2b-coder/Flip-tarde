@@ -7,7 +7,7 @@ const Fotterlinks = ({title,linklist,border}) => {
       <p className='text-base md:text-xl 2xl:text-2xl font-semibold w-max text-subprimary'>
        {title}
       </p> 
-      <ul className='font_secondary pt-6 flex flex-col gap-2 md:gap-4 2xl:gap-6'>
+      <ul className='font_secondary pt-6 flex flex-col gap-2 md:gap-4 2xl:gap-4'>
         {
           linklist.map((data,index)=>(
             <Link href={data.pagelink} key={index}>
