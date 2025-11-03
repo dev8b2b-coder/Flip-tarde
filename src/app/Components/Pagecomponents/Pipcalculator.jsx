@@ -8,6 +8,7 @@ import Button from "../Uiux/Button";
 import firebtnicon from "../../../../public/icons/firebtnicon.svg";
 import piphandupper from "../../../../public/images/piphandupper.webp";
 import piphanddown from "../../../../public/images/piphanddown.webp";
+import { useAutoScroll } from "../../../hooks/useAutoScroll";
 
 const HIDE_CONV_FOR = new Set(["EUR/USD", "GBP/USD", "NZD/USD", "AUD/USD"]);
 
@@ -24,7 +25,7 @@ const Pipcalculator = () => {
     const { name, value } = e.target;
     setPipdata((d) => ({ ...d, [name]: value }));
   };
-
+  useAutoScroll("calculator", { delay: 800 });
   const [base, quote] = useMemo(() => {
     if (!pipData.Instrument?.includes("/")) return ["", ""];
     const [b, q] = pipData.Instrument.split("/");

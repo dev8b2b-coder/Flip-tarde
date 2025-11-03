@@ -10,6 +10,7 @@ import Image from "next/image";
 import boxbg from "../../../../public/banners/box-bg.webp";
 import joint from "../../../../public/images/joint.webp";
 import Righttextgrap from "./Righttextgrap";
+import { useAutoScroll } from "../../../hooks/useAutoScroll";
 const data = [
   {
     id: 1,
@@ -38,6 +39,7 @@ const data = [
 ];
 
 function Economicuse() {
+  useAutoScroll("eco-calender", { delay: 800 });
   return (
     <div className="bg-theme">
       <div className="md:py-12">
@@ -46,7 +48,7 @@ function Economicuse() {
           style={{ backgroundImage: `url(${boxbg.src})` }}
         >
           <div className="inn_container">
-            <div className="text-center lg:text-start pb-8 md:pb-0">
+            <div className="text-center lg:text-start pb-8 md:pb-0" id="eco-calender">
               <Title title={"Why Use It?"} color="text-white" />
             </div>
             <div

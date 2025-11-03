@@ -8,7 +8,9 @@ import facebookblack from "../../../../public/icons/facebookblack.svg";
 import instablack from "../../../../public/icons/instablack.svg";
 import youtubeblack from "../../../../public/icons/youtubeblack.svg";
 import Link from "next/link";
+import { useAutoScroll } from "../../../hooks/useAutoScroll";
 export default function Contactfrom() {
+  useAutoScroll("social-link", { delay: 800 });
   return (
     <div>
       <div

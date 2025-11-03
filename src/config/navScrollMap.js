@@ -54,9 +54,10 @@ export const navScrollMap = {
   "Tools": {
     "Calendar Overview": { sectionId: "calender", path: "/economic-calendar" },
     "Why Use Economic Calendar": { sectionId: "eco-calender", path: "/economic-calendar" },
-    "Trade Anywhere": { sectionId: "trade", path: "/platform" },
+    // "Trade Anywhere": { sectionId: "trade", path: "/platform" },
     "What is a Pip": { sectionId: "pip-cal", path: "/pip-calculator" },
     "Calculator": { sectionId: "calculator", path: "/pip-calculator" },
+    "FAQs": { sectionId: "faq-scroll", path: "/pip-calculator" },
   },
   
   // Contact dropdown items
@@ -64,6 +65,7 @@ export const navScrollMap = {
     "Office & Contact Details": { sectionId: "contact", path: "/contact-us" },
     "Social Links": { sectionId: "social-link", path: "/contact-us" },
     "How IB Partner Works": { sectionId: "ib-partner", path: "/ib-partner" },
+    "Why Join as IB": { sectionId: "ib-why", path: "/ib-partner" },
   },
 };
 

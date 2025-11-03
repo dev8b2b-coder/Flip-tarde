@@ -2,6 +2,7 @@
 import React from "react";
 import Title from "../Uiux/Title";
 import Discription from "../Uiux/Discription";
+import { useAutoScroll } from "../../../hooks/useAutoScroll";
 
 const workstep = [
   {
@@ -18,6 +19,7 @@ const workstep = [
   }
 ];
 export default function Pipworkstep() {
+  useAutoScroll("pip-cal", { delay: 800 });
   return (
     <div className="bg-theme py-12 md:py-18 lg:py-32" id="pip-cal">
       <div className="inn_container">

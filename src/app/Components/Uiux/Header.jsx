@@ -198,10 +198,10 @@ const navlistdata = [
         items: [
           { name: "Calendar Overview", link: "/economic-calendar" },
           { name: "Why Use Economic Calendar", link: "/economic-calendar" },
-          { name: "Trade Anywhere", link: "/platform" },
+          // { name: "Trade Anywhere", link: "/platform" },
           { name: "What is a Pip", link: "/pip-calculator" },
           { name: "Calculator", link: "/pip-calculator" },
-          { name: "FAQs", link: "/faq" }
+          { name: "FAQs", link: "/pip-calculator" }
         ]
       },
     ]

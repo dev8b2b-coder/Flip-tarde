@@ -14,7 +14,9 @@ import ibworkdash1 from "../../../../public/images/ibworkdash1.webp";
 import ibworkdash2 from "../../../../public/images/ibworkdash2.webp";
 import ibworkdash3 from "../../../../public/images/ibworkdash3.webp";
 import ibworkdash4 from "../../../../public/images/ibworkdash4.webp";
+import { useAutoScroll } from "../../../hooks/useAutoScroll";
 const Ibpartnerwork = () => {
+  useAutoScroll("ib-partner", { delay: 800 });
   return (
     <div className="bg-theme" id="ib-partner">
       <div
