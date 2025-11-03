@@ -237,10 +237,16 @@ const navlistdata = [
 const MobileDropdownItem = ({ data, isOpen, setIsOpen, setIsMenu, pathname }) => {
   const sections = data.sections;
 
-  // Check if any child item is active
-  const isChildActive = sections?.some(section =>
-    section.items?.some(item => item.link === pathname)
-  );
+  // Get all items that match the pathname
+  const matchingItems = sections?.flatMap(section => section.items || [])
+    .filter(item => item.link === pathname);
+  
+  // Only consider active if there's exactly one unique match
+  // On home page ("/") with multiple items, don't highlight any
+  const activeItem = matchingItems.length === 1 ? matchingItems[0] : null;
+  
+  // Explicitly set to false on home page to prevent any highlighting
+  const isChildActive = pathname === '/' ? false : !!activeItem;
 
   return (
     <div className="w-full">
@@ -251,13 +257,13 @@ const MobileDropdownItem = ({ data, isOpen, setIsOpen, setIsMenu, pathname }) =>
           }`}
         onClick={() => setIsOpen(!isOpen)}
       >
-        <span>{data.nav_name}</span>
+        <span className="text-white">{data.nav_name}</span>
         <Image
           src={downarrow}
           alt="dropdown"
           width={16}
           height={16}
-          className={`max-w-[16px] duration-300 transition-all ease-in-out ${isOpen ? "rotate-180" : "rotate-0"
+          className={`max-w-[16px] duration-300 transition-all ease-in-out brightness-0 invert ${isOpen ? "rotate-180" : "rotate-0"
             }`}
         />
       </div>
@@ -271,11 +277,16 @@ const MobileDropdownItem = ({ data, isOpen, setIsOpen, setIsMenu, pathname }) =>
               {section.heading}
             </h4>
             <div className="space-y-1">
-              {section.items.map((item, index) => (
+              {section.items.map((item, index) => {
+                // Check if this specific item should be active
+                // Only highlight if it's the first item in all sections that matches pathname
+                const isActive = activeItem && activeItem === item && item.link === pathname;
+                
+                return (
                 <Link
                   key={index}
                   href={item.link}
-                  className={`block py-2 text-sm font-medium rounded-md transition-colors ${item.link === pathname
+                  className={`block py-2 text-sm font-medium rounded-md transition-colors ${isActive
                     ? "text-primary bg-primary/10 font-semibold"
                     : "text-gray-700 hover:text-primary hover:bg-theme"
                     }`}
@@ -299,7 +310,8 @@ const MobileDropdownItem = ({ data, isOpen, setIsOpen, setIsMenu, pathname }) =>
                 >
                   {item.name}
                 </Link>
-              ))}
+                );
+              })}
             </div>
           </div>
         ))}
@@ -336,6 +348,15 @@ export default function Header() {
     };
   }, [isMenu]);
   const [openDropdown, setOpenDropdown] = useState(null);
+  
+  // Close any open dropdown when route changes, especially on home page
+  useEffect(() => {
+    setOpenDropdown(null);
+    setHoverPos({ left: 0, width: 0 });
+    setTempHoveredItem(null);
+    setOpenMobileDropdown(null); // Close mobile dropdowns too
+  }, [pathname]);
+  
   const [hoveredItem, setHoveredItem] = useState(() => {
     // If on home page, no highlight
     if (pathname === '/') return null;
