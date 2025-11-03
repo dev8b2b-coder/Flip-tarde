@@ -1,30 +1,17 @@
 "use client"
-import React, { useEffect } from "react";
+import React from "react";
 import Title from "../Uiux/Title";
 import Discription from "../Uiux/Discription";
 import Graphhome from "./Markets/Graphhome";
+import { useAutoScroll } from "../../../hooks/useAutoScroll";
 
 function Economicalander() {
-    useEffect(() => {
-      const shouldScroll = sessionStorage.getItem("scrollToContact");
-      if (shouldScroll === "true") {
-        const el = document.getElementById("calender");
-        if (el) {
-          setTimeout(() => {
-            el.scrollIntoView({
-              behavior: "smooth",
-              block: "start"
-            });
-            sessionStorage.removeItem("scrollToContact");
-          }, 800);
-        }
-      }
-    }, []);
+  useAutoScroll("calender", { delay: 800 });
   return (
-    <div className="bg-theme" id="calender">
+    <div className="bg-theme">
       <div className="inn_container  pt-12 md:pt-18 lg:pt-24">
         <div className="grid grid-cols-1 lg:grid-cols-[3fr_2fr] text-center lg:text-start">
-          <div className="max-w-[350px] m-auto md:max-w-[unset] pb-3 md:pb-0">
+          <div className="max-w-[350px] m-auto md:max-w-[unset] pb-3 md:pb-0" id="calender">
             <Title
               title="FlipTrade <br/> Economic Calendar"
               color="text-white"

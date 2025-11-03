@@ -1,36 +1,23 @@
 "use client"
-import React, { useEffect } from "react";
+import React from "react";
 
 import Image from "next/image";
 import Discription from "../../Uiux/Discription";
 import Title from "../../Uiux/Title";
+import { useAutoScroll } from "../../../../hooks/useAutoScroll";
 
 
 const Accountcards = ({description ,carddata}) => {
-    useEffect(() => {
-    const shouldScroll = sessionStorage.getItem("scrollToContact");
-    if (shouldScroll === "true") {
-      const el = document.getElementById("trade-acc");
-      if (el) {
-        setTimeout(() => {
-          el.scrollIntoView({
-            behavior: "smooth",
-            block: "start"
-          });
-          sessionStorage.removeItem("scrollToContact");
-        }, 100);
-      }
-    }
-  }, []);
+  useAutoScroll("trade-acc", { delay: 800 });
   return (
-    <div className="bg-theme" id="trade-acc">
+    <div className="bg-theme">
       <div className="inn_container ">
         <div className="grid grid-col-1 text-center lg:text-start lg:grid-cols-2">
           <Title
             title="Who Should Trade <br/> This Account"
             color="text-white"
           />
-          <div className="flex justify-center items-center">
+          <div className="flex justify-center items-center" id="trade-acc">
             <Discription
               dispription={description}
               color="text-white"

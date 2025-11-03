@@ -1,3 +1,4 @@
+"use client"
 import React from "react";
 import Title from "../Uiux/Title";
 import tradeyouwaygraf from "../../../../public/images/tradeyouwaygraf.webp";
@@ -9,6 +10,7 @@ import Button from "../Uiux/Button";
 import downloadicon from "../../../../public/icons/downloadicon.svg";
 import Faq from "./Faq";
 import Yourway from "./Yourway";
+import { useAutoScroll } from "../../../hooks/useAutoScroll";
 const faqData = [
   {
     question: "What is FlipTrade?",
@@ -34,6 +36,7 @@ const faqData = [
 ];
 
 const Tradeyourway = () => {
+  useAutoScroll("trade-anywhere", { delay: 800 });
   return (
     <div className="bg-theme">
       <div className="">
@@ -62,7 +65,7 @@ const Tradeyourway = () => {
                   className="max-w-[550px] md:max-w-[unset] m-auto w-full"
                 />
               </div>
-              <div className="flex flex-col justify-center items-center">
+              <div className="flex flex-col justify-center items-center" id="trade-anywhere">
                 <div className="text-center lg:text-start pt-12 md:pt-0 px-5 md:px-0">
                   <Title
                     title={`Trade on the Go <br/> <span class='gradient_text'> Anytime and <br/> Anywhere </span>`}
@@ -75,7 +78,7 @@ const Tradeyourway = () => {
                   />
                 </div>
 
-                {/* <div className="pt-14 hidden md:flex w-full flex-col items-center">
+                <div className="pt-14 hidden md:flex w-full flex-col items-center">
                   <div className="flex gap-4 lg:gap-8">
                     <Button
                       btn_name={`Download on <strong> iOS </strong>`}
@@ -112,9 +115,9 @@ const Tradeyourway = () => {
                       shadow={true}
                     />
                   </div>
-                </div> */}
+                </div>
                 {/* Button section for mobile  */}
-                {/* <div className="pt-6 flex md:hidden gap-4 w-full flex-col items-center max-w-[300px] m-auto">
+                <div className="pt-6 flex md:hidden gap-4 w-full flex-col items-center max-w-[300px] m-auto">
                   <div className="flex w-full justify-start">
                     <Button
                       btn_name={`Download on <strong> iOS </strong>`}
@@ -155,7 +158,7 @@ const Tradeyourway = () => {
                       shadow={true}
                     />
                   </div>
-                </div> */}
+                </div>
               </div>
             </div>
           </div>

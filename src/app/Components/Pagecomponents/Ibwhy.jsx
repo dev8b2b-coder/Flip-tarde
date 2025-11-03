@@ -1,3 +1,4 @@
+"use client"
 import React from "react";
 import boxbg from "../../../../public/banners/box-bg.webp";
 import Title from "../Uiux/Title";
@@ -5,6 +6,7 @@ import Discription from "../Uiux/Discription";
 import firebtn from "../../../../public/icons/firebtnicon.svg";
 import Button from "../Uiux/Button";
 import Link from "next/link";
+import { useAutoScroll } from "../../../hooks/useAutoScroll";
 const tradeInfo = [
   {
     title: "Referral",
@@ -25,6 +27,7 @@ const tradeInfo = [
 ];
 
 const Ibwhy = () => {
+  useAutoScroll("ib-why", { delay: 800 });
   return (
     <div className="bg-theme">
       <div
@@ -32,7 +35,7 @@ const Ibwhy = () => {
         style={{ backgroundImage: `url(${boxbg.src})` }}
       >
         <div className="inn_container">
-          <div className="grid grid-col-1 md:grid-cols-2 pb-5 text-center md:text-start relative z-[2]">
+          <div className="grid grid-col-1 md:grid-cols-2 pb-5 text-center md:text-start relative z-[2]" id="ib-why">
             <Title
               title="Why Become an <br/> IB Partner?"
               color="text-white"

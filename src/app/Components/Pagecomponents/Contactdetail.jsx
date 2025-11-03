@@ -1,11 +1,12 @@
 "use client"
-import React, { useEffect } from "react";
+import React from "react";
 import Title from "../Uiux/Title";
 import locationicon from "../../../../public/icons/location.svg";
 import call from "../../../../public/icons/call.svg";
 import email from "../../../../public/images/email.webp";
 import Image from "next/image";
 import Link from "next/link";
+import { useAutoScroll } from "../../../hooks/useAutoScroll";
 export default function Contactdetail() {
   // const contactnumber = process.env.NEXT_CONTACT_NUMBER;
   // contactnumber.toString();
@@ -34,26 +35,11 @@ export default function Contactdetail() {
       cardicon: call
     }
   ];
-
-      useEffect(() => {
-      const shouldScroll = sessionStorage.getItem("scrollTDetails");
-      if (shouldScroll === "true") {
-        const el = document.getElementById("contact");
-        if (el) {
-          setTimeout(() => {
-            el.scrollIntoView({
-              behavior: "smooth",
-              block: "start"
-            });
-            sessionStorage.removeItem("scrollTDetails");
-          }, 800);
-        }
-      }
-    }, []);
+  useAutoScroll("contact", { delay: 800 });
   return (
-    <div className="bg-theme" id="contact">
+    <div className="bg-theme">
       <div className="inn_container py-16 md:py-24 lg:py-32">
-        <div className="text-center">
+        <div className="text-center" id="contact">
           <Title
             title={"Office & Contact <br /> Details"}
             color={"gradient_text w-max m-auto"}

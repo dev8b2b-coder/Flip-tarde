@@ -8,11 +8,13 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import discoverbg from "../../../../../public/images/discoverbg.webp"
+import { useAutoScroll } from "../../../../hooks/useAutoScroll";
 const Discovertrading = ({
   discription,
   discoverleftimage,
   discoverrightimage
 }) => {
+  useAutoScroll("discover-trading", { delay: 800 });
   const currentpath = usePathname();
   const pathname = currentpath
     .replace("/", "")
@@ -34,7 +36,7 @@ const Discovertrading = ({
               className="max-w-[240px] 2xl:max-w-[288px]"
             />
           </div>
-          <div className="text-center py-36 px-8">
+          <div className="text-center py-36 px-8" id="discover-trading">
             <Title
               title={`Discover <br/> ${pathname} Trading`}
               color="text-white"

@@ -1,5 +1,5 @@
 "use client"
-import React, { useEffect } from "react";
+import React from "react";
 import tradingaccounts from "../../../../public/banners/tradingaccounts.webp";
 import Title from "../Uiux/Title";
 import Discription from "../Uiux/Discription";
@@ -14,6 +14,7 @@ import Bitcoin from "../../../../public/icons/Bitcoin.svg";
 import Tradingaccountsph from "./Tradingaccountsph";
 import Link from "next/link";
 import accountcardbg from "../../../../public/images/accountcardbg.webp";
+import { useAutoScroll } from "../../../hooks/useAutoScroll";
 const accountinfo = [
   {
     acount_title: "Standard <br/>  Account",
@@ -121,18 +122,7 @@ const accountinfoph = [
   }
 ];
 function Tradingaccounts() {
-  useEffect(() => {
-    const shouldScroll = sessionStorage.getItem("scrollToContact");
-    if (shouldScroll === "true") {
-      const el = document.getElementById("account-type");
-      if (el) {
-        setTimeout(() => {
-          el.scrollIntoView({ behavior: "smooth", block: "start" });
-          sessionStorage.removeItem("scrollToContact");
-        }, 800);
-      }
-    }
-  }, []);
+  useAutoScroll("account-type", { delay: 800 });
   return (
     <div className="bg-theme relative">
       <video
@@ -151,7 +141,7 @@ function Tradingaccounts() {
           style={{ backgroundImage: `url(${tradingaccounts.src})` }}
         >
           <div className="inn_container">
-            <div className="grid grid-col-1 md:grid-cols-2 pb-5 text-center md:text-start relative z-[2]">
+            <div className="grid grid-col-1 md:grid-cols-2 pb-5 text-center md:text-start relative z-[2]" id="account-type">
               <Title
                 title="Trading Made <br/> <span class='gradient_text'> Personal </span> "
                 color="text-white"
@@ -165,7 +155,7 @@ function Tradingaccounts() {
             </div>
           </div>
 
-          <div className="relative hidden xl:block overflow-hidden pt-20 h-[750px] xl:h-auto" id="account-type">
+          <div className="relative hidden xl:block overflow-hidden pt-20 h-[750px] xl:h-auto">
             <Image
               src={accountsserface.src}
               alt="Banner"

@@ -7,6 +7,7 @@ import Image from "next/image";
 import buildtraderimagelowerph from "../../../../public/images/grapsecph.webp";
 import Button from "../Uiux/Button";
 import Link from "next/link";
+import { useAutoScroll } from "../../../hooks/useAutoScroll";
 
 const Grapsecondary = ({
   desktopbanner,
@@ -15,13 +16,14 @@ const Grapsecondary = ({
   description,
   btnname
 }) => {
+  useAutoScroll("ib-partners", { delay: 800 });
   return (
     <div className="bg-theme">
       <div className="inn_container hidden lg:block pb-12">
         <div className="relative">
           <Image src={desktopbanner} alt="banner" width={3000} height={500} />
 
-          <div className="absolute top-0 h-full flex items-center w-[50%]">
+          <div className="absolute top-0 h-full flex items-center w-[50%]" id="ib-partners">
             <div className="relative top-[13%] left-[6%] xl:left-[10%]">
               <Title title={title} color="text-secondary" />
               <div className="xl:pt-4">

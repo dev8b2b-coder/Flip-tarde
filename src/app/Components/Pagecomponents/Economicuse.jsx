@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect } from "react";
+import React from "react";
 import ecousebanner from "../../../../public/images/ecousebanner.webp";
 import ecousebannerphone from "../../../../public/images/ecousebannerphone.webp";
 import Title from "../Uiux/Title";
@@ -38,21 +38,6 @@ const data = [
 ];
 
 function Economicuse() {
-  useEffect(() => {
-    const shouldScroll = sessionStorage.getItem("scrollToContact");
-    if (shouldScroll === "true") {
-      const el = document.getElementById("eco-calender");
-      if (el) {
-        setTimeout(() => {
-          el.scrollIntoView({
-            behavior: "smooth",
-            block: "start"
-          });
-          sessionStorage.removeItem("scrollToContact");
-        }, 800);
-      }
-    }
-  }, []);
   return (
     <div className="bg-theme">
       <div className="md:py-12">

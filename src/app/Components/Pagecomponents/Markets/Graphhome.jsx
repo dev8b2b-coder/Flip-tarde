@@ -9,6 +9,7 @@ import Cryptocurrencygraph from "./Cryptocurrencygraph";
 import Metalgraph from "./Metalgraph";
 import Stocksgraph from "./Stocksgraph";
 import Economicgraph from "../Economicgraph";
+import { useAutoScroll } from "../../../../hooks/useAutoScroll";
 
 const Graphhome = ({ title, discription, pagepath }) => {
   const [darkMode, setDarkMode] = useState("light");
@@ -16,14 +17,14 @@ const Graphhome = ({ title, discription, pagepath }) => {
   const toggleDarkMode = () => {
     setDarkMode(prev => (prev === "light" ? "dark" : "light"));
   };
-
+  useAutoScroll("graph", { delay: 800 });
   return (
     <div className={`py-12   bg-theme`}>
       <div className="inn_container">
         {pagepath === "/economic-calendar"
           ? null
           : <div className="grid  text-center xl:text-start xl:grid-cols-2 max-w-[700px] md:max-w-[unset]">
-              <div className="flex justify-center xl:justify-start">
+              <div className="flex justify-center xl:justify-start" id="graph">
                 <Title title={title} color={"gradient_text"} />
               </div>
               <div className="flex justify-center xl:justify-start">

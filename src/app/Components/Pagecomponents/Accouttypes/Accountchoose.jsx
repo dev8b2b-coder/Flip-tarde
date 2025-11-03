@@ -1,9 +1,10 @@
 "use client"
-import React, { useEffect } from "react";
+import React from "react";
 import Title from "../../Uiux/Title";
 import Discription from "../../Uiux/Discription";
 import Image from "next/image";
 import accountchooseleft from "../../../../../public/images/accountchooseleft.webp";
+import { useAutoScroll } from "../../../../hooks/useAutoScroll";
 const Accountchoose = ({
   title,
   description,
@@ -14,21 +15,7 @@ const Accountchoose = ({
   cardtitle3,
   card_desc3
 }) => {
-    useEffect(() => {
-    const shouldScroll = sessionStorage.getItem("scrollToContact");
-    if (shouldScroll === "true") {
-      const el = document.getElementById("account-type");
-      if (el) {
-        setTimeout(() => {
-          el.scrollIntoView({
-            behavior: "smooth",
-            block: "start"
-          });
-          sessionStorage.removeItem("scrollToContact");
-        }, 100);
-      }
-    }
-  }, []);
+  useAutoScroll("account-type", { delay: 800 });
   return (
     <div className="bg-theme" id="account-type">
       <div className="inn_container">

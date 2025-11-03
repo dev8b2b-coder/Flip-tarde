@@ -17,6 +17,7 @@ import candlewhite from "../../../../public/icons/candlewhite.svg";
 import handsheckwhite from "../../../../public/icons/handsheckwhite.svg";
 import searchicon from "../../../../public/icons/search.svg";
 import faqicon from "../../../../public/icons/faq.svg"
+import { useAutoScroll } from "../../../hooks/useAutoScroll";
 const faqsmaindata = [
     {
         id: 1,
@@ -336,19 +337,6 @@ const Faqsearch = () => {
     const finalData = search ? filteredFaqs : faqsmaindata;
 
     useEffect(() => {
-        const shouldScroll = sessionStorage.getItem("scrollToContact");
-        if (shouldScroll === "true") {
-          const el = document.getElementById("faq-scroll");
-          if (el) {
-            setTimeout(() => {
-              el.scrollIntoView({ behavior: "smooth", block: "start" });
-              sessionStorage.removeItem("scrollToContact");
-            }, 800);
-          }
-        }
-      }, []);
-      
-    useEffect(() => {
         const handleScroll = () => {
             sectionRefs.current.forEach((ref, index) => {
                 if (!ref) return;
@@ -367,10 +355,11 @@ const Faqsearch = () => {
         return () => window.removeEventListener("scroll", handleScroll);
     }, [finalData, faqtogle]);
 
+    useAutoScroll("faq-scroll", { delay: 800 });
     return (
-        <div className="bg-theme" id="faq-scroll">
+        <div className="bg-theme">
             <div className="inn_container pt-12 pb-12 xl:pt-24 xl:pb-24">
-                <div className="text-center">
+                <div className="text-center" id="faq-scroll">
                     <Title title="Search for Answers" color="gradient_text" />
                     <div className="text-center pt-6">
                         <p className="text-lg md:text-2xl xl:text-3xl 2xl:text-4xl font-semibold text-white pb-2">

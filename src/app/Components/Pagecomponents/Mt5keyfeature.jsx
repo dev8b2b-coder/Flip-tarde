@@ -1,8 +1,9 @@
 "use client"
-import React, { useEffect } from "react";
+import React from "react";
 import Title from "../Uiux/Title";
 import sidebanner from "../../../../public/images/mt5keyfeature.webp";
 import Image from "next/image";
+import { useAutoScroll } from "../../../hooks/useAutoScroll";
 const features = [
   {
     id: 1,
@@ -27,24 +28,13 @@ const features = [
 ];
 
 function Mt5keyfeature() {
-    useEffect(() => {
-    const shouldScroll = sessionStorage.getItem("scrollToContact");
-    if (shouldScroll === "true") {
-      const el = document.getElementById("platform-features");
-      if (el) {
-        setTimeout(() => {
-          el.scrollIntoView({ behavior: "smooth", block: "start" });
-          sessionStorage.removeItem("scrollToContact");
-        }, 800);
-      }
-    }
-  }, []);
+  useAutoScroll("platform-features", { delay: 800 });
   return (
     <div className="bg-theme py-12 md:py-18 lg:py-28" >
       <div className="inn_container text-center pb-6 xl:text-start">
         <Title title={"Key Features"} color={"text-white"} />
       </div>
-      <div className="grid xl:grid-cols-[1fr_2fr] inn_container pt-12 md:pt-18">
+      <div className="grid xl:grid-cols-[1fr_2fr] inn_container pt-12 md:pt-18" id="platform-features">
         <div>
           <Image
             src={sidebanner}
@@ -54,7 +44,7 @@ function Mt5keyfeature() {
             className="w-[70%] xl:w-[90%] m-auto"
           />
         </div>
-        <div className="px-[5%] flex flex-col justify-center gap-6" id="platform-features">
+        <div className="px-[5%] flex flex-col justify-center gap-6">
           {features.map(data =>
             <div
               key={data.id}

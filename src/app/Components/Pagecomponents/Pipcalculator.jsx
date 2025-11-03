@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useMemo, useState } from "react";
 import Image from "next/image";
 
 import pipcalculator from "../../../../public/banners/pipcalculator.webp";
@@ -20,22 +20,6 @@ const Pipcalculator = () => {
     stoploss: "",
     convRate: ""
   });
-
-    useEffect(() => {
-    const shouldScroll = sessionStorage.getItem("scrollToContact");
-    if (shouldScroll === "true") {
-      const el = document.getElementById("calculator");
-      if (el) {
-        setTimeout(() => {
-          el.scrollIntoView({
-            behavior: "smooth",
-            block: "start"
-          });
-          sessionStorage.removeItem("scrollToContact");
-        }, 800);
-      }
-    }
-  }, []);
   const handelchange = (e) => {
     const { name, value } = e.target;
     setPipdata((d) => ({ ...d, [name]: value }));

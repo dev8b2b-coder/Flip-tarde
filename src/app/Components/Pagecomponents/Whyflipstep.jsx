@@ -4,15 +4,17 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import Discription from "../Uiux/Discription";
 import Title from "../Uiux/Title";
+import { useAutoScroll } from "../../../hooks/useAutoScroll";
 const Whyflipstep = ({ pointdata }) => {
   const currentpath = usePathname();
+  useAutoScroll("whyflipstep", { delay: 800 });
   const pathname = currentpath
     .replace("/", "")
     .replace(/-/g, " ")
     .replace(/\b\w/g, c => c.toUpperCase());
   return (
     <div className="bg-theme">
-      <div className="inn_container pt-12">
+      <div className="inn_container pt-12" id="whyflipstep">
         <div className="grid grid-cols-1 lg:grid-cols-2 text-center lg:text-start">
           <div>
             <Title title="Advanced Trading <br/> Platforms" color="gradient_text" />

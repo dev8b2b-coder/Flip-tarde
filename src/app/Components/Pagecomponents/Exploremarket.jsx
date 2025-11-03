@@ -16,6 +16,7 @@ import Button from "../Uiux/Button";
 import Exploreslider from "./Exploreslider";
 import Link from "next/link";
 import bluegradintbg from "../../../../public/images/bluegradintbg.webp";
+import { useAutoScroll } from "../../../hooks/useAutoScroll";
 const markettype = [
   {
     marketname: "Forex",
@@ -44,6 +45,8 @@ const markettype = [
 ];
 
 const Exploremarket = () => {
+  useAutoScroll("exploremarket", { delay: 800 });
+  useAutoScroll("starttrading", { delay: 800 });
   return (
     <div className="bg-theme">
       <div
@@ -51,7 +54,7 @@ const Exploremarket = () => {
         style={{ backgroundImage: `url(${bluegradintbg.src})` }}
       >
         <div className="inn_container pt-10 md:pt-18 lg:pt-24">
-          <div className="text-center">
+          <div className="text-center" id="exploremarket">
             <Title
               title="What can you trade with <br/> <span class='text-subprimary'> FlipTrade </span>"
               color="text-white"
@@ -69,7 +72,7 @@ const Exploremarket = () => {
           <Image src={explorelower} alt="banner" width={3000} height={500} />
 
           <div className="absolute top-0 h-full flex items-center w-[50%]">
-            <div className="relative top-[-2%] left-[6%] xl:left-[10%]">
+            <div className="relative top-[-2%] left-[6%] xl:left-[10%]" id="starttrading">
               <Title
                 title={`Practice Trading, <br/> <span class='text-primary'> Risk-Free </span>`}
                 color="text-black"

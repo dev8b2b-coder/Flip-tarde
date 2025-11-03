@@ -1,34 +1,20 @@
 "use client";
-import React, { useEffect } from "react";
+import React from "react";
 import Title from "../../Uiux/Title";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
+import { useAutoScroll } from "../../../../hooks/useAutoScroll";
 const Marketspoints = ({ pointdata }) => {
   const currentpath = usePathname();
   const pathname = currentpath
     .replace("/", "")
     .replace(/-/g, " ")
     .replace(/\b\w/g, c => c.toUpperCase());
-
-  useEffect(() => {
-    const shouldScroll = sessionStorage.getItem("scrollToContact");
-    if (shouldScroll === "true") {
-      const el = document.getElementById("benifits");
-      if (el) {
-        setTimeout(() => {
-          el.scrollIntoView({
-            behavior: "smooth",
-            block: "start"
-          });
-          sessionStorage.removeItem("scrollToContact");
-        }, 100);
-      }
-    }
-  }, []);
+    useAutoScroll("benifits", { delay: 800 });
   return (
     <div className="bg-theme" id="benifits">
       <div className="inn_container pt-12">
-        <div className="text-center lg:text-start max-w-[350px] md:max-w-[600px] lg:max-w-[unset] m-auto">
+        <div className="text-center lg:text-start max-w-[350px] md:max-w-[600px] lg:max-w-[unset] m-auto" id="benifits">
           <Title
             title={`Why Trade ${pathname} <br/> with FlipTrade`}
             color={"gradient_text"}

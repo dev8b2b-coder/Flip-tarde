@@ -1,3 +1,4 @@
+"use client"
 import React from "react";
 import Title from "../Uiux/Title";
 import tradeyouwayback from "../../../../public/images/tradeyouwayback.webp";
@@ -7,6 +8,7 @@ import Discription from "../Uiux/Discription";
 import Button from "../Uiux/Button";
 import downloadicon from "../../../../public/icons/downloadicon.svg";
 import Faq from "./Faq";
+import { useAutoScroll } from "../../../hooks/useAutoScroll";
 const faqData = [
   {
     question: "What is FlipTrade?",
@@ -32,6 +34,7 @@ const faqData = [
 ];
 
 const Mt5download = () => {
+  useAutoScroll("trade-download", { delay: 800 });
   return (
     <div className="bg-theme">
       <div className="xl:py-24">
@@ -51,7 +54,7 @@ const Mt5download = () => {
                 />
               </div>
               <div className="flex flex-col justify-center items-center ps-4">
-                <div className="text-center lg:text-start pt-12 md:pt-0 px-5 md:px-0">
+                <div className="text-center lg:text-start pt-12 md:pt-0 px-5 md:px-0" id="trade-download">
                   <Title
                     title={`Download MT5 and start trading with FlipTrade today.`}
                     color="gradient_text"
@@ -63,7 +66,7 @@ const Mt5download = () => {
                   />
                 </div>
 
-                {/* <div className="pt-14 hidden md:flex w-full flex-col items-center">
+                <div className="pt-14 hidden md:flex w-full flex-col items-center">
                   <div className="flex gap-4 lg:gap-8">
                     <Button
                       btn_name={`Download on <strong> iOS </strong>`}
@@ -100,9 +103,9 @@ const Mt5download = () => {
                       shadow={true}
                     />
                   </div>
-                </div> */}
+                </div>
                 {/* Button section for mobile  */}
-                {/* <div className="pt-6 flex md:hidden gap-4 w-full flex-col items-center max-w-[300px] m-auto">
+                <div className="pt-6 flex md:hidden gap-4 w-full flex-col items-center max-w-[300px] m-auto">
                   <div className="flex w-full justify-start">
                     <Button
                       btn_name={`Download on <strong> iOS </strong>`}
@@ -143,7 +146,7 @@ const Mt5download = () => {
                       shadow={true}
                     />
                   </div>
-                </div> */}
+                </div>
               </div>
             </div>
           </div>

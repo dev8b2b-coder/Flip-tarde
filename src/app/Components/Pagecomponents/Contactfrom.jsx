@@ -1,5 +1,5 @@
 "use client"
-import React, { useEffect } from "react";
+import React from "react";
 import formsidebanner from "../../../../public/images/formsidebanner.webp";
 import Image from "next/image";
 import Maincontactform from "./Maincontactform";
@@ -9,27 +9,6 @@ import instablack from "../../../../public/icons/instablack.svg";
 import youtubeblack from "../../../../public/icons/youtubeblack.svg";
 import Link from "next/link";
 export default function Contactfrom() {
-useEffect(() => {
-    const shouldScroll = sessionStorage.getItem("scrollToContact");
-    const shouldScroll2 = sessionStorage.getItem("scrollTCont");
-    if (shouldScroll === "true") {
-      const el = document.getElementById("contact-me");
-      if (el) {
-        setTimeout(() => {
-          el.scrollIntoView({ behavior: "smooth", block: "start" });
-          sessionStorage.removeItem("scrollToContact");
-        }, 800);
-      }
-    }else if (shouldScroll2 === "true") {
-      const el = document.getElementById("social-link");
-      if (el) {
-        setTimeout(() => {
-          el.scrollIntoView({ behavior: "smooth", block: "start" });
-          sessionStorage.removeItem("scrollTCont");
-        }, 800);
-      }
-    }
-  }, []);
   return (
     <div>
       <div

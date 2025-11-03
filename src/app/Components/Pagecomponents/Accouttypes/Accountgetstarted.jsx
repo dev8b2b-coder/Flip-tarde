@@ -7,6 +7,7 @@ import accountarrowsecondary from "../../../../../public/images/accountarrowseco
 import accountarrowprimary from "../../../../../public/images/accountarrowprimary.webp";
 import bgarrow from "../../../../../public/images/accountwhyarrow.webp";
 import Image from "next/image";
+import { useAutoScroll } from "../../../../hooks/useAutoScroll";
 const Accountgetstarted = ({
   description,
   mini_depo,
@@ -14,8 +15,7 @@ const Accountgetstarted = ({
   swap_free,
   commission
 }) => {
-  console.log(spreads_from);
-
+  useAutoScroll("get-started", { delay: 800 });
   return (
     <div className="bg-theme">
       <div
@@ -23,7 +23,7 @@ const Accountgetstarted = ({
         style={{ backgroundImage: `url(${boxbg.src})` }}
       >
         <div className="inn_container  py-16 md:py-20 lg:py-40 bg-contain">
-          <div className="grid grid-col-1 text-center lg:text-start lg:grid-cols-2">
+          <div className="grid grid-col-1 text-center lg:text-start lg:grid-cols-2" id="get-started">
             <Title
               title="Get Started Easily"
               color="gradient_text"

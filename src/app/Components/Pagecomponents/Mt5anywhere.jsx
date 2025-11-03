@@ -1,38 +1,13 @@
 "use client"
-import React, { useEffect } from "react";
+import React from "react";
 import boxbg from "../../../../public/banners/box-bg.webp";
 import mainbanner from "../../../../public/images/mt5where.webp";
 import Image from "next/image";
 import Title from "../Uiux/Title";
 import Link from "next/link";
+import { useAutoScroll } from "../../../hooks/useAutoScroll";
 const Mt5anywhere = () => {
-  //   const getMobileLink = () => {
-  //   if (typeof navigator === "undefined") return "#";
-  //   const userAgent = navigator.userAgent || navigator.vendor || window.opera;
-
-  //   if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-  //     return "https://download.mql5.com/cdn/mobile/mt5/ios?server=FlipTradeGroup-Server";
-  //   } else if (/android/i.test(userAgent)) {
-  //     return "https://download.mql5.com/cdn/mobile/mt5/android?server=FlipTradeGroup-Server";
-  //   } else {
-  //     return "/" ;
-  //   }
-  // };
-  useEffect(() => {
-    const shouldScroll = sessionStorage.getItem("scrollTotrade");
-    if (shouldScroll === "true") {
-      const el = document.getElementById("trade");
-      if (el) {
-        setTimeout(() => {
-          el.scrollIntoView({
-            behavior: "smooth",
-            block: "start"
-          });
-          sessionStorage.removeItem("scrollTotrade");
-        }, 800);
-      }
-    }
-  }, []);
+  useAutoScroll("trade", { delay: 800 });
   return (
     <div className="bg-theme" id="trade">
       <div

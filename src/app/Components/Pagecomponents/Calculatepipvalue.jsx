@@ -1,3 +1,4 @@
+"use client"
 import React from "react";
 import calculatepipvaluebg from "../../../../public/images/Calculatepipvalue.webp";
 import Calculatepipvalueleft from "../../../../public/images/Calculatepipvalueleft.webp";
@@ -6,14 +7,16 @@ import Title from "../Uiux/Title";
 import Discription from "../Uiux/Discription";
 import Button from "../Uiux/Button";
 import fireicon from "../../../../public/icons/firebtniconblue.svg";
+import { useAutoScroll } from "../../../hooks/useAutoScroll";
 const Calculatepipvalue = () => {
+  useAutoScroll("pip-calculator", { delay: 800 });
   return (
     <div className="pt-12 lg:pt-0 bg-theme px-[3%]">
       <div
         className="bg-cover lg:bg-contain bg-no-repeat bg-center"
         style={{ backgroundImage: `url(${calculatepipvaluebg.src})` }}
       >
-        <div className="inn_container grid grid-cols-1 lg:grid-cols-2 py-12 md:py-18 xl:py-28">
+        <div className="inn_container grid grid-cols-1 lg:grid-cols-2 py-12 md:py-18 xl:py-28" id="pip-calculator">
           <div>
             <Image
               src={Calculatepipvalueleft}

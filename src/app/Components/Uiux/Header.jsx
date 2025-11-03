@@ -12,36 +12,27 @@ import menucross from "../../../../public/icons/menucross.svg";
 import downarrow from "../../../../public/icons/downarrow.svg";
 import usericon from "../../../../public/icons/user.svg";
 import giftwhite from "../../../../public/icons/giftwhite.svg";
+import { handleNavLinkClick, scrollToSection, setScrollTarget } from "../../../utils/scrollUtils";
+import { getSectionId, getTargetPath } from "../../../config/navScrollMap";
 const navlistdata = [
   {
     id: 1,
     nav_name: "Quick Start",
     sections: [
       {
-        heading: "Introduction",
-        items: [
-          { id: 1, name: "Why FlipTrade?", link: "/why-fliptrade" },
-          { id: 2, name: "What is Online Trading", link: "#" },
-          { id: 4, name: "How to Start Trading", link: "/web-trading" },
-          { id: 5, name: "Why Traders Choose Us", link: "/why-fliptrade" },
-          { id: 6, name: "Contact Us", link: "/contact-us" },
-          { id: 7, name: "FAQs", link: "/faq" }
-        ]
-      },
-      {
         heading: "Trade",
         items: [
-          { id: 8, name: "Types of Markets", link: "/forex" },
-          { id: 9, name: "Trading Conditions", link: "#" },
+          { id: 8, name: "Types of Markets", link: "/" },
+          // { id: 9, name: "Trading Conditions", link: "#" },
           { id: 10, name: "Account Types Overview", link: "/" },
-          { id: 11, name: "Risk Management Tips", link: "#" }
+          { id: 11, name: "Risk Management Tips", link: "/" }
         ]
       },
       {
         heading: "Trading Platforms",
         items: [
           { id: "webtrader", name: "WebTrader", link: "/web-trading" },
-          { id: "mobileapp", name: "Mobile App", link: "#" },
+          { id: "mobileapp", name: "Mobile App", link: "/" },
           { id: "mt5", name: "MetaTrader 5 (MT5)", link: "/platform" },
           {
             id: "Platform Features",
@@ -53,45 +44,37 @@ const navlistdata = [
       {
         heading: "Tools & Resources",
         items: [
-          { id: "webtrader", name: "Pip Calculator", link: "/pip-calculator" },
+          { id: "webtrader", name: "Pip Calculator", link: "/" },
           {
             id: "mobileapp",
             name: "Economic Calendar",
             link: "/economic-calendar"
           },
           { id: "mt5", name: "IB Partner", link: "/ib-partner" },
-          // {
-          //   id: "Platform Features",
-          //   name: "Why Partner with Us",
-          //   link: "/why-fliptrade"
-          // }
+          {
+            id: "Platform Features",
+            name: "Why Partner with Us",
+            link: "/ib-partner"
+          }
         ]
-      }
+      },
+      {
+        heading: "Quick Links",
+        items: [
+          { id: 1, name: "Why FlipTrade?", link: "/" },
+          // { id: 2, name: "What is Online Trading", link: "#" },
+          { id: 4, name: "How to Start Trading", link: "/" },
+          { id: 5, name: "Why Traders Choose Us", link: "/why-fliptrade" },
+          { id: 6, name: "Contact Us", link: "/contact-us" },
+          { id: 7, name: "FAQs", link: "/faq" }
+        ]
+      },
     ]
   },
   {
     id: 2,
     nav_name: "Markets",
     sections: [
-      {
-        heading: "Introduction",
-        items: [
-          {
-            id: "onlinetrading",
-            name: "Benefits of Forex with FlipTrade",
-            link: "/forex"
-          },
-          { id: "howtostart", name: "Global Index Overview", link: "/indices" },
-          { id: "whychooseus", name: "Why Trade Commodities", link: "/commodities" },
-          {
-            id: "whychooseus",
-            name: "Discover Stock Trading",
-            link: "/metals"
-          },
-          { id: "whychooseus", name: "What are Indices", link: "/indices" },
-          { id: "whychooseus", name: "FAQs", link: "/faq" }
-        ]
-      },
       {
         heading: "Markets Type",
         items: [
@@ -106,7 +89,26 @@ const navlistdata = [
           },
           { id: "riskmanagement", name: "Stocks", link: "/stocks" }
         ]
-      }
+      },
+      {
+        heading: "Quick Links",
+        items: [
+          {
+            id: "onlinetrading",
+            name: "Benefits of Forex with FlipTrade",
+            link: "/forex"
+          },
+          // { id: "howtostart", name: "Global Index Overview", link: "/indices" },
+          { id: "whychooseus", name: "Why Trade Commodities", link: "/commodities" },
+          {
+            id: "whychooseus",
+            name: "Discover Stock Trading",
+            link: "/stocks"
+          },
+          { id: "whychooseus", name: "What are Indices", link: "/indices" },
+          { id: "whychooseus", name: "FAQs", link: "/cryptocurrency" }
+        ]
+      },
     ]
   },
   {
@@ -114,7 +116,16 @@ const navlistdata = [
     nav_name: "Account Type",
     sections: [
       {
-        heading: "Introduction",
+        heading: "Account Type",
+        items: [
+          { id: "typesmarkets", name: "Standard Account", link: "/standard-account" },
+          { id: "tradingconditions", name: "Classic Account", link: "/classic-account" },
+          { id: "accounttypes", name: "ECN Account", link: "/enc-account" },
+          { id: "riskmanagement", name: "Professional Account", link: "/professional-account" }
+        ]
+      },
+      {
+        heading: "Quick Links",
         items: [
           {
             id: "onlinetrading",
@@ -140,35 +151,16 @@ const navlistdata = [
           {
             id: "whychooseus",
             name: "FAQs",
-            link: "/faq"
+            link: "/accounts-types"
           },
         ]
       },
-      {
-        heading: "Account Type",
-        items: [
-          { id: "typesmarkets", name: "Standard Account", link: "/standard-account" },
-          { id: "tradingconditions", name: "Classic Account", link: "/classic-account" },
-          { id: "accounttypes", name: "ECN Account", link: "/enc-account" },
-          { id: "riskmanagement", name: "Professional Account", link: "/professional-account" }
-        ]
-      }
     ]
   },
   {
     id: 4,
     nav_name: "Platforms",
     sections: [
-      {
-        heading: "Introduction",
-        items: [
-          { id: "whyflip", name: "Why Choose Our Platform", link: "/platform" },
-          { id: "whyflip", name: "Key Features", link: "/platform" },
-          { id: "whyflip", name: "Trade Anywhere", link: "/platform" },
-          { id: "whyflip", name: "Download (MT5)", link: "/platform" },
-          { id: "whyflip", name: "FAQs", link: "/faq" },
-        ]
-      },
       {
         heading: "Trading Platforms",
         items: [
@@ -178,6 +170,16 @@ const navlistdata = [
           { id: "riskmanafdsgement", name: "Social & Copy Trading", link: "/social-&-copy-trading" }
         ]
       },
+      {
+        heading: "Quick Links",
+        items: [
+          // { id: "whyflip", name: "Why Choose Our Platform", link: "/platform" },
+          { id: "whyflip", name: "Key Features", link: "/platform" },
+          { id: "whyflip", name: "Trade Anywhere", link: "/platform" },
+          { id: "whyflip", name: "Download (MT5)", link: "/platform" },
+          { id: "whyflip", name: "FAQs", link: "/platform" },
+        ]
+      },
     ]
   },
   {
@@ -185,7 +187,14 @@ const navlistdata = [
     nav_name: "Tools",
     sections: [
       {
-        heading: "Introduction",
+        heading: "Trading Tools",
+        items: [
+          { name: "Pip Calculator", link: "/pip-calculator" },
+          { name: "Economic Calendar", link: "/economic-calendar" }
+        ]
+      },
+      {
+        heading: "Quick Links",
         items: [
           { name: "Calendar Overview", link: "/economic-calendar" },
           { name: "Why Use Economic Calendar", link: "/economic-calendar" },
@@ -195,13 +204,6 @@ const navlistdata = [
           { name: "FAQs", link: "/faq" }
         ]
       },
-      {
-        heading: "Trading Tools",
-        items: [
-          { name: "Pip Calculator", link: "/pip-calculator" },
-          { name: "Economic Calendar", link: "/economic-calendar" }
-        ]
-      }
     ]
 
   },
@@ -210,7 +212,14 @@ const navlistdata = [
     nav_name: "Contact",
     sections: [
       {
-        heading: "Introduction",
+        heading: "Partnership & Support",
+        items: [
+          { name: "IB Partner", link: "/ib-partner" },
+          { name: "Contact Us", link: "/contact-us" }
+        ]
+      },
+      {
+        heading: "Quick Links",
         items: [
           { name: "Office & Contact Details", link: "/contact-us" },
           { name: "Sign Up Form", link: "https://client.fliptradegroup.com/trader/registration" },
@@ -220,13 +229,6 @@ const navlistdata = [
           { name: "FAQs", link: "/faq" }
         ]
       },
-      {
-        heading: "Partnership & Support",
-        items: [
-          { name: "IB Partner", link: "/ib-partner" },
-          { name: "Contact Us", link: "/contact-us" }
-        ]
-      }
     ]
   }
 ];
@@ -277,7 +279,20 @@ const MobileDropdownItem = ({ data, isOpen, setIsOpen, setIsMenu, pathname }) =>
                     ? "text-primary bg-primary/10 font-semibold"
                     : "text-gray-700 hover:text-primary hover:bg-theme"
                     }`}
-                  onClick={() => {
+                  onClick={(e) => {
+                    // Get section ID for scroll
+                    const sectionId = getSectionId(data.nav_name, item.name);
+                    const isSamePage = pathname === item.link;
+                    
+                    if (sectionId && isSamePage) {
+                      // Same page - prevent default and scroll
+                      e.preventDefault();
+                      scrollToSection(sectionId, { headerOffset: 120, delay: 100 });
+                    } else if (sectionId) {
+                      // Different page - set scroll target for navigation
+                      setScrollTarget(sectionId);
+                    }
+                    
                     setIsMenu(false);
                     setIsOpen(false);
                   }}
@@ -643,102 +658,29 @@ export default function Header() {
                                 : "text-black hover:text-primary hover:underline"
                                 }`}
                              onClick={(e) => {
-                               const isHome = pathname === "/";
-                              // Save flag for contact scroll
-                                if (openDropdown === "Quick Start" && item.name === "Contact Us") {
-                                  sessionStorage.setItem("scrollToContact", "true");
-                                }else  if (openDropdown === "Quick Start" && item.name === "FAQs") {
-                                  sessionStorage.setItem("scrollToContact", "true");
-                                }else  if (openDropdown === "Quick Start" && item.name === "Account Types Overview") {
-                                 if (isHome) {
-                                const el = document.getElementById("account-type");
-                                if (el) {
-                                  const headerOffset = 120; // adjust this if needed
-                                  const elementPosition = el.getBoundingClientRect().top + window.pageYOffset;
-                                  const offsetPosition = elementPosition - headerOffset;
-
-                                  // Wait until layout is stable
-                                  requestAnimationFrame(() => {
-                                    setTimeout(() => {
-                                      window.scrollTo({
-                                        top: offsetPosition,
-                                        behavior: "smooth",
-                                      });
-
-                                      // remove flag after scroll
-                                      setTimeout(() => {
-                                        sessionStorage.removeItem("scrollToContact");
-                                      }, 800);
-                                    }, 300); // give layout 300ms to stabilize
-                                  });
+                                // Get section ID and target path from configuration
+                                const sectionId = getSectionId(openDropdown, item.name);
+                                const targetPath = getTargetPath(openDropdown, item.name);
+                                
+                                // If same page, always scroll (even if already scrolled)
+                                const isSamePage = pathname === item.link;
+                                
+                                if (sectionId) {
+                                  if (isSamePage) {
+                                    // Prevent default link behavior and scroll directly
+                                    e.preventDefault();
+                                    scrollToSection(sectionId, { headerOffset: 120, delay: 100 });
+                                  } else {
+                                    // Different page - use normal navigation with scroll target
+                                    handleNavLinkClick(
+                                      sectionId,
+                                      pathname,
+                                      item.link,
+                                      { headerOffset: 120, delay: 300 }
+                                    );
+                                  }
                                 }
-                              }
-                              else {
-                                  sessionStorage.setItem("scrollToContact", "true");
-                                }
-                                }else  if (openDropdown === "Quick Start" && item.name === "Platform Features") {
-                                  sessionStorage.setItem("scrollToContact", "true");
-                                } 
-                                else  if (openDropdown === "Markets" && item.name === "Benefits of Forex with FlipTrade") {
-                                  sessionStorage.setItem("scrollToContact", "true");
-                                } 
-                                else  if (openDropdown === "Markets" && item.name === "Global Index Overview") {
-                                  sessionStorage.setItem("scrollToContact", "true");
-                                } 
-                                else  if (openDropdown === "Markets" && item.name === "Why Trade Commodities") {
-                                  sessionStorage.setItem("scrollToContact", "true");
-                                }
-                                else  if (openDropdown === "Markets" && item.name === "Discover Stock Trading") {
-                                  sessionStorage.setItem("scrollToContact", "true");
-                                }
-                                 else  if (openDropdown === "Account Type" && item.name === "Why Choose Classic Account") {
-                                  sessionStorage.setItem("scrollToContact", "true");
-                                }
-                                 else  if (openDropdown === "Account Type" && item.name === "Who Should Trade ECN Account") {
-                                  sessionStorage.setItem("scrollToContact", "true");
-                                }
-                                else  if (openDropdown === "Account Type" && item.name === "How to Upgrade") {
-                                  sessionStorage.setItem("scrollToContact", "true");
-                                }
-                                else  if (openDropdown === "Account Type" && item.name === "Benefits of Professional Account") {
-                                  sessionStorage.setItem("scrollToContact", "true");
-                                }
-                                else  if (openDropdown === "Platforms" && item.name === "Key Features") {
-                                  sessionStorage.setItem("scrollToContact", "true");
-                                }
-                                else  if (openDropdown === "Platforms" && item.name === "Trade Anywhere") {
-                                  sessionStorage.setItem("scrollTotrade", "true");
-                                }
-                                else  if (openDropdown === "Platforms" && item.name === "Download (MT5)") {
-                                  sessionStorage.setItem("scrollTotrade", "true");
-                                }
-                                else  if (openDropdown === "Tools" && item.name === "Calendar Overview") {
-                                  sessionStorage.setItem("scrollToContact", "true");
-                                }
-                                else  if (openDropdown === "Tools" && item.name === "Why Use Economic Calendar") {
-                                  sessionStorage.setItem("scrollToContact", "true");
-                                }
-                                 else  if (openDropdown === "Tools" && item.name === "Trade Anywhere") {
-                                  sessionStorage.setItem("scrollTotrade", "true");
-                                }
-                                else  if (openDropdown === "Tools" && item.name === "What is a Pip") {
-                                  sessionStorage.setItem("scrollToContact", "true");
-                                }
-                                else  if (openDropdown === "Tools" && item.name === "Calculator") {
-                                  sessionStorage.setItem("scrollToContact", "true");
-                                }
-                                else  if (openDropdown === "Contact" && item.name === "Office & Contact Details") {
-                                  sessionStorage.setItem("scrollTDetails", "true");
-                                }
-                                else  if (openDropdown === "Contact" && item.name === "Social Links") {
-                                  sessionStorage.setItem("scrollTCont", "true");
-                                }
-                                else  if (openDropdown === "Contact" && item.name === "How IB Partner Works") {
-                                  sessionStorage.setItem("scrollToContact", "true");
-                                }
-                                else {
-                                  sessionStorage.removeItem("scrollToContact");
-                                }
+                                
                                 setOpenDropdown(null);
                               }}
                               >

@@ -1,4 +1,5 @@
-import React, { useEffect } from "react";
+"use client";
+import React from "react";
 import Title from "../Uiux/Title";
 import Discription from "../Uiux/Discription";
 
@@ -9,7 +10,7 @@ const workstep = [
   },
   {
     title: "Currency Pair",
-    description: "Choose the pair you’re trading <br/> (e.g., EUR/USD)."
+    description: "Choose the pair you're trading <br/> (e.g., EUR/USD)."
   },
   {
     title: "Currency Pair",
@@ -17,21 +18,6 @@ const workstep = [
   }
 ];
 export default function Pipworkstep() {
-    useEffect(() => {
-    const shouldScroll = sessionStorage.getItem("scrollToContact");
-    if (shouldScroll === "true") {
-      const el = document.getElementById("pip-cal");
-      if (el) {
-        setTimeout(() => {
-          el.scrollIntoView({
-            behavior: "smooth",
-            block: "start"
-          });
-          sessionStorage.removeItem("scrollToContact");
-        }, 800);
-      }
-    }
-  }, []);
   return (
     <div className="bg-theme py-12 md:py-18 lg:py-32" id="pip-cal">
       <div className="inn_container">

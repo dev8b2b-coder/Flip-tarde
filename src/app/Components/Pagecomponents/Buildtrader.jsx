@@ -1,9 +1,11 @@
+"use client";
 import React from "react";
 import Title from "../Uiux/Title";
 import Discription from "../Uiux/Discription";
 import buildtraderimage from "../../../../public/images/buildtraderimage.webp";
 import buildtraderimageloerph from "../../../../public/images/buildtraderimagelower.webp";
 import Righttextgrap from "./Righttextgrap";
+import { useAutoScroll } from "../../../hooks/useAutoScroll";
 const buildtradetagcard = [
   {
     title: "10,000 +",
@@ -32,9 +34,12 @@ const buildtradetagcard = [
   }
 ];
 const Buildtrader = () => {
+  // Auto-scroll to buildtrader section when navigated from header
+  useAutoScroll("buildtrader", { delay: 800 });
+  
   return (
     <div className="bg-theme">
-      <div className="inn_container pt-16 md:pt-20 lg:pt-30">
+      <div className="inn_container pt-16 md:pt-20 lg:pt-30" id="buildtrader">
         <div className="grid grid-col-1 text-center lg:text-start lg:grid-cols-2">
           <Title
             title="Built for Traders. <br/> Backed by Trust."

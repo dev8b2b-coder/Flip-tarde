@@ -1,10 +1,13 @@
+"use client";
 import React from "react";
 import Title from "../Uiux/Title";
 import Image from "next/image";
 import workflowround from "../../../../public/images/workflowround.webp";
+import { useAutoScroll } from "../../../hooks/useAutoScroll";
 export default function Workprocess() {
+  useAutoScroll("workprocess", { delay: 800 });
   return (
-    <div className="bg-theme">
+    <div className="bg-theme" id="workprocess">
       <div className="inn_container relative pt-18 pb-32">
         <div className="max-w-[550px] 2xl:max-w-[750px] m-auto relative hidden xl:block">
           <Image

@@ -1,5 +1,5 @@
 "use client"
-import React, { useEffect } from "react";
+import React from "react";
 import workprocessbanner from "../../../../public/banners/workprocess.webp";
 import accountupgrade from "../../../../public/images/accountupgrade.webp";
 import Image from "next/image";
@@ -11,6 +11,7 @@ import accupgradetab2 from "../../../../public/images/accupgradetab2.webp";
 import accupgradeph1 from '../../../../public/images/accupgradeph1.webp';
 import accupgradeph2 from '../../../../public/images/accupgradeph2.webp';
 import accupgradeph3 from '../../../../public/images/accupgradeph3.webp';
+import { useAutoScroll } from "../../../hooks/useAutoScroll";
 const upgradepoints = [
   {
     title: "Log In",
@@ -97,21 +98,7 @@ const upgradepointsph = [
 
 
 const Accountupgrade = () => {
-      useEffect(() => {
-    const shouldScroll = sessionStorage.getItem("scrollToContact");
-    if (shouldScroll === "true") {
-      const el = document.getElementById("upgrade-acc");
-      if (el) {
-        setTimeout(() => {
-          el.scrollIntoView({
-            behavior: "smooth",
-            block: "start"
-          });
-          sessionStorage.removeItem("scrollToContact");
-        }, 800);
-      }
-    }
-  }, []);
+  useAutoScroll("upgrade-acc", { delay: 800 });
   return (
     <div className="bg-theme relative" id="upgrade-acc">
       <div

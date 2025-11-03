@@ -3,21 +3,6 @@ import React, { useEffect, useRef, memo } from "react";
 
 const Indicesgraph = ({ darkMode }) => {
   const container = useRef();
-useEffect(() => {
-    const shouldScroll = sessionStorage.getItem("scrollToContact");
-    if (shouldScroll === "true") {
-      const el = document.getElementById("graph");
-      if (el) {
-        setTimeout(() => {
-          el.scrollIntoView({
-            behavior: "smooth",
-            block: "start"
-          });
-          sessionStorage.removeItem("scrollToContact");
-        }, 800);
-      }
-    }
-  }, []);
   useEffect(
     () => {
       container.current.innerHTML = "";

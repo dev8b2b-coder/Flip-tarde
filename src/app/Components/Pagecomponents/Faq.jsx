@@ -2,18 +2,20 @@
 import { useState } from "react";
 import plus from "../../../../public/icons/plus.svg";
 import Image from "next/image";
+import { useAutoScroll } from "../../../hooks/useAutoScroll";
 const Faq = ({ faqData, pt }) => {
   const [activeIndex, setActiveIndex] = useState(null);
 
   const toggleAnswer = index => {
     setActiveIndex(activeIndex === index ? null : index);
   };
-
+  useAutoScroll("faq-scroll", { delay: 800 });
   return (
     <div
       className={`max-w-[900px] 2xl:max-w-7xl m-auto ${pt === false
         ? "pt-8"
         : "pt-6 md:pt-12 xl:pt-16"} `}
+        id="faq-scroll"
     >
       <div className="flex flex-col gap-4 md:gap-5 font_secondary">
         {faqData.map((faq, index) =>
