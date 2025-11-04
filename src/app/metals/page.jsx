@@ -11,6 +11,7 @@ import Advanced from "/public/icons/Advanced.svg";
 import Secure from "/public/icons/forexpoint2.svg";
 import Support from "/public/icons/Support.svg";
 import Graphhome from "../Components/Pagecomponents/Markets/Graphhome";
+import Homemarquee from "../Components/Pagecomponents/Homemarquee";
 const faqData = [
   {
     question: "Which metals are available?",
@@ -76,6 +77,7 @@ export default function page() {
         banner_title="Precious Metals Trading <br/> Gold & Silver"
         banner_discription="Trade Gold, Silver, and Platinum with tight <br/> spreads and high liquidity."
       />
+      <Homemarquee/>
       <Graphhome
         title={`What are <br/> Metals?`}
         discription={`Metals trading includes precious metals like gold, silver, and <br /> platinum. Investors trade metals to hedge risk or capitalize on <br/> price movements.`}

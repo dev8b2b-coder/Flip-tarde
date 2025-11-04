@@ -18,7 +18,7 @@ const Righttextgrap = ({desktopbanner,phonetabbanner,title,description,btnname,p
               height={500}
               className="w-full"
             />
-            <div className={`absolute ${position ? position :'top-[30%] xl:w-[43%] right-0'}`}>
+            <div className={`absolute ${position ? position :'top-[20%] lg:top-[30%] xl:w-[43%] right-0'}`}>
               <div className="">
                 <Title
                   title={title}

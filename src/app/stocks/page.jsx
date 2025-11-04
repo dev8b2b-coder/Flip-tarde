@@ -12,6 +12,7 @@ import Secure from "/public/icons/forexpoint2.svg";
 import Support from "/public/icons/Support.svg";
 import Graphhome from "../Components/Pagecomponents/Markets/Graphhome";
 import PageHead from "../Pagehead";
+import Homemarquee from "../Components/Pagecomponents/Homemarquee";
 const faqData = [
   {
     question: "Which stocks can I trade?",
@@ -78,6 +79,7 @@ export default function page() {
         banner_title="Stock Trading | Global <br /> Equities"
         banner_discription="Trade global company shares with low costs, real-time <br/> data, and easy portfolio diversification."
       />
+      <Homemarquee/>
       <Graphhome
         title={`What are <br/> Stocks?`}
         discription={`Stocks represent ownership in a company. Trading stocks <br/> allows you to profit from share price movements and potential <br/> dividends.`}

@@ -52,7 +52,7 @@ const Faq = ({ faqData, pt }) => {
               }}
             >
               <div
-                className=" text-secondary text-base 2xl:text-xl font-light py-2 ps-[2%] text-start custome_faq"
+                className=" text-secondary text-base 2xl:text-xl font-medium py-2 ps-[2%] text-start custome_faq"
                 dangerouslySetInnerHTML={{ __html: faq.answer }}
               />
             </div>

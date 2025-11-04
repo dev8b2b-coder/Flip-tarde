@@ -10,6 +10,7 @@ import youtue from "../../../../public/icons/youtube.svg";
 import Link from "next/link";
 import Worldbroker from "../Pagecomponents/Worldbroker";
 import telegram from "../../../../public/icons/telegram.svg";
+import twitter from "../../../../public/icons/twitter.svg";
 const footerdata = {
   linkingdata: [
     {
@@ -113,6 +114,11 @@ const footerdata = {
       icon: Instaicon
     },
     {
+      alt: "Twitter",
+      pagelink: "https://www.instagram.com/fliptradegroup/",
+      icon: twitter
+    },
+    {
       alt: "You Tube",
       pagelink: "https://www.youtube.com/@fliptradegroup",
       icon: youtue
@@ -171,7 +177,7 @@ const Fotter = () => {
                 )}
               </div>
 
-              <div className="grid  grid-cols-2 md:grid-cols-3 lg:grid-cols-4  border-b-[0.5px] border-[#ffffff2e]">
+              <div className="grid  grid-cols-2 md:grid-cols-3 lg:grid-cols-5  border-b-[0.5px] border-[#ffffff2e]">
                 {footerdata.social_links.map((data, index) =>
                   <div
                     key={index}

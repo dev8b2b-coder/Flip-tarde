@@ -14,9 +14,9 @@ const Mt5anywhere = () => {
         className="bg-cover"
         style={{ backgroundImage: `url(${boxbg.src})` }}
       >
-        <div className="inn_container py-12 lg:py-18">
+        <div className="inn_container py-12 lg:py-18" style={{marginBottom:'7rem'}}>
           <div className="text-center pb-4 md:pb-8">
-            <Title title={"Trade Anywhere"} color={"text-white"} />
+            <Title title={"Trade Anywhere"} color={"gradient_text"} />
           </div>
           <div className="relative">
             <Image

@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React from "react";
 import Title from "../Uiux/Title";
 import tradeyouwaygraf from "../../../../public/images/tradeyouwaygraf.webp";
@@ -11,28 +11,29 @@ import downloadicon from "../../../../public/icons/downloadicon.svg";
 import Faq from "./Faq";
 import Yourway from "./Yourway";
 import { useAutoScroll } from "../../../hooks/useAutoScroll";
+import Link from "next/link";
 const faqData = [
   {
     question: "What is FlipTrade?",
     answer:
-      "A secure trading platform for Forex, stocks, commodities, indices, and crypto."
+      "A secure trading platform for Forex, stocks, commodities, indices, and crypto.",
   },
   {
     question: "How do I start trading?",
-    answer: "Sign up, verify your account, deposit funds, and begin trading."
+    answer: "Sign up, verify your account, deposit funds, and begin trading.",
   },
   {
     question: "What are the fees?",
-    answer: "Transparent, low trading fees with no hidden charges."
+    answer: "Transparent, low trading fees with no hidden charges.",
   },
   {
     question: "Is FlipTrade safe?",
-    answer: "Yes, we use strong security, 2FA, and safe fund storage."
+    answer: "Yes, we use strong security, 2FA, and safe fund storage.",
   },
   {
     question: "How can I get support?",
-    answer: "Via live chat, email, or our Help Center guides."
-  }
+    answer: "Via live chat, email, or our Help Center guides.",
+  },
 ];
 
 const Tradeyourway = () => {
@@ -65,7 +66,10 @@ const Tradeyourway = () => {
                   className="max-w-[550px] md:max-w-[unset] m-auto w-full"
                 />
               </div>
-              <div className="flex flex-col justify-center items-center" id="trade-anywhere">
+              <div
+                className="flex flex-col justify-center items-center"
+                id="trade-anywhere"
+              >
                 <div className="text-center lg:text-start pt-12 md:pt-0 px-5 md:px-0">
                   <Title
                     title={`Trade on the Go <br/> <span class='gradient_text'> Anytime and <br/> Anywhere </span>`}
@@ -80,45 +84,54 @@ const Tradeyourway = () => {
 
                 <div className="pt-14 hidden md:flex w-full flex-col items-center">
                   <div className="flex gap-4 lg:gap-8">
-                    <Button
-                      btn_name={`Download on <strong> iOS </strong>`}
-                      icon={downloadicon.src}
-                      btn_bg={`bg-primary`}
-                      text_color="text-white"
-                      border_color="border-primary"
-                      shadow={true}
-                    />
-                    <Button
-                      btn_name={`Download on <strong> Android </strong>`}
-                      icon={downloadicon.src}
-                      btn_bg={`bg-primary`}
-                      text_color="text-white"
-                      border_color="border-primary"
-                      shadow={true}
-                    />
+                    <Link href="https://download.mql5.com/cdn/mobile/mt5/ios?server=FlipTradeGroup-Server">
+                      <Button
+                        btn_name={`Download on <strong> iOS </strong>`}
+                        icon={downloadicon.src}
+                        btn_bg={`bg-primary`}
+                        text_color="text-white"
+                        border_color="border-primary"
+                        shadow={true}
+                      />
+                    </Link>
+                    <Link href="https://download.mql5.com/cdn/mobile/mt5/android?server=FlipTradeGroup-Server">
+                      <Button
+                        btn_name={`Download on <strong> Android </strong>`}
+                        icon={downloadicon.src}
+                        btn_bg={`bg-primary`}
+                        text_color="text-white"
+                        border_color="border-primary"
+                        shadow={true}
+                      />
+                    </Link>
                   </div>
                   <div className="flex pt-6 gap-4 lg:gap-8 lg:ps-[15%]">
-                    <Button
-                      btn_name={`Download on <strong> Mac </strong>`}
-                      icon={downloadicon.src}
-                      btn_bg={`bg-primary`}
-                      text_color="text-white"
-                      border_color="border-primary"
-                      shadow={true}
-                    />
-                    <Button
-                      btn_name={`Download on <strong> Windows </strong>`}
-                      icon={downloadicon.src}
-                      btn_bg={`bg-primary`}
-                      text_color="text-white"
-                      border_color="border-primary"
-                      shadow={true}
-                    />
+                    <Link href="https://apps.apple.com/gb/app/metatrader-5/id413251709">
+                      <Button
+                        btn_name={`Download on <strong> Mac </strong>`}
+                        icon={downloadicon.src}
+                        btn_bg={`bg-primary`}
+                        text_color="text-white"
+                        border_color="border-primary"
+                        shadow={true}
+                      />
+                    </Link>
+                    <Link href="https://download.mql5.com/cdn/web/flip.trade.group/mt5/fliptradegroup5setup.exe">
+                      <Button
+                        btn_name={`Download on <strong> Windows </strong>`}
+                        icon={downloadicon.src}
+                        btn_bg={`bg-primary`}
+                        text_color="text-white"
+                        border_color="border-primary"
+                        shadow={true}
+                      />
+                    </Link>
                   </div>
                 </div>
                 {/* Button section for mobile  */}
                 <div className="pt-6 flex md:hidden gap-4 w-full flex-col items-center max-w-[300px] m-auto">
                   <div className="flex w-full justify-start">
+                    <Link href="https://download.mql5.com/cdn/mobile/mt5/ios?server=FlipTradeGroup-Server">
                     <Button
                       btn_name={`Download on <strong> iOS </strong>`}
                       icon={downloadicon.src}
@@ -127,8 +140,10 @@ const Tradeyourway = () => {
                       border_color="border-primary"
                       shadow={true}
                     />
+                    </Link>
                   </div>
                   <div className="flex w-full justify-end">
+                    <Link href="https://download.mql5.com/cdn/mobile/mt5/android?server=FlipTradeGroup-Server">
                     <Button
                       btn_name={`Download on <strong> Android </strong>`}
                       icon={downloadicon.src}
@@ -137,8 +152,10 @@ const Tradeyourway = () => {
                       border_color="border-primary"
                       shadow={true}
                     />
+                    </Link>
                   </div>
                   <div className="flex w-full justify-start">
+                    <Link href="https://apps.apple.com/gb/app/metatrader-5/id413251709">
                     <Button
                       btn_name={`Download on <strong> Mac </strong>`}
                       icon={downloadicon.src}
@@ -147,8 +164,10 @@ const Tradeyourway = () => {
                       border_color="border-primary"
                       shadow={true}
                     />
+                    </Link>
                   </div>
                   <div className="flex w-full justify-end">
+                    <Link href="https://download.mql5.com/cdn/web/flip.trade.group/mt5/fliptradegroup5setup.exe">
                     <Button
                       btn_name={`Download on <strong> Windows </strong>`}
                       icon={downloadicon.src}
@@ -157,6 +176,7 @@ const Tradeyourway = () => {
                       border_color="border-primary"
                       shadow={true}
                     />
+                    </Link>
                   </div>
                 </div>
               </div>

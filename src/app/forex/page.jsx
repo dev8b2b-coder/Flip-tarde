@@ -6,12 +6,13 @@ import Title from "../Components/Uiux/Title";
 import Faq from "../Components/Pagecomponents/Faq";
 import forexdiscoverleft from "/public/images/forexdiscoverleft.webp";
 import forexdiscoverright from "/public/images/forexdiscoverright.webp";
+import coinsimg from "/public/images/coinsimg.webp";
 import setp1 from "/public/icons/Advanced.svg";
 import setp2 from "/public/icons/forexpoint2.svg";
 import setp3 from "/public/icons/forexpoint3.svg";
 import setp4 from "/public/icons/Support.svg";
 import Graphhome from "../Components/Pagecomponents/Markets/Graphhome";
-import PageHead from "../Pagehead";
+import Homemarquee from "../Components/Pagecomponents/Homemarquee";
 const faqData = [
   {
     question: "Which forex pairs are available?",
@@ -74,6 +75,7 @@ export default function page() {
         banner_title="Forex Trading | Online <br/> FX Trading"
         banner_discription="The FX market moves over $5 trillion daily, making it the <br/> world’s largest and most liquid."
       />
+      <Homemarquee/>
       <Graphhome
         title={`What is Forex?`}
         discription={`Forex (Foreign Exchange) is the global market for trading currencies. <br/> Traders buy and sell currency pairs, like EUR/USD and GBP/JPY, to <br/> profit from exchange rate movements. It is the largest financial <br/> market, operating 24 hours a day, 5 days a week.`}
@@ -86,6 +88,7 @@ export default function page() {
         }
         discoverleftimage={forexdiscoverleft}
         discoverrightimage={forexdiscoverright}
+        coinsimg={coinsimg}
       />
       <div className=" bg-theme">
         <div className="inn_container pt-12 pb-16">

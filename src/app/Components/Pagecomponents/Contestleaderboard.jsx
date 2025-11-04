@@ -15,7 +15,7 @@ const Contestleaderboard = () => {
         loop
         muted
         playsInline
-        className="absolute top-0 left-0 w-full h-full object-cover opacity-90 "
+        className="absolute top-0 left-0 w-full h-full object-cover opacity-90 md:block hidden"
       >
         <source src="/videos/contestcelebration.mp4" type="video/mp4" />
       </video>

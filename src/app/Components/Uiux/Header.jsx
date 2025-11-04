@@ -675,7 +675,7 @@ export default function Header() {
                               key={index}
                               href={item.link}
                               className={`relative z-10 font_secondary py-1 block rounded-lg text-base text-ternary transition-all duration-500 ${item.link === pathname
-                                ? "text-primary font-semibold"
+                                ? "text-primary hover:underline"
                                 : "text-black hover:text-primary hover:underline"
                                 }`}
                              onClick={(e) => {

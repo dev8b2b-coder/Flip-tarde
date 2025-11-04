@@ -7,26 +7,27 @@ import firebtnicon from "../../../../../public/icons/firebtniconblue.svg";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-import discoverbg from "../../../../../public/images/discoverbg.webp"
+import discoverbg from "../../../../../public/images/discoverbg.webp";
 import { useAutoScroll } from "../../../../hooks/useAutoScroll";
 const Discovertrading = ({
   discription,
   discoverleftimage,
-  discoverrightimage
+  discoverrightimage,
+  coinsimg,
 }) => {
   useAutoScroll("discover-trading", { delay: 800 });
   const currentpath = usePathname();
   const pathname = currentpath
     .replace("/", "")
     .replace(/-/g, " ")
-    .replace(/\b\w/g, c => c.toUpperCase());
+    .replace(/\b\w/g, (c) => c.toUpperCase());
   return (
     <div className="bg-theme">
       <div
         className="inn_container bg-cover bg-no-repeat bg-center flex items-center justify-center rounded-4xl"
         style={{ backgroundImage: `url(${discoverbg.src})` }}
       >
-        <div className="hidden lg:grid grid-cols-[2fr_3fr_2fr]">
+        <div className="hidden lg:grid grid-cols-[2fr_3fr_2fr] relative">
           <div className="flex items-center">
             <Image
               src={discoverleftimage}
@@ -69,6 +70,16 @@ const Discovertrading = ({
               className="max-w-[240px] 2xl:max-w-[288px]"
             />
           </div>
+          {coinsimg && (
+            <div className="absolute right-[-6rem] top-[22rem]">
+              <Image
+                src={coinsimg}
+                width={1000}
+                height={300}
+                className="max-w-[500px]"
+              />
+            </div>
+          )}
         </div>
         <div className="grid lg:hidden grid-cols-1 relative">
           <div className="flex absolute items-center z-[1] left-0 top-[30%]">

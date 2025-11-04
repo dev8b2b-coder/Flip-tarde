@@ -12,6 +12,7 @@ import accupgradeph1 from '../../../../public/images/accupgradeph1.webp';
 import accupgradeph2 from '../../../../public/images/accupgradeph2.webp';
 import accupgradeph3 from '../../../../public/images/accupgradeph3.webp';
 import { useAutoScroll } from "../../../hooks/useAutoScroll";
+import Link from "next/link";
 const upgradepoints = [
   {
     title: "Log In",
@@ -278,6 +279,7 @@ const Accountupgrade = () => {
 
           <div className="lg:absolute flex lg:block justify-center w-full lg:top-[55%]">
             <div className="inn_container">
+              <Link href="https://client.fliptradegroup.com/trader">
               <Button
                 btn_name="Upgrade Now"
                 border_color="border-primary"
@@ -286,6 +288,7 @@ const Accountupgrade = () => {
                 text_color="text-white"
                 icon={firebtnicon}
               />
+              </Link>
             </div>
           </div>
         </div>

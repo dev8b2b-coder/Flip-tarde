@@ -2,8 +2,6 @@ import React from "react";
 import Title from "../Uiux/Title";
 import Discription from "../Uiux/Discription";
 import newgencardbg from "../../../../public/images/newgencardbg.webp";
-import mainbanner from "../../../../public/images/nextgenbg.webp";
-import Image from "next/image";
 const Nextgennew = () => {
   return (
     <div className="relative pt-12 md:pt-18 lg:pt-28 xl:pt-38 bg-theme overflow-hidden">
@@ -18,20 +16,22 @@ const Nextgennew = () => {
           <source src="/videos/nextgen-bg.mp4" type="video/mp4" />
         </video>
 
-        <div className="relative ">
-          <Image
-            src={mainbanner}
-            alt="mainbanner"
-            width={3000}
-            height={500}
-            className=""
-          />
+        <div className="relative z-10">
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="w-full h-auto object-cover"
+            >
+              <source src="/videos/Fliptradeiconvideo.mp4" type="video/mp4" />
+            </video>
           <div className="lg:absolute top-0 left-0 w-full h-full z-10">
             <div className="grid grid-col-1 text-center lg:text-start lg:grid-cols-[3fr_2fr]  bg-[linear-gradient(180deg,rgba(0,0,0,1)_0%,rgba(255,255,255,0)_100%)]">
               <div>
                 <Title
                   title="Next-Gen Forex <br/> Trading for Everyone"
-                  color="text-white"
+                  color="gradient_text"
                 />
               </div>
               <div className="flex justify-center items-center">

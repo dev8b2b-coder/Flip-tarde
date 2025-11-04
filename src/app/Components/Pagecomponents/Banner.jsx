@@ -7,6 +7,7 @@ import giftbtnicon from "../../../../public/icons/giftbtnicon.svg";
 import Homesidebanner from "../../../../public/banners/Homesidebanner.webp";
 import Image from "next/image";
 import Link from "next/link";
+import Banergif from "../../../../public/videos/BaneerGIF.gif";
 // import { Player } from "@lottiefiles/react-lottie-player";
 // import json from "../../../../public/json/Growth.json";
 export default function Banner() {
@@ -61,10 +62,10 @@ export default function Banner() {
           </div>
           <div className="pt-16 lg:pt-0">
             <Image
-              src={Homesidebanner.src}
+              src={Banergif}
               alt="Side banner"
-              width={2000}
-              height={500}
+              width={3000}
+              height={1000}
               className="relative right-[-2%] w-[90%] md:w-[60%] lg:w-full m-auto"
             />
             {/* <Player

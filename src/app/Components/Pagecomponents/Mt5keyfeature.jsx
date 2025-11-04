@@ -32,7 +32,7 @@ function Mt5keyfeature() {
   return (
     <div className="bg-theme py-12 md:py-18 lg:py-28" >
       <div className="inn_container text-center pb-6 xl:text-start">
-        <Title title={"Key Features"} color={"text-white"} />
+        <Title title={"Key Features"} color={"gradient_text"} />
       </div>
       <div className="grid xl:grid-cols-[1fr_2fr] inn_container pt-12 md:pt-18" id="platform-features">
         <div>
@@ -41,14 +41,14 @@ function Mt5keyfeature() {
             alt=""
             width={1500}
             height={500}
-            className="w-[70%] xl:w-[90%] m-auto"
+            className="w-full m-auto"
           />
         </div>
-        <div className="px-[5%] flex flex-col justify-center gap-6">
+        <div className="px-[5%] flex flex-col justify-center gap-4">
           {features.map(data =>
             <div
               key={data.id}
-              className="flex flex-col md:flex-row gap-3 md:gap-8 lg:gap-12 p-6 lg:p-10 2xl:p-14 rounded-4xl bg-[linear-gradient(89deg,rgba(106,64,236,0.62)_0%,rgba(106,64,236,1)_100%)]"
+              className="flex flex-col md:flex-row gap-3 md:gap-8 lg:gap-12 p-6 lg:p-10 2xl:p-11 rounded-4xl bg-[linear-gradient(89deg,rgba(106,64,236,0.62)_0%,rgba(106,64,236,1)_100%)]"
             >
               <div className="text-[45px] pr-8 lg:pr-12 flex md:border-r-[3px] border-dashed items-center text-white">
                 0{data.id}

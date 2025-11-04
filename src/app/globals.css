@@ -96,7 +96,8 @@
 }
 
 .title_text {
-  font-size: 80px;
+  /* font-size: 80px; */
+  font-size: 75px;
   line-height: 98px;
 }
 
@@ -161,8 +162,8 @@ body {
 .gradient_text_secondary {
   background: radial-gradient(
     circle,
-    rgba(226, 164, 255, 1) 0%,
-    rgba(146, 39, 255, 1) 100%
+    rgba(255, 255, 255, 1),
+    rgba(135, 135, 135, 0)
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -410,4 +411,77 @@ input[type=number] {
 
 .swiper-pagination-bullet {
   background-color: #fff !important;
+}
+
+/* 🟣 Smooth Animated Black + Purple Gradient Background (with top/bottom fade) */
+.bg-animated-gradient {
+  position: relative;
+  background: linear-gradient(
+    -45deg,
+    #000000,
+    #1a002e,
+    #3b007a,
+    #000000
+  );
+  background-size: 300% 300%;
+  animation: gradientShift 35s ease-in-out infinite;
+  overflow: hidden;
+}
+
+/* ✨ Soft purple lines (subtle motion) */
+.bg-animated-gradient::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    125deg,
+    rgba(150, 0, 255, 0.06) 0px,
+    rgba(150, 0, 255, 0.06) 1px,
+    transparent 3px,
+    transparent 90px
+  );
+  animation: softLines 100s linear infinite;
+  opacity: 0.25;
+  mix-blend-mode: overlay;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* 🌫 Fade top & bottom overlay */
+.bg-animated-gradient::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.9) 0%,
+    rgba(0, 0, 0, 0) 20%,
+    rgba(0, 0, 0, 0) 80%,
+    rgba(0, 0, 0, 0.9) 100%
+  );
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* 🎬 Gradient motion */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* 🌀 Slow diagonal line drift */
+@keyframes softLines {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 1200px 600px;
+  }
 }

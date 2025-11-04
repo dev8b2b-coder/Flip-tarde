@@ -8,6 +8,7 @@ import Discription from "../Uiux/Discription";
 import Button from "../Uiux/Button";
 import fireicon from "../../../../public/icons/firebtniconblue.svg";
 import { useAutoScroll } from "../../../hooks/useAutoScroll";
+import Link from "next/link";
 const Calculatepipvalue = () => {
   useAutoScroll("pip-calculator", { delay: 800 });
   return (
@@ -39,12 +40,14 @@ const Calculatepipvalue = () => {
                 color={"text-white"}
               />
             </div>
+            <Link href="/pip-calculator">
             <Button
               btn_name={"Learn More About Pip Calculator"}
               border_color={"border-white"}
               icon={fireicon}
               btn_bg={"bg-white"}
             />
+            </Link>
           </div>
         </div>
       </div>

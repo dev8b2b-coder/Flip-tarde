@@ -12,6 +12,7 @@ import Secure from "/public/icons/forexpoint2.svg";
 import Support from "/public/icons/Support.svg";
 import Graphhome from "../Components/Pagecomponents/Markets/Graphhome";
 import PageHead from "../Pagehead";
+import Homemarquee from "../Components/Pagecomponents/Homemarquee";
 const faqData = [
   {
     question: "Which commodities are available?",
@@ -78,6 +79,7 @@ export default function page() {
         banner_title="Commodities <br /> CFDs"
         banner_discription="Trade spot and futures commodities across metals, <br /> energy, and agriculture markets."
       />
+      <Homemarquee/>
       <Graphhome
         title={`What are Commodities?`}
         discription={`Commodities are raw materials like oil, wheat, and coffee. <br /> Trading commodities allows you to profit from price <br />  movements in essential resources.`}

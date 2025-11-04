@@ -49,7 +49,7 @@ function Economicuse() {
         >
           <div className="inn_container">
             <div className="text-center lg:text-start pb-8 md:pb-0" id="eco-calender">
-              <Title title={"Why Use It?"} color="text-white" />
+              <Title title={"Why Use It?"} color="gradient_text" />
             </div>
             <div
               className=" max-w-[800px] 2xl:max-w-[961px] m-auto relative"

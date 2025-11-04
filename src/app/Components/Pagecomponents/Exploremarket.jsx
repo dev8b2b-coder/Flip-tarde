@@ -20,28 +20,28 @@ import { useAutoScroll } from "../../../hooks/useAutoScroll";
 const markettype = [
   {
     marketname: "Forex",
-    sidebanner: exploremarket1
+    sidebanner: exploremarket1,
   },
   {
     marketname: "Indices",
-    sidebanner: exploremarket2
+    sidebanner: exploremarket2,
   },
   {
     marketname: "Cryptocurrency",
-    sidebanner: exploremarket4
+    sidebanner: exploremarket4,
   },
   {
     marketname: "Metals",
-    sidebanner: exploremarket5
+    sidebanner: exploremarket5,
   },
   {
     marketname: "Commodities",
-    sidebanner: exploremarket3
+    sidebanner: exploremarket3,
   },
   {
     marketname: "Stocks",
-    sidebanner: exploremarket6
-  }
+    sidebanner: exploremarket6,
+  },
 ];
 
 const Exploremarket = () => {
@@ -56,7 +56,7 @@ const Exploremarket = () => {
         <div className="inn_container pt-10 md:pt-18 lg:pt-24">
           <div className="text-center" id="exploremarket">
             <Title
-              title="What can you trade with <br/> <span class='text-subprimary'> FlipTrade </span>"
+              title="What can you trade <br/> <span>with<span class='gradient_text'> FlipTrade </span></span>"
               color="text-white"
             />
           </div>
@@ -70,9 +70,20 @@ const Exploremarket = () => {
       <div className="inn_container hidden lg:block pb-12">
         <div className="relative">
           <Image src={explorelower} alt="banner" width={3000} height={500} />
-
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-full max-w-[500px] object-cover absolute top-4 right-28"
+          >
+            <source src="/videos/Mobileanimation.mp4" type="video/mp4" />
+          </video>
           <div className="absolute top-0 h-full flex items-center w-[50%]">
-            <div className="relative top-[-2%] left-[6%] xl:left-[10%]" id="starttrading">
+            <div
+              className="relative top-[-2%] left-[6%] xl:left-[10%]"
+              id="starttrading"
+            >
               <Title
                 title={`Practice Trading, <br/> <span class='text-primary'> Risk-Free </span>`}
                 color="text-black"
@@ -83,7 +94,7 @@ const Exploremarket = () => {
                   color="text-black"
                 />
               </div>
-              <p className="text-4xl xl:text-[60px] pt-3 xl:pt-6 xl:leading-[98px] font-[350] font_ternary text-primary">
+              <p className="text-4xl xl:text-[60px] pt-3 xl:pt-6 xl:leading-[98px] font-semibold font_ternary text-primary">
                 3 Steps
               </p>
               <div className="pt-4 xl:pt-2 flex gap-2 xl:gap-5">

@@ -148,20 +148,20 @@ function Tradingaccounts() {
               />
               <div className="flex justify-center items-center">
                 <Discription
-                  dispription={`Ustomize your trading journey with accounts <br/> built to enhance your experience and <br/> strategies.`}
+                  dispription={`Ustomize your trading journey with accounts built to<br/> enhance your experience and strategies.`}
                   color="text-white"
                 />
               </div>
             </div>
           </div>
 
-          <div className="relative hidden xl:block overflow-hidden pt-20 h-[750px] xl:h-auto">
+          <div className="relative hidden xl:block overflow-hidden pt-[10rem] h-[750px] xl:h-auto">
             <Image
               src={accountsserface.src}
               alt="Banner"
               width={3000}
               height={500}
-              className="relative left-[-10%] h-full xl:h-auto"
+              className="relative left-[-10%] h-full xl:h-auto bottom-[4rem]"
             />
             <div className="absolute top-0 h-full w-full flex items-center" >
               <div className="max-w-[1440px] px-[3%] xl:px-[unset] m-auto relative bottom-[20%]">

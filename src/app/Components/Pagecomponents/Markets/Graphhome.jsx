@@ -19,7 +19,7 @@ const Graphhome = ({ title, discription, pagepath }) => {
   };
   useAutoScroll("graph", { delay: 800 });
   return (
-    <div className={`py-12   bg-theme`}>
+    <div className={`py-12 bg-animated-gradient pt-[8rem]`}>
       <div className="inn_container">
         {pagepath === "/economic-calendar"
           ? null
