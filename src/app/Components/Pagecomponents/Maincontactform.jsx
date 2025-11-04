@@ -8,6 +8,7 @@ const Maincontactform = () => {
   const [emailerror, setEmailError] = useState("");
   const [messageerror, setmessageError] = useState("");
   const [thankyou, setthankyou] = useState(false);
+  const [loading, setLoading] = useState(false);
   const [formdata, setFormdata] = useState({
     name: "",
     email: "",
@@ -25,23 +26,36 @@ const Maincontactform = () => {
   };
  const router = useRouter()
   const errorhandle = () => {
+    // Reset all errors first
+    setNameError("");
+    setEmailError("");
+    setmessageError("");
+    
+    // Check name
     if (formdata.name === "") {
       setNameError("Enter Your name First");
-    } else if (formdata.email === "") {
+    }
+    
+    // Check email
+    if (formdata.email === "") {
       setEmailError("Enter Your Email Here");
-    } else if (!formdata.email.includes("@" && ".")) {
-      setEmailError("Enter Your Vaild Email , @ , .");
-    } else if (formdata.message === "") {
-      setEmailError("");
+    } else if (!formdata.email.includes("@") || !formdata.email.includes(".")) {
+      setEmailError("Enter Your Valid Email with @ and .");
+    }
+    
+    // Check message
+    if (formdata.message === "") {
       setmessageError("Enter Your Message");
-    } else {
-      null;
     }
   };
   const handlesubmit = async () => {
     errorhandle();
 
-    if (formdata.name && formdata.email && formdata.message) {
+    // Validate email format
+    const isValidEmail = formdata.email.includes("@") && formdata.email.includes(".");
+    
+    if (formdata.name && formdata.email && isValidEmail && formdata.message) {
+      setLoading(true);
       try {
         const res = await fetch("/api/send-email", {
           method: "POST",
@@ -68,6 +82,9 @@ const Maincontactform = () => {
         }
       } catch (err) {
         console.error("Fetch error:", err);
+        setLoading(false);
+      } finally {
+        setLoading(false);
       }
     }
   };
@@ -92,7 +109,7 @@ const Maincontactform = () => {
           : <div className="font_ternary px-2 py-5  lg:px-10  lg:py-10 border-2 border-[#00000033] rounded-3xl lg:rounded-[44px]">
               <div className="">
                 <div className="text-lg lg:text-[21px] text-secondary font-[350]">
-                  Your Name
+                  Your Name <span className="text-red-500">*</span>
                 </div>
                 <input
                   type="text"
@@ -106,13 +123,13 @@ const Maincontactform = () => {
                 />
                 {nameerror === ""
                   ? null
-                  : <span className="text-red-500 text-[14px]">
+                  : <span className="text-red-500 text-[14px] ml-[1rem]">
                       {nameerror}
                     </span>}
               </div>
               <div className="pt-6">
                 <div className="text-lg lg:text-[21px] text-secondary font-[350]">
-                  Email Here
+                  Email <span className="text-red-500">*</span>
                 </div>
                 <input
                   type="email"
@@ -126,13 +143,13 @@ const Maincontactform = () => {
                 />
                 {emailerror === ""
                   ? null
-                  : <span className="text-red-500 text-[14px]">
+                  : <span className="text-red-500 text-[14px] ml-[1rem]">
                       {emailerror}
                     </span>}
               </div>
               <div className="pt-6">
                 <div className="text-lg lg:text-[21px] text-secondary font-[350]">
-                  Message Here
+                  Message Here <span className="text-red-500">*</span>
                 </div>
                 <textarea
                   name="message"
@@ -145,7 +162,7 @@ const Maincontactform = () => {
                 />
                 {messageerror === ""
                   ? null
-                  : <span className="text-red-500 text-[14px]">
+                  : <span className="text-red-500 text-[14px] ml-[1rem]">
                       {messageerror}
                     </span>}
               </div>
@@ -162,10 +179,10 @@ const Maincontactform = () => {
                   text_color="text-white"
                 />
               </div>
-            : <div onClick={handlesubmit}>
+            : <div onClick={!loading ? handlesubmit : undefined} className={loading ? "cursor-not-allowed opacity-70" : "cursor-pointer"}>
                 <Button
-                  btn_name="Submit"
-                  icon={firebtn.src}
+                  btn_name={loading ? "Loading..." : "Submit"}
+                  icon={loading ? null : firebtn.src}
                   border_color={"border-primary"}
                   btn_bg="bg-primary"
                   text_color="text-white"
