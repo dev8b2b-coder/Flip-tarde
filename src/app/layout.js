@@ -54,7 +54,7 @@ export default function RootLayout({ children }) {
         cz-shortcut-listen="true"
       >
       <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TMB747V2"
-      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+      height="0" width="0" style={{display:'none',visibility:'hidden'}}></iframe></noscript>
         <GoogleAnalytics />
         <div className="main_outer_container">
           <div className="absolute w-full max-w-[1960px] z-[999] bg-[linear-gradient(1deg,rgba(255,255,255,0)_15%,rgb(0_0_0_/_76%)_99%)]">
