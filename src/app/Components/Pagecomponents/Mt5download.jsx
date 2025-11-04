@@ -69,7 +69,7 @@ const Mt5download = () => {
 
                 <div className="pt-14 hidden md:flex w-full flex-col items-center">
                   <div className="flex gap-4 lg:gap-8">
-                    <Link href="https://download.mql5.com/cdn/mobile/mt5/ios?server=FlipTradeGroup-Server">
+                    <Link href="https://download.mql5.com/cdn/mobile/mt5/ios?server=FlipTradeGroup-Server" target="_blank">
                     <Button
                       btn_name={`Download on <strong> iOS </strong>`}
                       icon={downloadicon.src}
@@ -79,7 +79,7 @@ const Mt5download = () => {
                       shadow={true}
                     />
                     </Link>
-                    <Link href="https://download.mql5.com/cdn/mobile/mt5/android?server=FlipTradeGroup-Server">
+                    <Link href="https://download.mql5.com/cdn/mobile/mt5/android?server=FlipTradeGroup-Server" target="_blank">
                     <Button
                       btn_name={`Download on <strong> Android </strong>`}
                       icon={downloadicon.src}
@@ -91,7 +91,7 @@ const Mt5download = () => {
                     </Link>
                   </div>
                   <div className="flex pt-6 gap-4 lg:gap-8 lg:ps-[15%]">
-                    <Link href="https://apps.apple.com/gb/app/metatrader-5/id413251709">
+                    <Link href="https://apps.apple.com/gb/app/metatrader-5/id413251709" target="_blank">
                     <Button
                       btn_name={`Download on <strong> Mac </strong>`}
                       icon={downloadicon.src}
@@ -101,7 +101,7 @@ const Mt5download = () => {
                       shadow={true}
                     />
                     </Link>
-                    <Link href="https://download.mql5.com/cdn/web/flip.trade.group/mt5/fliptradegroup5setup.exe">
+                    <Link href="https://download.mql5.com/cdn/web/flip.trade.group/mt5/fliptradegroup5setup.exe" target="_blank">
                     <Button
                       btn_name={`Download on <strong> Windows </strong>`}
                       icon={downloadicon.src}
@@ -116,7 +116,7 @@ const Mt5download = () => {
                 {/* Button section for mobile  */}
                 <div className="pt-6 flex md:hidden gap-4 w-full flex-col items-center max-w-[300px] m-auto">
                   <div className="flex w-full justify-start">
-                    <Link href="https://download.mql5.com/cdn/mobile/mt5/ios?server=FlipTradeGroup-Server">
+                    <Link href="https://download.mql5.com/cdn/mobile/mt5/ios?server=FlipTradeGroup-Server" target="_blank">
                     <Button
                       btn_name={`Download on <strong> iOS </strong>`}
                       icon={downloadicon.src}
@@ -128,7 +128,7 @@ const Mt5download = () => {
                     </Link>
                   </div>
                   <div className="flex w-full justify-end">
-                    <Link href="https://download.mql5.com/cdn/mobile/mt5/android?server=FlipTradeGroup-Server">
+                    <Link href="https://download.mql5.com/cdn/mobile/mt5/android?server=FlipTradeGroup-Server" target="_blank">
                     <Button
                       btn_name={`Download on <strong> Android </strong>`}
                       icon={downloadicon.src}
@@ -140,7 +140,7 @@ const Mt5download = () => {
                     </Link>
                   </div>
                   <div className="flex w-full justify-start">
-                    <Link href="https://apps.apple.com/gb/app/metatrader-5/id413251709">
+                    <Link href="https://apps.apple.com/gb/app/metatrader-5/id413251709" target="_blank">
                     <Button
                       btn_name={`Download on <strong> Mac </strong>`}
                       icon={downloadicon.src}
@@ -152,7 +152,7 @@ const Mt5download = () => {
                     </Link>
                   </div>
                   <div className="flex w-full justify-end">
-                    <Link href="https://download.mql5.com/cdn/web/flip.trade.group/mt5/fliptradegroup5setup.exe">
+                    <Link href="https://download.mql5.com/cdn/web/flip.trade.group/mt5/fliptradegroup5setup.exe" target="_blank">
                     <Button
                       btn_name={`Download on <strong> Windows </strong>`}
                       icon={downloadicon.src}

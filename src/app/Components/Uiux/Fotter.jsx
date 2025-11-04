@@ -185,7 +185,7 @@ const Fotter = () => {
                       ? null
                       : "border-r-[0.5px] border-t-[0.5px] border-[#ffffff2e]"}`}
                   >
-                    <Link href={data.pagelink}>
+                    <Link href={data.pagelink} target="_blank">
                       <div
                         className={`flex items-center py-4 md:py-8 xl:py-12 w-[85%] xl:w-[70%] m-auto gap-4`}
                       >

@@ -25,7 +25,7 @@ export default function Contactfrom() {
               <Maincontactform />
             </div>
             <div className="flex">
-            <div className="hidden xl:block absolute max-w-[700px] top-[4rem] left-0.5">
+            <div className="hidden xl:block absolute max-w-[700px] top-[4rem] left-0.5 w-full">
               <Image
                 src={formsidebanner}
                 alt="formsidebanner"
@@ -34,7 +34,7 @@ export default function Contactfrom() {
                 className="w-full"
               />
             </div>
-            <div className="hidden xl:block absolute max-w-[700px] right-[-5rem] top-0">
+            <div className="hidden xl:block absolute max-w-[700px] right-[-5rem] top-0 w-full">
               <Image
                 src={manright}
                 alt="manright"
