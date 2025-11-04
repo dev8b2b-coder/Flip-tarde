@@ -95,7 +95,7 @@ const Pipcalculator = () => {
           alt="hand image"
           width={2000}
           height={500}
-          className="max-w-[926px] w-full"
+          className="max-w-[926px] w-full z-40"
         />
       </div>
       <div className="inn_container  py-18 lg:py-24 2xl:py-40 relative z-[3]">
@@ -242,7 +242,7 @@ const Pipcalculator = () => {
           </div>
         </div>
       </div>
-      <div className="absolute hidden 2xl:block bottom-[-7%] left-[-3%] z-[1]">
+      <div className="absolute hidden 2xl:block bottom-[-6%] left-[-3%] z-50">
         <Image
           src={piphanddown}
           alt="hand image"

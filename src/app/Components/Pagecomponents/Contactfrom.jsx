@@ -1,6 +1,6 @@
 "use client"
 import React from "react";
-import formsidebanner from "../../../../public/images/formsidebanner.webp";
+// import formsidebanner from "../../../../public/images/formsidebanner.webp";
 import Image from "next/image";
 import Maincontactform from "./Maincontactform";
 import contactusbanner from "../../../../public/banners/contactusbanner.webp";
@@ -9,6 +9,8 @@ import instablack from "../../../../public/icons/instablack.svg";
 import youtubeblack from "../../../../public/icons/youtubeblack.svg";
 import Link from "next/link";
 import { useAutoScroll } from "../../../hooks/useAutoScroll";
+import formsidebanner from "../../../../public/images/womenleft.webp";
+import manright from "../../../../public/images/manright.webp";
 export default function Contactfrom() {
   useAutoScroll("social-link", { delay: 800 });
   return (
@@ -19,10 +21,11 @@ export default function Contactfrom() {
       >
         <div className="inn_container">
           <div className=" max-w-[1380px] m-auto">
-            <div className="flex justify-center xl:justify-end">
+            <div className="flex justify-center xl:justify-center">
               <Maincontactform />
             </div>
-            <div className="hidden xl:block absolute max-w-[700px] top-0 ">
+            <div className="flex">
+            <div className="hidden xl:block absolute max-w-[700px] top-[4rem] left-0.5">
               <Image
                 src={formsidebanner}
                 alt="formsidebanner"
@@ -30,6 +33,16 @@ export default function Contactfrom() {
                 height={500}
                 className="w-full"
               />
+            </div>
+            <div className="hidden xl:block absolute max-w-[700px] right-[-5rem] top-0">
+              <Image
+                src={manright}
+                alt="manright"
+                width={2000}
+                height={500}
+                className="w-full"
+              />
+            </div>
             </div>
           </div>
         </div>

@@ -10,22 +10,22 @@ import Aosinit from "./Components/Pagecomponents/Aosinit";
 const monaSans = localFont({
   src: [{ path: "../../public/fonts/Mona-Sans-MediumWide.ttf" }],
 
-  variable: "--font-mona-sans"
+  variable: "--font-mona-sans",
 });
 const monaSansnormal = localFont({
   src: [{ path: "../../public/fonts/Mona-Sans.ttf" }],
 
-  variable: "--font-mona-sans-normal"
+  variable: "--font-mona-sans-normal",
 });
 const monaSansnormallight = localFont({
   src: [{ path: "../../public/fonts/Mona-Sans-LightWide.ttf" }],
 
-  variable: "--font-mona-sans-normallight"
+  variable: "--font-mona-sans-normallight",
 });
 const monaSanswidenormal = localFont({
   src: [{ path: "../../public/fonts/Mona-Sans-UltraLightWide.ttf" }],
 
-  variable: "--font-mona-sans-monaSanswidenormal"
+  variable: "--font-mona-sans-monaSanswidenormal",
 });
 export const metadata = {
   title: "Best Forex & Multi-Asset Trading Platform | FlipTrade Group",
@@ -35,19 +35,26 @@ export const metadata = {
     icon: "/favicon.ico",
   },
   verification: {
-    google: "KgCqFoO6NlFNiJg06rxf_0u6vjoiAAGn4sVMH_X-1aQ"
-  }
+    google: "KgCqFoO6NlFNiJg06rxf_0u6vjoiAAGn4sVMH_X-1aQ",
+  },
 };
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
         <Canonical />
+        <script>{`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-TMB747V2');`}</script>
       </head>
       <body
         className={`${monaSans.variable} ${monaSansnormal.variable} ${monaSansnormallight.variable} ${monaSanswidenormal.variable} antialiased`}
         cz-shortcut-listen="true"
       >
+      <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TMB747V2"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <GoogleAnalytics />
         <div className="main_outer_container">
           <div className="absolute w-full max-w-[1960px] z-[999] bg-[linear-gradient(1deg,rgba(255,255,255,0)_15%,rgb(0_0_0_/_76%)_99%)]">

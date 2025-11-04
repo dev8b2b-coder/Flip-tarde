@@ -39,9 +39,9 @@ export default function Contactdetail() {
   return (
     <div className="bg-theme">
       <div className="inn_container py-16 md:py-24 lg:py-32">
-        <div className="text-center" id="contact">
+        <div className="justify-items-start" id="contact">
           <Title
-            title={"Office & Contact <br /> Details"}
+            title={"Office & Contact Details"}
             color={"gradient_text w-max m-auto"}
           />
         </div>

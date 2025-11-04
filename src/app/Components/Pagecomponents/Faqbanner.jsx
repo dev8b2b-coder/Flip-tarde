@@ -10,7 +10,7 @@ import Link from "next/link";
 const Faqbanner = () => {
   return (
     <div className="" style={{ backgroundImage: `url(${faqbanner.src})` }}>
-      <div className="inn_container pt-40 pb-20 ">
+      <div className="inn_container pt-40 pb-0 ">
         <div className="grid grid-cols-1 lg:grid-cols-2 ">
           <div className="flex flex-col justify-center text-center lg:text-start">
             <Title title={"FlipTrade FAQ"} color={"gradient_text"} />
@@ -41,7 +41,7 @@ const Faqbanner = () => {
               alt="side banner"
               width={1000}
               height={500}
-              className="max-w-[80%] m-auto"
+              className="max-w-[100%] m-auto"
             />
           </div>
         </div>

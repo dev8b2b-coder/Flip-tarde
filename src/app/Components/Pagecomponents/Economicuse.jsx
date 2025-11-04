@@ -11,6 +11,7 @@ import boxbg from "../../../../public/banners/box-bg.webp";
 import joint from "../../../../public/images/joint.webp";
 import Righttextgrap from "./Righttextgrap";
 import { useAutoScroll } from "../../../hooks/useAutoScroll";
+import EconomicCalendarHero from "./Markets/EconomicCalendarHero";
 const data = [
   {
     id: 1,
@@ -149,6 +150,7 @@ function Economicuse() {
             btnname="Start Trading with FlipTrade"
             position='top-[22%] xl:w-[43%] right-[-2%]'
           />
+          <EconomicCalendarHero/>
         </div>
       </div>
     </div>

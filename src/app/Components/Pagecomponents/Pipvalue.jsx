@@ -3,11 +3,13 @@ import pipvaluebanner from "../../../../public/images/pipvalues.webp";
 import Image from "next/image";
 import Title from "../Uiux/Title";
 import Discription from "../Uiux/Discription";
+import Worldbrokerbg from "../../../../public/images/Worldbrokerbg.webp";
 import Button from "../Uiux/Button";
 import fireicon from "../../../../public/icons/firebtnicon.svg";
 const Pipvalue = ({onScrollClick}) => {
   return (
-    <div className="bg-theme">
+    <div className="inn_container relative bg-no-repeat bg-center bg-cover min-h-[600px] sm:min-h-[500px] md:min-h-[660px] md:rounded-4xl"
+     style={{ backgroundImage: `url(${Worldbrokerbg.src})` }}>
       <div className="inn_container py-12 md:py-18 lg:py-24">
         <div className="grid grid-cols-1 lg:grid-cols-2">
           <div>

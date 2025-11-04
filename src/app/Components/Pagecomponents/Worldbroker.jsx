@@ -12,7 +12,7 @@ function Worldbroker() {
   return (
     <div className="bg-theme pt-12 md:pt-18 lg:pt-24 pb-12 md:pb-18">
       <div
-        className="inn_container relative bg-no-repeat bg-center bg-cover min-h-[600px] sm:min-h-[500px] md:min-h-[660px] md:rounded-2xl"
+        className="inn_container relative bg-no-repeat bg-center bg-cover min-h-[600px] sm:min-h-[500px] md:min-h-[660px] md:rounded-4xl"
         style={{ backgroundImage: `url(${Worldbrokerbg.src})` }}
       >
         {/* Grid layout */}

@@ -361,16 +361,7 @@ const Faqsearch = () => {
             <div className="inn_container pt-12 pb-12 xl:pt-24 xl:pb-24">
                 <div className="text-center" id="faq-scroll">
                     <Title title="Search for Answers" color="gradient_text" />
-                    <div className="text-center pt-6">
-                        <p className="text-lg md:text-2xl xl:text-3xl 2xl:text-4xl font-semibold text-white pb-2">
-                            How do I use the Help Centre?
-                        </p>
-                        <span className="text-white list_text">
-                            Type your question to get instant answers. If you don’t find what
-                            you need, check the <br /> FAQ below or contact us via live chat,
-                            email, or callback.
-                        </span>
-                    </div>
+                    
                     <div className="flex w-full md:w-max md:mx-auto my-6 items-center gap-4 py-[16px] md:py-[22px] px-[40px] border-2 border-primary rounded-full md:min-w-[65%] bg-white">
                         <Image
                             src={searchicon}
@@ -387,6 +378,16 @@ const Faqsearch = () => {
                             className="border-none outline-none placeholder-[var(--primary)] list_text font_ternary w-[80%] text-primary"
                             data-np-intersection-state="visible"
                         />
+                    </div>
+                    <div className="text-center pt-6">
+                        <p className="text-lg md:text-2xl xl:text-3xl 2xl:text-4xl font-semibold text-white pb-2">
+                            How do I use the Help Centre?
+                        </p>
+                        <span className="text-white list_text">
+                            Type your question to get instant answers. If you don’t find what
+                            you need, check the <br /> FAQ below or contact us via live chat,
+                            email, or callback.
+                        </span>
                     </div>
                 </div>
 
